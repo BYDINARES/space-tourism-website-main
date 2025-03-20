@@ -1,16 +1,29 @@
+html,
+body {
+  height: 140vw;
+  width: 100vw;
+}
 body {
   color: aliceblue;
-}
-
-body > img {
-  position: absolute;
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-}
-body > div {
-  position: absolute;
-  z-index: 1;
-  height: 100%;
-  width: 100%;
+  //The background image
+  > img {
+    position: fixed;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  //The
+  > div {
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+      "blank The_div blank"
+      "blank Title blank"
+      "blank Text blank"
+      "blank Button blank";
+  }
 }
