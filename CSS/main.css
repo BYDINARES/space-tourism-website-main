@@ -1,24 +1,47 @@
-html,
-body {
-  height: 140vw;
+html {
+  height: 100vw;
   width: 100vw;
+  margin: 0%;
 }
 
 body {
-  color: aliceblue;
-}
-body > img {
-  position: fixed;
-  z-index: -1;
   height: 100%;
   width: 100%;
-  object-fit: cover;
-}
-body > div {
-  position: absolute;
-  z-index: 1;
-  height: 100%;
-  width: 100%;
+  margin: 0%;
   display: grid;
-  grid-template-areas: "blank The_div blank" "blank Title blank" "blank Text blank" "blank Button blank";
+  grid-template-columns: 5% 1fr 5%;
+  grid-template-rows: 2fr 1fr 3fr 3fr 3fr;
+}
+body > * {
+  z-index: 1;
+  grid-column: 2/3;
+}
+body .the-background {
+  position: absolute;
+  z-index: 0;
+  height: 100vh;
+  width: 100vw;
+}
+body > nav {
+  grid-row: 1/2;
+  grid-column: 2/3;
+}
+body > nav > ul {
+  display: flex;
+  flex-direction: row;
+}
+body .dimond {
+  grid-row: 1/2;
+}
+body .sub-title {
+  grid-row: 2/3;
+}
+body .title {
+  grid-row: 3/4;
+}
+body .plain-text {
+  grid-row: 4/5;
+}
+body .button {
+  grid-row: 5;
 }/*# sourceMappingURL=main.css.map */
