@@ -1,5 +1,5 @@
 html {
-  height: 100vw;
+  height: 150vw;
   width: 100vw;
   margin: 0%;
 }
@@ -9,16 +9,17 @@ body {
   margin: 0%;
   display: grid;
   grid-template-columns: 5% 1fr 5%;
-  grid-template-rows: 2fr 1fr 3fr 3fr 3fr;
+  grid-template-rows: 2fr 1fr 3fr 3fr 1fr 3.5fr;
   > * {
     z-index: 1;
     grid-column: 2/3;
+    color: aliceblue;
   }
   //The image in the background
   .the-background {
     position: absolute;
     z-index: 0;
-    height: 100vh;
+    height: auto;
     width: 100vw;
   }
   //The navigation bar
@@ -37,16 +38,28 @@ body {
   //The title section
   .sub-title {
     grid-row: 2/3;
+    justify-self: center;
+    margin-bottom: 0%;
   }
   .title {
     grid-row: 3/4;
+    font-size: 5rem;
+    justify-self: center;
+    margin: 0%;
   }
 
   //The text and button part
   .plain-text {
     grid-row: 4/5;
+    justify-self: center;
+    font-size: 1.3rem;
+    filter: brightness(0.9);
   }
-  .button {
-    grid-row: 5;
+  .explore {
+    grid-row: 6;
+    justify-self: center;
+    height: 100%;
+    width: 40%;
+    border-radius: 50%;
   }
 }
