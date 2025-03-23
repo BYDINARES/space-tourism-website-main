@@ -1,0 +1,35 @@
+.destination-body {
+  height: 150vw;
+  width: 100vw;
+  margin: 0%;
+  display: grid;
+  grid-template-columns: 5% 1fr 5%;
+  grid-template-rows: 1fr 4fr 0.5fr 4fr 4fr;
+
+  .background-destination-mobile {
+    height: auto;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+  }
+  //everything after the background
+  .background-destination-mobile ~ * {
+    grid-column: 2/3;
+  }
+  //The top menu
+  .dimond,
+  .toggle-menu,
+  nav {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  .sub-title,
+  .the-moon {
+    grid-row: 2/3;
+  }
+
+  > * {
+    z-index: 1;
+  }
+}
