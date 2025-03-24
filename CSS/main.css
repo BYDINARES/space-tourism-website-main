@@ -4,29 +4,51 @@
   margin: 0%;
   display: grid;
   grid-template-columns: 5% 1fr 5%;
-  grid-template-rows: 1fr 4fr 0.5fr 4fr 4fr;
-}
-.destination-body .background-destination-mobile {
-  height: auto;
-  width: 100%;
-  position: absolute;
-  z-index: 0;
+  grid-template-rows: auto auto 1fr auto auto auto;
+  /* .background-destination-mobile {
+    height: auto;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+  } */
 }
 .destination-body .background-destination-mobile ~ * {
   grid-column: 2/3;
 }
-.destination-body .dimond,
-.destination-body .toggle-menu,
-.destination-body nav {
+.destination-body .nav-bar {
   grid-column: 2/3;
   grid-row: 1/2;
+  height: fit-content;
+  flex-direction: row;
 }
-.destination-body .sub-title,
-.destination-body .the-moon {
+.destination-body .nav-bar nav ul {
+  display: flex;
+  flex-direction: row;
+}
+.destination-body .sub-title {
   grid-row: 2/3;
-}
-.destination-body > * {
+  align-items: center;
+  grid-column: 2/3;
   z-index: 1;
+  height: fit-content;
+}
+.destination-body .the-moon {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  height: 50px;
+  width: 50px;
+}
+.destination-body .the-planet-options {
+  grid-column: 2/3;
+  grid-row: 4/5;
+}
+.destination-body h1 {
+  grid-column: 2/3;
+  grid-row: 5/6;
+}
+.destination-body .plain-text {
+  grid-column: 2/3;
+  grid-row: 6/7;
 }
 
 .index-body {
