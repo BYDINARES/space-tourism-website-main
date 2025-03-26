@@ -1,11 +1,8 @@
 @use "pages/destination";
-
-@font-face {
-  font-family: "Popins";
-  src: url();
-}
+@use "fonts";
 
 .index-body {
+  font-family: "Roboto", sans-serif;
   height: 150vw;
   width: 100vw;
   margin: 0%;
