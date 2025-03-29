@@ -1,6 +1,6 @@
 .destination-body {
   font-family: "Roboto", sans-serif;
-  height: 160vw;
+  height: 182vw;
   width: 100vw;
   margin: 0%;
   display: grid;
@@ -43,7 +43,7 @@
 .destination-body .planet {
   grid-row: 3/4;
   height: 100%;
-  width: 48%;
+  width: 50%;
 }
 .destination-body .the-planet-options {
   grid-row: 4/5;
@@ -159,6 +159,41 @@
   font-weight: 900;
   src: url("../fonts/roboto-v47-latin-900.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+.crew-body {
+  display: grid;
+  height: 150vw;
+  width: 100vw;
+  margin: 0%;
+  color: aliceblue;
+  grid-template-columns: 5% 1fr 5%;
+  grid-template-columns: auto auto 2fr auto auto auto auto;
+}
+.crew-body .background-destination-mobile {
+  height: auto;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+}
+.crew-body * {
+  z-index: 1;
+  grid-column: 2/3;
+}
+.crew-body .nav-bar {
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: row;
+}
+.crew-body .nav-bar ul {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  padding: 3%;
+}
+.crew-body h3 {
+  grid-row: 2/3;
+  text-transform: uppercase;
+}
+
 .index-body {
   font-family: "Roboto", sans-serif;
   height: 150vw;

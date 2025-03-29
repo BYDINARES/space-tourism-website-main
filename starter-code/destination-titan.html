@@ -11,36 +11,68 @@
       href="./assets/favicon-32x32.png"
     />
 
+    <link rel="stylesheet" href="../CSS/main.css" />
+
     <title>Frontend Mentor | Space tourism website</title>
   </head>
-  <body>
-    <nav>
-      <ul>
-        <li><a href="index.html">00 Home</a></li>
-        <li><a href="Destination/destination-moon.html">01 Destination</a></li>
-        <li><a href="crew/crew-commander.html">02 Crew</a></li>
-        <li><a href="Technology/technology-vehicle.html">03 Technology</a></li>
-      </ul>
-    </nav>
+  <body class="destination-body">
+    <img
+      class="background-destination-mobile"
+      src="../starter-code\assets\destination\background-destination-mobile.jpg"
+      transfonter.org-20250325-095348
+      alt="The empty space with stars"
+    />
+    <div class="nav-bar">
+      <img
+        class="dimond"
+        src="../starter-code\assets\shared\logo.svg"
+        alt="A dimond"
+      />
 
-    <h2>01 PICK YOUR DESTINATION</h2>
+      <!-- <button class="toggle-menu">
+        <img
+          src="../starter-code\assets\shared\icon-hamburger.svg"
+          alt="A toggle menu"
+        />
+      </button> -->
+      <nav>
+        <ul>
+          <li><a href="index.html">00 Home</a></li>
+          <li><a href="destination-moon.html">01 Destination</a></li>
+          <li><a href="crew-commander.html">02 Crew</a></li>
+          <li><a href="technology-vehicle.html">03 Technology</a></li>
+        </ul>
+      </nav>
+    </div>
 
-    <button><a href="destination-moon.html">Moon</a></button>
-    <button><a href="destination-mars.html">Mars</a></button>
-    <button><a href="destination-europa.html">Europa</a></button>
-    <button><a href="destination-titan.html">Titan</a></button>
+    <h2 class="sub-title">01 PICK YOUR DESTINATION</h2>
+
+    <img
+      class="planet"
+      src="../starter-code/assets/destination/image-titan.png"
+      alt="Titan"
+    />
+    <div class="the-planet-options">
+      <a href="destination-moon.html">Moon</a>
+      <a href="destination-mars.html">Mars</a>
+      <a href="destination-europa.html">Europa</a>
+      <a href="destination-titan.html">Titan</a>
+    </div>
 
     <h1>Titan</h1>
 
-    <p>
+    <p class="plain-text">
       The only moon known to have a dense atmosphere other than Earth, Titan is
       a home away from home (just a few hundred degrees colder!). As a bonus,
       you get striking views of the Rings of Saturn.
     </p>
-    <p>Avg. distance</p>
-    <p>1.6 bil. km</p>
 
-    <p>Est. travel time</p>
-    <p>7 years</p>
+    <div class="travel-mesuraments">
+      <p class="distance">Avg. distance</p>
+      <p>1.6 bil. km</p>
+
+      <p class="travel-time">Est. travel time</p>
+      <p>7 years</p>
+    </div>
   </body>
 </html>
