@@ -40,6 +40,9 @@
   height: fit-content;
   width: fit-content;
 }
+.destination-body .sub-title a {
+  color: rgba(240, 248, 255, 0.516);
+}
 .destination-body .planet {
   grid-row: 3/4;
   height: 100%;
@@ -161,12 +164,14 @@
 }
 .crew-body {
   display: grid;
-  height: 150vw;
+  height: 170vw;
   width: 100vw;
   margin: 0%;
   color: aliceblue;
   grid-template-columns: 5% 1fr 5%;
-  grid-template-columns: auto auto 2fr auto auto auto auto;
+  grid-template-rows: auto auto 3fr auto auto auto auto;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
 }
 .crew-body .background-destination-mobile {
   height: auto;
@@ -174,9 +179,10 @@
   position: absolute;
   z-index: 0;
 }
-.crew-body * {
+.crew-body *:not(.nav-bar) {
   z-index: 1;
   grid-column: 2/3;
+  justify-self: center;
 }
 .crew-body .nav-bar {
   grid-row: 1/2;
@@ -192,6 +198,33 @@
 .crew-body h3 {
   grid-row: 2/3;
   text-transform: uppercase;
+}
+.crew-body .crew-member {
+  grid-row: 3/4;
+  height: 90%;
+  width: 60%;
+}
+.crew-body h2 {
+  grid-row: 4/5;
+  margin: 2%;
+  color: rgba(240, 248, 255, 0.702);
+  font-weight: 300;
+}
+.crew-body h1 {
+  grid-row: 5/6;
+  margin-top: 0%;
+}
+.crew-body .plain-text {
+  grid-row: 6/7;
+  text-align: center;
+  color: rgba(240, 248, 255, 0.756);
+}
+.crew-body > ul {
+  grid-row: 7;
+  display: flex;
+  flex-direction: row;
+  padding: 0%;
+  margin-top: 0%;
 }
 
 .index-body {
