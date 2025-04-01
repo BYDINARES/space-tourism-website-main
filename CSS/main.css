@@ -1,11 +1,12 @@
+@charset "UTF-8";
 .destination-body {
   font-family: "Roboto", sans-serif;
-  height: 182vw;
+  height: 200vw;
   width: 100vw;
   margin: 0%;
   display: grid;
   grid-template-columns: 5% 1fr 5%;
-  grid-template-rows: auto auto 28% auto auto auto;
+  grid-template-rows: auto auto 30% auto auto auto;
   justify-items: center;
   align-items: center;
   color: aliceblue;
@@ -16,7 +17,7 @@
   position: absolute;
   z-index: 0;
 }
-.destination-body * {
+.destination-body *:not(.background-destination-mobile) {
   grid-column: 2/3;
   z-index: 1;
 }
@@ -34,11 +35,12 @@
   position: absolute;
 }
 .destination-body .sub-title {
-  align-items: center;
   grid-column: 2/3;
   z-index: 1;
   height: fit-content;
   width: fit-content;
+  text-align: center;
+  font-size: 1.3rem;
 }
 .destination-body .sub-title a {
   color: rgba(240, 248, 255, 0.516);
@@ -46,12 +48,11 @@
 .destination-body .planet {
   grid-row: 3/4;
   height: 100%;
-  width: 50%;
+  width: 60%;
 }
 .destination-body .the-planet-options {
   grid-row: 4/5;
   margin: 5%;
-  margin-top: 10%;
 }
 .destination-body h1 {
   grid-row: 5/6;
@@ -88,6 +89,9 @@
 }
 .destination-body .travel-mesuraments .travel-time {
   margin: 0%;
+}
+.destination-body .travel-mesuraments p {
+  margin-bottom: 0%;
 }
 
 /* roboto-100 - latin */
@@ -193,11 +197,15 @@
   display: flex;
   flex-direction: row;
   position: absolute;
-  padding: 3%;
+  margin: 0%;
+  padding: 0%;
 }
 .crew-body h3 {
   grid-row: 2/3;
   text-transform: uppercase;
+}
+.crew-body h3 a {
+  color: rgba(240, 248, 255, 0.516);
 }
 .crew-body .crew-member {
   grid-row: 3/4;
@@ -228,7 +236,7 @@
 }
 
 .technology-body {
-  height: 190vw;
+  height: 189vw;
   width: 100vw;
   display: grid;
   grid-template-rows: auto auto 1fr auto auto auto auto;
@@ -262,6 +270,9 @@
   grid-row: 2/3;
   margin: 10%;
 }
+.technology-body h2 a {
+  color: rgba(240, 248, 255, 0.504);
+}
 .technology-body .main-image {
   grid-row: 3/4;
   grid-column: 1/4;
@@ -294,6 +305,10 @@
   display: grid;
   grid-template-columns: 5% 1fr 5%;
   grid-template-rows: 2fr 1fr 3fr 3fr 1fr 3.5fr;
+  background-image: url("../starter-code\assetshome஬kground-home-mobile.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .index-body > * {
   z-index: 1;
@@ -302,8 +317,8 @@
 }
 .index-body .the-background {
   position: absolute;
+  background-size: cover;
   z-index: 0;
-  height: auto;
   width: 100vw;
 }
 .index-body > nav {
@@ -326,13 +341,15 @@
   grid-row: 3/4;
   font-size: 5rem;
   justify-self: center;
+  align-self: center;
   margin: 0%;
 }
 .index-body .plain-text {
   grid-row: 4/5;
   justify-self: center;
-  font-size: 1.3rem;
-  filter: brightness(0.9);
+  font-size: 1rem;
+  text-align: center;
+  color: rgba(240, 248, 255, 0.761);
 }
 .index-body .explore {
   grid-row: 6;
