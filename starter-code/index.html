@@ -21,20 +21,20 @@
       src="../starter-code\assets\home\background-home-mobile.jpg"
       alt="The planet earth from outside"
     />
-
-    <img
-      class="dimond"
-      src="../starter-code\assets\shared\logo.svg"
-      alt="A dimond"
-    />
-    <!-- <button class="toggle-menu">
+    <nav class="nav-bar">
       <img
-        src="../starter-code\assets\shared\icon-hamburger.svg"
-        alt="A toggle menu"
+        class="dimond"
+        src="../starter-code\assets\shared\logo.svg"
+        alt="A dimond"
       />
-    </button> -->
-    <nav>
-      <ul>
+      <button class="button-menu" onclick="toggleMenu()">
+        <img
+          src="../starter-code\assets\shared\icon-hamburger.svg"
+          alt="A toggle menu"
+        />
+      </button>
+
+      <ul class="nav-links">
         <li><a href="index.html">00 Home</a></li>
         <li><a href="destination-moon.html">01 Destination</a></li>
         <li><a href="crew-commander.html">02 Crew</a></li>
@@ -50,5 +50,7 @@
       relax because we’ll give you a truly out of this world experience!
     </p>
     <button class="explore"><a href="destination-moon.html">Explore</a></button>
+
+    <script src="../JS/script.js"></script>
   </body>
 </html>
