@@ -320,6 +320,7 @@
   grid-row: 1/2;
   grid-column: 2/3;
   display: flex;
+  z-index: 3;
 }
 .index-body .nav-bar .dimond {
   grid-row: 1/2;
@@ -331,26 +332,27 @@
 .index-body .nav-bar .nav-links {
   list-style: none;
   visibility: hidden;
-  position: absolute;
+  position: fixed;
   right: 0;
-  background: black;
   width: 50%;
   padding: 0%;
   text-align: center;
+  background: black;
   border-radius: 10px;
-  z-index: 3;
+  z-index: 2;
   /* Show menu when active */
   /* Slide effect */
 }
-.index-body .nav-bar .nav-links .nav-links li {
+.index-body .nav-bar .nav-links li {
   padding: 15px;
+  list-style: none;
 }
-.index-body .nav-bar .nav-links .nav-links a {
+.index-body .nav-bar .nav-links li a {
   color: white;
   text-decoration: none;
   display: block;
 }
-.index-body .nav-bar .nav-links .nav-links.active {
+.index-body .nav-bar .nav-links .active {
   visibility: visible;
   animation: slideIn 0.3s ease-in-out;
 }
