@@ -46,17 +46,17 @@
       list-style: none;
       visibility: hidden;
       position: fixed;
+      height: 100vh;
       right: 0;
       width: 50%;
       padding: 0%;
       //style
       text-align: center;
       background: black;
-      border-radius: 10px;
       z-index: 2;
 
       li {
-        padding: 15px;
+        padding: 15%;
         list-style: none;
         a {
           color: white;
@@ -66,9 +66,14 @@
       }
 
       /* Show menu when active */
-      .active {
+      &.active {
         visibility: visible;
         animation: slideIn 0.3s ease-in-out;
+      }
+
+      &.not-active {
+        visibility: visible;
+        animation: slideOut 0.3s ease-in-out;
       }
 
       /* Slide effect */
@@ -79,6 +84,16 @@
         }
         to {
           transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      @keyframes slideOut {
+        from {
+          transform: translateX(0);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(20);
           opacity: 1;
         }
       }
