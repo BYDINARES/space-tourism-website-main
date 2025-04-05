@@ -17,33 +17,41 @@
   </head>
   <body class="destination-body">
     <img
-      class="background-destination-mobile"
-      src="../starter-code\assets\destination\background-destination-mobile.jpg"
-      transfonter.org-20250325-095348
-      alt="The empty space with stars"
+      class="the-background"
+      src="../starter-code/assets/destination/background-destination-mobile.jpg"
+      alt="The planet earth from outside"
     />
-    <div class="nav-bar">
+    <nav class="nav-bar">
       <img
         class="dimond"
         src="../starter-code\assets\shared\logo.svg"
         alt="A dimond"
       />
 
-      <!-- <button class="toggle-menu">
+      <button class="button-menu" onclick="toggleMenu()">
         <img
-          src="../starter-code\assets\shared\icon-hamburger.svg"
+          src="../starter-code/assets/shared/icon-hamburger.svg"
           alt="A toggle menu"
         />
-      </button> -->
-      <nav>
-        <ul>
-          <li><a href="index.html">00 Home</a></li>
-          <li><a href="destination-moon.html">01 Destination</a></li>
-          <li><a href="crew-commander.html">02 Crew</a></li>
-          <li><a href="technology-vehicle.html">03 Technology</a></li>
-        </ul>
-      </nav>
-    </div>
+      </button>
+
+      <ul class="nav-links">
+        <li>
+          <a class="pages-links" href="index.html">00 Home</a>
+        </li>
+        <li>
+          <a class="pages-links" href="destination-moon.html">01 Destination</a>
+        </li>
+        <li>
+          <a class="pages-links" href="crew-commander.html">02 Crew</a>
+        </li>
+        <li>
+          <a class="pages-links" href="technology-vehicle.html"
+            >03 Technology</a
+          >
+        </li>
+      </ul>
+    </nav>
 
     <h2 class="sub-title"><a>01</a> PICK YOUR DESTINATION</h2>
 
@@ -74,5 +82,7 @@
       <p class="travel-time">Est. travel time</p>
       <p>7 years</p>
     </div>
+
+    <script src="/JS/script.js"></script>
   </body>
 </html>

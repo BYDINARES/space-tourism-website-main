@@ -11,14 +11,15 @@
   //style
   color: aliceblue;
 
-  .background-destination-mobile {
-    height: auto;
+  .the-background {
+    height: 200vw;
     width: 100%;
     position: absolute;
     z-index: 0;
   }
+
   //everything after the background
-  *:not(.background-destination-mobile) {
+  *:not(.the-background) {
     grid-column: 2/3;
     z-index: 1;
   }
@@ -26,15 +27,79 @@
   //1
   .nav-bar {
     grid-row: 1/2;
-    height: fit-content;
-    flex-direction: row;
-    nav ul {
-      display: flex;
-      flex-direction: row;
-      gap: 10px;
-    }
+    grid-column: 2/3;
+    display: flex;
+    z-index: 3;
+    width: 100%;
+    margin-top: 2%;
+
     .dimond {
-      position: absolute;
+      grid-row: 1/2;
+    }
+
+    //The hamburger one
+    .button-menu {
+      cursor: pointer;
+      margin-left: auto;
+      width: 12%;
+    }
+
+    //the whole nav bar
+    .nav-links {
+      list-style: none;
+      visibility: hidden;
+      position: fixed;
+      height: 100vh;
+      right: 0;
+      width: 50%;
+      padding: 0%;
+      //style
+      text-align: center;
+      background: black;
+      z-index: 2;
+
+      li {
+        padding: 15%;
+        list-style: none;
+        a {
+          color: white;
+          text-decoration: none;
+          display: block;
+        }
+      }
+
+      /* Show menu when active */
+      &.active {
+        visibility: visible;
+        animation: slideIn 0.3s ease-in-out;
+      }
+
+      &.not-active {
+        visibility: visible;
+        animation: slideOut 0.3s ease-in-out;
+      }
+
+      /* Slide effect */
+      @keyframes slideIn {
+        from {
+          transform: translateY(-20px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      @keyframes slideOut {
+        from {
+          transform: translateX(0);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(20px);
+          opacity: 1;
+        }
+      }
     }
   }
 
@@ -46,6 +111,7 @@
     width: fit-content;
     text-align: center;
     font-size: 1.3rem;
+    margin: 5%;
     a {
       color: rgba(240, 248, 255, 0.516);
     }

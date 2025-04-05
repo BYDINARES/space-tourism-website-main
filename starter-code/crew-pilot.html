@@ -22,28 +22,37 @@
       transfonter.org-20250325-095348
       alt="The empty space with stars"
     />
-    <div class="nav-bar">
+    <nav class="nav-bar">
       <img
         class="dimond"
         src="../starter-code\assets\shared\logo.svg"
         alt="A dimond"
       />
-      <!-- <button class="toggle-menu">
+
+      <button class="button-menu" onclick="toggleMenu()">
         <img
-          src="../starter-code\assets\shared\icon-hamburger.svg"
+          src="../starter-code/assets/shared/icon-hamburger.svg"
           alt="A toggle menu"
         />
-      </button> -->
+      </button>
 
-      <nav>
-        <ul>
-          <li><a href="index.html">00 Home</a></li>
-          <li><a href="destination-moon.html">01 Destination</a></li>
-          <li><a href="crew-commander.html">02 Crew</a></li>
-          <li><a href="technology-vehicle.html">03 Technology</a></li>
-        </ul>
-      </nav>
-    </div>
+      <ul class="nav-links">
+        <li>
+          <a class="pages-links" href="index.html">00 Home</a>
+        </li>
+        <li>
+          <a class="pages-links" href="destination-moon.html">01 Destination</a>
+        </li>
+        <li>
+          <a class="pages-links" href="crew-commander.html">02 Crew</a>
+        </li>
+        <li>
+          <a class="pages-links" href="technology-vehicle.html"
+            >03 Technology</a
+          >
+        </li>
+      </ul>
+    </nav>
 
     <h3><a>02</a> Meet your crew</h3>
 
@@ -69,5 +78,7 @@
       <li><a href="crew-pilot.html">Pilot</a></li>
       <li><a href="crew-specialist.html">Specialist</a></li>
     </ul>
+
+    <script src="/JS/script.js"></script>
   </body>
 </html>

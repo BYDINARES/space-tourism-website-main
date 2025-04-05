@@ -21,28 +21,37 @@
       src="/starter-code/assets/technology/background-technology-mobile.jpg"
     />
 
-    <div class="nav-bar">
+    <nav class="nav-bar">
       <img
         class="dimond"
-        src="/starter-code/assets/shared/logo.svg"
+        src="../starter-code\assets\shared\logo.svg"
         alt="A dimond"
       />
-      <!-- <button class="toggle-menu">
+
+      <button class="button-menu" onclick="toggleMenu()">
         <img
-          src="../starter-code\assets\shared\icon-hamburger.svg"
+          src="../starter-code/assets/shared/icon-hamburger.svg"
           alt="A toggle menu"
         />
-      </button> -->
+      </button>
 
-      <nav>
-        <ul>
-          <li><a href="index.html">00 Home</a></li>
-          <li><a href="destination-moon.html">01 Destination</a></li>
-          <li><a href="crew-commander.html">02 Crew</a></li>
-          <li><a href="technology-vehicle.html">03 Technology</a></li>
-        </ul>
-      </nav>
-    </div>
+      <ul class="nav-links">
+        <li>
+          <a class="pages-links" href="index.html">00 Home</a>
+        </li>
+        <li>
+          <a class="pages-links" href="destination-moon.html">01 Destination</a>
+        </li>
+        <li>
+          <a class="pages-links" href="crew-commander.html">02 Crew</a>
+        </li>
+        <li>
+          <a class="pages-links" href="technology-vehicle.html"
+            >03 Technology</a
+          >
+        </li>
+      </ul>
+    </nav>
 
     <h2><a>03</a> Space launch 101</h2>
 
@@ -67,5 +76,7 @@
       capsule is where you'll spend your time during the flight. It includes a
       space gym, cinema, and plenty of other activities to keep you entertained.
     </p>
+
+    <script src="/JS/script.js"></script>
   </body>
 </html>
