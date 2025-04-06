@@ -31,10 +31,10 @@
     display: flex;
     z-index: 3;
     width: 100%;
-    margin-top: 2%;
 
     .dimond {
       grid-row: 1/2;
+      margin-top: 2%;
     }
 
     //The hamburger one
@@ -42,6 +42,7 @@
       cursor: pointer;
       margin-left: auto;
       width: 12%;
+      margin-top: 2%;
     }
 
     //the whole nav bar

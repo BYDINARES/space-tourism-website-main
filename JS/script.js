@@ -1,3 +1,5 @@
+//================== General functions ==============================
+
 let menu = document.querySelector(".nav-links");
 function toggleMenu() {
   menu.classList.toggle("active");
@@ -15,10 +17,16 @@ function closeMenuOnClickOutside(event) {
   // Check if the click is NOT inside the menu or the hamburger button
   if (!menu.contains(event.target) && !button.contains(event.target)) {
     menu.classList.remove("active");
-    /* menu.classList.add("not-active"); */ //============================ I nedd to put a counter here!!!!!
+    menu.classList.add("not-active");
+    setTimeout(() => {
+      menu.classList.remove("not-active");
+    }, 200);
+    //============================ I nedd to put a counter here!!!!!
     document.removeEventListener("click", closeMenuOnClickOutside);
   }
 }
 
 // Optional: mobile touch support (in case of touch events)
 document.addEventListener("touchstart", closeMenuOnClickOutside);
+
+//========================= Destination only ==========================
