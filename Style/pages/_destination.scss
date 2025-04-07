@@ -19,13 +19,13 @@
   }
 
   //everything after the background
-  *:not(.the-background) {
+  *:not(.the-background, .nav-bar) {
     grid-column: 2/3;
     z-index: 1;
   }
 
   //1
-  .nav-bar {
+  /* .nav-bar {
     grid-row: 1/2;
     grid-column: 2/3;
     display: flex;
@@ -70,7 +70,6 @@
         }
       }
 
-      /* Show menu when active */
       &.active {
         visibility: visible;
         animation: slideIn 0.3s ease-in-out;
@@ -81,7 +80,6 @@
         animation: slideOut 0.3s ease-in-out;
       }
 
-      /* Slide effect */
       @keyframes slideIn {
         from {
           transform: translateY(-20px);
@@ -103,7 +101,7 @@
         }
       }
     }
-  }
+  } */
 
   //2
   .sub-title {

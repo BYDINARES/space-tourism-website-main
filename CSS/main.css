@@ -9,6 +9,83 @@
   justify-items: center;
   align-items: center;
   color: aliceblue;
+  /* .nav-bar {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    display: flex;
+    z-index: 3;
+    width: 100%;
+
+    .dimond {
+      grid-row: 1/2;
+      margin-top: 2%;
+    }
+
+    //The hamburger one
+    .button-menu {
+      cursor: pointer;
+      margin-left: auto;
+      width: 12%;
+      margin-top: 2%;
+    }
+
+    //the whole nav bar
+    .nav-links {
+      list-style: none;
+      visibility: hidden;
+      position: fixed;
+      height: 100vh;
+      right: 0;
+      width: 50%;
+      padding: 0%;
+      margin: 0%;
+      //style
+      text-align: center;
+      background: black;
+      z-index: 2;
+
+      li {
+        padding: 15%;
+        list-style: none;
+        a {
+          color: white;
+          text-decoration: none;
+          display: block;
+        }
+      }
+
+      &.active {
+        visibility: visible;
+        animation: slideIn 0.3s ease-in-out;
+      }
+
+      &.not-active {
+        visibility: visible;
+        animation: slideOut 0.3s ease-in-out;
+      }
+
+      @keyframes slideIn {
+        from {
+          transform: translateY(-20px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      @keyframes slideOut {
+        from {
+          transform: translateX(0);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(20px);
+          opacity: 1;
+        }
+      }
+    }
+  } */
 }
 .destination-body .the-background {
   height: 200vw;
@@ -16,78 +93,9 @@
   position: absolute;
   z-index: 0;
 }
-.destination-body *:not(.the-background) {
+.destination-body *:not(.the-background, .nav-bar) {
   grid-column: 2/3;
   z-index: 1;
-}
-.destination-body .nav-bar {
-  grid-row: 1/2;
-  grid-column: 2/3;
-  display: flex;
-  z-index: 3;
-  width: 100%;
-}
-.destination-body .nav-bar .dimond {
-  grid-row: 1/2;
-  margin-top: 2%;
-}
-.destination-body .nav-bar .button-menu {
-  cursor: pointer;
-  margin-left: auto;
-  width: 12%;
-  margin-top: 2%;
-}
-.destination-body .nav-bar .nav-links {
-  list-style: none;
-  visibility: hidden;
-  position: fixed;
-  height: 100vh;
-  right: 0;
-  width: 50%;
-  padding: 0%;
-  margin: 0%;
-  text-align: center;
-  background: black;
-  z-index: 2;
-  /* Show menu when active */
-  /* Slide effect */
-}
-.destination-body .nav-bar .nav-links li {
-  padding: 15%;
-  list-style: none;
-}
-.destination-body .nav-bar .nav-links li a {
-  color: white;
-  text-decoration: none;
-  display: block;
-}
-.destination-body .nav-bar .nav-links.active {
-  visibility: visible;
-  animation: slideIn 0.3s ease-in-out;
-}
-.destination-body .nav-bar .nav-links.not-active {
-  visibility: visible;
-  animation: slideOut 0.3s ease-in-out;
-}
-@keyframes slideIn {
-  from {
-    transform: translateY(-20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes slideOut {
-  from {
-    transform: translateX(0);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(20px);
-    opacity: 1;
-  }
 }
 .destination-body .sub-title {
   grid-column: 2/3;
@@ -244,75 +252,6 @@
   grid-column: 2/3;
   justify-self: center;
 }
-.crew-body .nav-bar {
-  grid-row: 1/2;
-  grid-column: 2/3;
-  display: flex;
-  z-index: 3;
-  width: 100%;
-}
-.crew-body .nav-bar .dimond {
-  grid-row: 1/2;
-  margin-top: 2%;
-}
-.crew-body .nav-bar .button-menu {
-  cursor: pointer;
-  margin-left: auto;
-  width: 12%;
-  margin-top: 2%;
-}
-.crew-body .nav-bar .nav-links {
-  list-style: none;
-  visibility: hidden;
-  position: fixed;
-  height: 100vh;
-  right: 0;
-  width: 50%;
-  padding: 0%;
-  margin: 0%;
-  text-align: center;
-  background: black;
-  z-index: 2;
-  /* Show menu when active */
-  /* Slide effect */
-}
-.crew-body .nav-bar .nav-links li {
-  padding: 15%;
-  list-style: none;
-}
-.crew-body .nav-bar .nav-links li a {
-  color: white;
-  text-decoration: none;
-  display: block;
-}
-.crew-body .nav-bar .nav-links.active {
-  visibility: visible;
-  animation: slideIn 0.3s ease-in-out;
-}
-.crew-body .nav-bar .nav-links.not-active {
-  visibility: visible;
-  animation: slideOut 0.3s ease-in-out;
-}
-@keyframes slideIn {
-  from {
-    transform: translateY(-20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes slideOut {
-  from {
-    transform: translateX(0);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(20px);
-    opacity: 1;
-  }
-}
 .crew-body h3 {
   grid-row: 2/3;
   text-transform: uppercase;
@@ -365,78 +304,9 @@
   width: 100%;
   z-index: 0;
 }
-.technology-body *:not(.background-technology-mobile) {
+.technology-body *:not(.background-technology-mobile, .nav-bar) {
   z-index: 1;
   grid-column: 2/3;
-}
-.technology-body .nav-bar {
-  grid-row: 1/2;
-  grid-column: 2/3;
-  display: flex;
-  z-index: 3;
-  width: 100%;
-}
-.technology-body .nav-bar .dimond {
-  grid-row: 1/2;
-  margin-top: 2%;
-}
-.technology-body .nav-bar .button-menu {
-  cursor: pointer;
-  margin-left: auto;
-  width: 12%;
-  margin-top: 2%;
-}
-.technology-body .nav-bar .nav-links {
-  list-style: none;
-  visibility: hidden;
-  position: fixed;
-  height: 100vh;
-  right: 0;
-  width: 50%;
-  padding: 0%;
-  margin: 0%;
-  text-align: center;
-  background: black;
-  z-index: 2;
-  /* Show menu when active */
-  /* Slide effect */
-}
-.technology-body .nav-bar .nav-links li {
-  padding: 15%;
-  list-style: none;
-}
-.technology-body .nav-bar .nav-links li a {
-  color: white;
-  text-decoration: none;
-  display: block;
-}
-.technology-body .nav-bar .nav-links.active {
-  visibility: visible;
-  animation: slideIn 0.3s ease-in-out;
-}
-.technology-body .nav-bar .nav-links.not-active {
-  visibility: visible;
-  animation: slideOut 0.3s ease-in-out;
-}
-@keyframes slideIn {
-  from {
-    transform: translateY(-20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes slideOut {
-  from {
-    transform: translateX(0);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(20px);
-    opacity: 1;
-  }
 }
 .technology-body h2 {
   grid-row: 2/3;
@@ -469,43 +339,24 @@
   text-align: center;
 }
 
-.index-body {
-  font-family: "Roboto", sans-serif;
-  height: 150vw;
-  width: 100vw;
-  margin: 0%;
-  display: grid;
-  grid-template-columns: 5% 1fr 5%;
-  grid-template-rows: 1fr 1fr 3fr 3fr 1fr 3.5fr;
-}
-.index-body > * {
-  z-index: 1;
-  grid-column: 2/3;
-  color: aliceblue;
-}
-.index-body .the-background {
-  position: absolute;
-  background-size: cover;
-  z-index: 0;
-  width: 100vw;
-}
-.index-body .nav-bar {
+.nav-bar {
   grid-row: 1/2;
   grid-column: 2/3;
   display: flex;
   z-index: 3;
+  width: 100%;
 }
-.index-body .nav-bar .dimond {
+.nav-bar .dimond {
   grid-row: 1/2;
   margin-top: 2%;
 }
-.index-body .nav-bar .button-menu {
+.nav-bar .button-menu {
   cursor: pointer;
   margin-left: auto;
   width: 12%;
   margin-top: 2%;
 }
-.index-body .nav-bar .nav-links {
+.nav-bar .nav-links {
   list-style: none;
   visibility: hidden;
   position: fixed;
@@ -520,20 +371,20 @@
   /* Show menu when active */
   /* Slide effect */
 }
-.index-body .nav-bar .nav-links li {
+.nav-bar .nav-links li {
   padding: 15%;
   list-style: none;
 }
-.index-body .nav-bar .nav-links li a {
+.nav-bar .nav-links li a {
   color: white;
   text-decoration: none;
   display: block;
 }
-.index-body .nav-bar .nav-links.active {
+.nav-bar .nav-links.active {
   visibility: visible;
   animation: slideIn 0.3s ease-in-out;
 }
-.index-body .nav-bar .nav-links.not-active {
+.nav-bar .nav-links.not-active {
   visibility: visible;
   animation: slideOut 1s forwards;
 }
@@ -557,9 +408,31 @@
     opacity: 0;
   }
 }
+
+.index-body {
+  font-family: "Roboto", sans-serif;
+  height: 150vw;
+  width: 100vw;
+  margin: 0%;
+  display: grid;
+  grid-template-columns: 5% 1fr 5%;
+  grid-template-rows: 1fr 1fr 3fr 3fr 1fr 3.5fr;
+}
+.index-body > *:not(.nav-bar) {
+  z-index: 1;
+  grid-column: 2/3;
+  color: aliceblue;
+}
+.index-body .the-background {
+  position: absolute;
+  background-size: cover;
+  z-index: 0;
+  width: 100vw;
+}
 .index-body .sub-title {
   grid-row: 2/3;
   justify-self: center;
+  align-self: flex-end;
   margin-bottom: 0%;
 }
 .index-body .title {
@@ -580,6 +453,7 @@
   grid-row: 6;
   justify-self: center;
   height: 100%;
-  width: 40%;
+  width: 45%;
   border-radius: 50%;
+  color: black;
 }/*# sourceMappingURL=main.css.map */

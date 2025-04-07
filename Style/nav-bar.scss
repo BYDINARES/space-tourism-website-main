@@ -1,0 +1,80 @@
+//The navigation bar
+.nav-bar {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  display: flex;
+  z-index: 3;
+  width: 100%;
+
+  .dimond {
+    grid-row: 1/2;
+    margin-top: 2%;
+  }
+
+  //The hamburger one
+  .button-menu {
+    cursor: pointer;
+    margin-left: auto;
+    width: 12%;
+    margin-top: 2%;
+  }
+
+  //the whole nav bar
+  .nav-links {
+    list-style: none;
+    visibility: hidden;
+    position: fixed;
+    height: 100vh;
+    right: 0;
+    width: 50%;
+    padding: 0%;
+    margin: 0%;
+    //style
+    text-align: center;
+    background: black;
+    z-index: 2;
+
+    li {
+      padding: 15%;
+      list-style: none;
+      a {
+        color: white;
+        text-decoration: none;
+        display: block;
+      }
+    }
+
+    /* Show menu when active */
+    &.active {
+      visibility: visible;
+      animation: slideIn 0.3s ease-in-out;
+    }
+
+    &.not-active {
+      visibility: visible;
+      animation: slideOut 1s forwards;
+    }
+
+    /* Slide effect */
+    @keyframes slideIn {
+      from {
+        transform: translateY(-20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    @keyframes slideOut {
+      0% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+    }
+  }
+}
