@@ -131,6 +131,8 @@
   border-bottom: 2px solid white;
   margin-bottom: 0%;
   padding-bottom: 5%;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.723);
 }
 .destination-body .travel-mesuraments {
   grid-row: 7;
@@ -366,10 +368,10 @@
   padding: 0%;
   margin: 0%;
   text-align: center;
-  background: black;
+  background-color: rgba(0, 0, 0, 0.529);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* for Safari */
   z-index: 2;
-  /* Show menu when active */
-  /* Slide effect */
 }
 .nav-bar .nav-links li {
   padding: 15%;
@@ -380,18 +382,23 @@
   text-decoration: none;
   display: block;
 }
-.nav-bar .nav-links.active {
-  visibility: visible;
-  animation: slideIn 0.3s ease-in-out;
+
+/* Show menu when active */
+.nav-links {
+  /* Slide effect */
 }
-.nav-bar .nav-links.not-active {
+.nav-links.active {
   visibility: visible;
-  animation: slideOut 1s forwards;
+  animation: slideIn 0.3s ease;
+}
+.nav-links.not-active {
+  visibility: visible;
+  animation: slideOut 1s ease;
 }
 @keyframes slideIn {
   from {
-    transform: translateY(-20px);
-    opacity: 0;
+    transform: translateY(-5%);
+    opacity: 0.2;
   }
   to {
     transform: translateY(0);
@@ -407,6 +414,60 @@
     transform: translateX(100%);
     opacity: 0;
   }
+}
+
+@keyframes palpitations {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.09);
+  }
+}
+.index-body .explore {
+  animation: palpitations 1s ease-in-out infinite alternate;
+}
+
+@keyframes slideFromTheLeft {
+  from {
+    transform: translateX(-100%) rotate(-45deg);
+    opacity: 0.5;
+  }
+  to {
+    transform: translateX(0px) rotate(0deg);
+    opacity: 1;
+  }
+}
+.destination-body .planet {
+  animation: slideFromTheLeft 1s ease;
+}
+
+@keyframes slideFromTheBottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0.2;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.crew-body .crew-member {
+  animation: slideFromTheBottom 1s ease;
+}
+
+@keyframes slideFromTheRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.technology-body .main-image {
+  animation: slideFromTheRight 1s ease;
 }
 
 .index-body {

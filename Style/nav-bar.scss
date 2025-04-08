@@ -31,7 +31,9 @@
     margin: 0%;
     //style
     text-align: center;
-    background: black;
+    background-color: rgba(0, 0, 0, 0.529);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* for Safari */
     z-index: 2;
 
     li {
@@ -41,39 +43,6 @@
         color: white;
         text-decoration: none;
         display: block;
-      }
-    }
-
-    /* Show menu when active */
-    &.active {
-      visibility: visible;
-      animation: slideIn 0.3s ease-in-out;
-    }
-
-    &.not-active {
-      visibility: visible;
-      animation: slideOut 1s forwards;
-    }
-
-    /* Slide effect */
-    @keyframes slideIn {
-      from {
-        transform: translateY(-20px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-    @keyframes slideOut {
-      0% {
-        transform: translateX(0);
-        opacity: 1;
-      }
-      100% {
-        transform: translateX(100%);
-        opacity: 0;
       }
     }
   }

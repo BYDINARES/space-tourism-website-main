@@ -1,17 +1,97 @@
-.destination-body {
-  @keyframes slideFromTheLeft {
-    form {
-      transform: translateX(-100%);
-      opacity: 0.5;
-      transform: rotate(45deg);
+/* Show menu when active */
+.nav-links {
+  &.active {
+    visibility: visible;
+    animation: slideIn 0.3s ease;
+  }
+
+  &.not-active {
+    visibility: visible;
+    animation: slideOut 1s ease;
+  }
+
+  /* Slide effect */
+  @keyframes slideIn {
+    from {
+      transform: translateY(-5%);
+      opacity: 0.2;
     }
     to {
-      transform: translateX(0px);
+      transform: translateY(0);
       opacity: 1;
-      transform: rotate(0deg);
+    }
+  }
+  @keyframes slideOut {
+    0% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+  }
+}
+
+.index-body {
+  @keyframes palpitations {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.09);
+    }
+  }
+  .explore {
+    animation: palpitations 1s ease-in-out infinite alternate;
+  }
+}
+
+.destination-body {
+  @keyframes slideFromTheLeft {
+    from {
+      transform: translateX(-100%) rotate(-45deg);
+      opacity: 0.5;
+    }
+    to {
+      transform: translateX(0px) rotate(0deg);
+      opacity: 1;
     }
   }
   .planet {
     animation: slideFromTheLeft 1s ease;
+  }
+}
+
+.crew-body {
+  @keyframes slideFromTheBottom {
+    from {
+      transform: translateY(100%);
+      opacity: 0.2;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .crew-member {
+    animation: slideFromTheBottom 1s ease;
+  }
+}
+
+.technology-body {
+  @keyframes slideFromTheRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  .main-image {
+    animation: slideFromTheRight 1s ease;
   }
 }
