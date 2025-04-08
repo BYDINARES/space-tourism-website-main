@@ -44,6 +44,10 @@
   }
   .explore {
     animation: palpitations 1s ease-in-out infinite alternate;
+
+    &:hover {
+      transform: scale(); //THis section is pending
+    }
   }
 }
 
