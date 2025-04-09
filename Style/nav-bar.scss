@@ -13,6 +13,7 @@
 
   //The hamburger one
   .button-menu {
+    all: unset;
     cursor: pointer;
     margin-left: auto;
     width: 12%;
@@ -35,6 +36,14 @@
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px); /* for Safari */
     z-index: 2;
+
+    button {
+      all: unset;
+      margin-top: 8%;
+      margin-left: 50%;
+      height: 4.5%;
+      cursor: pointer;
+    }
 
     li {
       padding: 15%;

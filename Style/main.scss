@@ -53,9 +53,10 @@
   .explore {
     grid-row: 6;
     justify-self: center;
-    height: 100%;
-    width: 45%;
+    height: 90%;
+    width: 40%;
     border-radius: 50%;
-    color: black;
+    color: rgba(0, 0, 0, 0.716);
+    font-size: 2rem;
   }
 }

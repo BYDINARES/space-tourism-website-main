@@ -353,6 +353,7 @@
   margin-top: 2%;
 }
 .nav-bar .button-menu {
+  all: unset;
   cursor: pointer;
   margin-left: auto;
   width: 12%;
@@ -372,6 +373,13 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px); /* for Safari */
   z-index: 2;
+}
+.nav-bar .nav-links button {
+  all: unset;
+  margin-top: 8%;
+  margin-left: 50%;
+  height: 4.5%;
+  cursor: pointer;
 }
 .nav-bar .nav-links li {
   padding: 15%;
@@ -426,6 +434,9 @@
 }
 .index-body .explore {
   animation: palpitations 1s ease-in-out infinite alternate;
+}
+.index-body .explore:hover {
+  transform: scale();
 }
 
 @keyframes slideFromTheLeft {
@@ -513,8 +524,9 @@
 .index-body .explore {
   grid-row: 6;
   justify-self: center;
-  height: 100%;
-  width: 45%;
+  height: 90%;
+  width: 40%;
   border-radius: 50%;
-  color: black;
+  color: rgba(0, 0, 0, 0.716);
+  font-size: 2rem;
 }/*# sourceMappingURL=main.css.map */

@@ -10,18 +10,22 @@ function toggleMenu() {
   }
 }
 
+//Adds the animation of the removal of the navbar
+function removeNavbar() {
+  menu.classList.remove("active");
+  menu.classList.add("not-active");
+  setTimeout(() => {
+    menu.classList.remove("not-active");
+  }, 200);
+}
+
 // Function to close menu if clicked outside
 function closeMenuOnClickOutside(event) {
   const button = document.querySelector(".button-menu");
 
   // Check if the click is NOT inside the menu or the hamburger button
   if (!menu.contains(event.target) && !button.contains(event.target)) {
-    menu.classList.remove("active");
-    menu.classList.add("not-active");
-    setTimeout(() => {
-      menu.classList.remove("not-active");
-    }, 200);
-    //============================ I nedd to put a counter here!!!!!
+    removeNavbar();
     document.removeEventListener("click", closeMenuOnClickOutside);
   }
 }
@@ -29,4 +33,8 @@ function closeMenuOnClickOutside(event) {
 // Optional: mobile touch support (in case of touch events)
 document.addEventListener("touchstart", closeMenuOnClickOutside);
 
-//========================= Destination only ==========================
+// Remove the navbar if the X button was clicked
+const X = document.querySelector(".X");
+X.addEventListener("click", () => {
+  removeNavbar();
+});
