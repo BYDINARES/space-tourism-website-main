@@ -1,6 +1,6 @@
 .destination-body {
   font-family: "Roboto", sans-serif;
-  height: 200vw;
+  height: 205vw;
   width: 100vw;
   margin: 0%;
   display: grid;
@@ -8,87 +8,11 @@
   grid-template-rows: auto auto 30% auto auto auto;
   justify-items: center;
   align-items: center;
+  position: relative;
   color: aliceblue;
-  /* .nav-bar {
-    grid-row: 1/2;
-    grid-column: 2/3;
-    display: flex;
-    z-index: 3;
-    width: 100%;
-
-    .dimond {
-      grid-row: 1/2;
-      margin-top: 2%;
-    }
-
-    //The hamburger one
-    .button-menu {
-      cursor: pointer;
-      margin-left: auto;
-      width: 12%;
-      margin-top: 2%;
-    }
-
-    //the whole nav bar
-    .nav-links {
-      list-style: none;
-      visibility: hidden;
-      position: fixed;
-      height: 100vh;
-      right: 0;
-      width: 50%;
-      padding: 0%;
-      margin: 0%;
-      //style
-      text-align: center;
-      background: black;
-      z-index: 2;
-
-      li {
-        padding: 15%;
-        list-style: none;
-        a {
-          color: white;
-          text-decoration: none;
-          display: block;
-        }
-      }
-
-      &.active {
-        visibility: visible;
-        animation: slideIn 0.3s ease-in-out;
-      }
-
-      &.not-active {
-        visibility: visible;
-        animation: slideOut 0.3s ease-in-out;
-      }
-
-      @keyframes slideIn {
-        from {
-          transform: translateY(-20px);
-          opacity: 0;
-        }
-        to {
-          transform: translateY(0);
-          opacity: 1;
-        }
-      }
-      @keyframes slideOut {
-        from {
-          transform: translateX(0);
-          opacity: 0;
-        }
-        to {
-          transform: translateX(20px);
-          opacity: 1;
-        }
-      }
-    }
-  } */
 }
 .destination-body .the-background {
-  height: 200vw;
+  height: 205vw;
   width: 100%;
   position: absolute;
   z-index: 0;
@@ -234,7 +158,7 @@
 }
 .crew-body {
   display: grid;
-  height: 170vw;
+  height: 200vw;
   width: 100vw;
   margin: 0%;
   color: aliceblue;
@@ -244,7 +168,7 @@
   font-family: "Roboto", sans-serif;
 }
 .crew-body .background-destination-mobile {
-  height: auto;
+  height: 200vw;
   width: 100%;
   position: absolute;
   z-index: 0;
@@ -290,7 +214,7 @@
 }
 
 .technology-body {
-  height: 189vw;
+  height: 200vw;
   width: 100vw;
   display: grid;
   grid-template-rows: auto auto 1fr auto auto auto auto;
@@ -302,7 +226,7 @@
 }
 .technology-body .background-technology-mobile {
   position: absolute;
-  height: auto;
+  height: 200vw;
   width: 100%;
   z-index: 0;
 }
@@ -350,21 +274,21 @@
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  margin-top: 10%;
 }
 .nav-bar .dimond {
   grid-row: 1/2;
-  height: fit-content;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 .nav-bar .button-menu {
   all: unset;
   margin-left: auto;
   cursor: pointer;
   width: 10%;
-  height: 100%;
+  height: fit-content;
   box-sizing: border-box;
-  padding-top: 5%;
-  padding-bottom: 5%;
+  margin-top: 10%;
+  margin-bottom: 10%;
 }
 .nav-bar .button-menu > div {
   display: flex;
@@ -372,7 +296,7 @@
   justify-content: space-between;
   height: 100%;
   width: 100%;
-  gap: 20%;
+  gap: 5px;
 }
 .nav-bar .button-menu > div span {
   height: 4px;
@@ -504,12 +428,12 @@
 
 .index-body {
   font-family: "Roboto", sans-serif;
-  height: 150vw;
+  height: 160vw;
   width: 100vw;
   margin: 0%;
   display: grid;
   grid-template-columns: 5% 1fr 5%;
-  grid-template-rows: 1fr 1fr 3fr 3fr 1fr 3.5fr;
+  grid-template-rows: 1fr 1fr 3fr 3fr 3.5fr;
 }
 .index-body > *:not(.nav-bar) {
   z-index: 1;
@@ -520,6 +444,7 @@
   position: absolute;
   background-size: cover;
   z-index: 0;
+  height: 200vw;
   width: 100vw;
 }
 .index-body .sub-title {
@@ -543,10 +468,10 @@
   color: rgba(240, 248, 255, 0.761);
 }
 .index-body .explore {
-  grid-row: 6;
+  grid-row: 5;
   justify-self: center;
   height: 90%;
-  width: 40%;
+  width: 45%;
   border-radius: 50%;
   color: rgba(0, 0, 0, 0.716);
   font-size: 2rem;

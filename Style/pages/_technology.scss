@@ -1,5 +1,5 @@
 .technology-body {
-  height: 189vw;
+  height: 200vw;
   width: 100vw;
   display: grid;
   grid-template-rows: auto auto 1fr auto auto auto auto;
@@ -12,7 +12,7 @@
 
   .background-technology-mobile {
     position: absolute;
-    height: auto;
+    height: 200vw;
     width: 100%;
     z-index: 0;
   }

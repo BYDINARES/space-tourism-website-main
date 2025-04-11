@@ -8,11 +8,11 @@
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  margin-top: 10%;
 
   .dimond {
     grid-row: 1/2;
-    height: fit-content;
+    margin-top: 5%;
+    margin-bottom: 5%;
   }
 
   //The hamburger one
@@ -21,10 +21,10 @@
     margin-left: auto;
     cursor: pointer;
     width: 10%;
-    height: 100%;
+    height: fit-content;
     box-sizing: border-box;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    margin-top: 10%;
+    margin-bottom: 10%;
 
     > div {
       display: flex;
@@ -32,7 +32,7 @@
       justify-content: space-between;
       height: 100%;
       width: 100%;
-      gap: 20%;
+      gap: 5px;
 
       span {
         height: 4px;
