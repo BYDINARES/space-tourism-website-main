@@ -1,4 +1,25 @@
 /* Show menu when active */
+.button-menu {
+  span {
+    transition: transform 0.5s ease;
+  }
+
+  &.active {
+    span:nth-child(1) {
+      transform: rotate(-40deg) rotateY(90deg);
+      transform-origin: right center;
+    }
+
+    span:nth-child(2) {
+      transform: rotate(-40deg) rotateY(-1deg);
+    }
+
+    span:nth-child(3) {
+      transform: rotate(40deg);
+    }
+  }
+}
+
 .nav-links {
   &.active {
     visibility: visible;
