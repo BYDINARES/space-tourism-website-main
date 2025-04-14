@@ -3,31 +3,46 @@
 const menu = document.querySelector(".nav-links");
 const hamburgerButton = document.querySelector(".button-menu");
 
+//The hamburger button center
+let timesClicked = 0;
+hamburgerButton.addEventListener("click", () => {
+  timesClicked++;
+  menu.classList.add("active");
+  hamburgerButton.classList.add("active");
+
+  if (timesClicked >= 2) {
+    hamburgerButton.classList.remove("active");
+    timesClicked = 0;
+    removeNavbar();
+  }
+
+  isFixed(hamburgerButton);
+});
+
 // The one which makes the hamburger button become fixed
 function isFixed(button) {
   if (button.classList.contains("active")) {
+    const rect = button.getBoundingClientRect(); // get current position
+
     button.style.position = "fixed";
+    button.style.top = rect.top + "px";
+    button.style.left = rect.left + "px";
+    button.style.width = rect.width + "px";
+    button.style.height = rect.height + "px";
   } else {
     button.style.position = "static";
+    button.style.top = "";
+    button.style.left = "";
+    button.style.width = "";
+    button.style.height = "";
   }
 }
 
 // The general function
 function toggleMenu() {
-  menu.classList.toggle("active");
-  hamburgerButton.classList.toggle("active");
-
-  isFixed(hamburgerButton);
+  menu.classList.add("active");
 
   // If menu is now active, add outside click listener
-  if (menu.classList.contains("active")) {
-    document.addEventListener("click", closeMenuOnClickOutside);
-  } else if (
-    !menu.classList.contains("active") ||
-    !hamburgerButton.classList.contains("active")
-  ) {
-    removeNavbar();
-  }
 }
 
 //Adds the animation of the removal of the navbar
@@ -42,9 +57,8 @@ function removeNavbar() {
 // Function to close menu if clicked outside
 function closeMenuOnClickOutside(event) {
   // Check if the click is NOT inside the menu or the hamburger button
-  if (!menu.contains(event.target) && !hamburgerButton.contains(event.target)) {
+  if (!menu.contains(event.target)) {
     removeNavbar();
-    hamburgerButton.classList.remove("active");
     document.removeEventListener("click", closeMenuOnClickOutside);
   }
 }

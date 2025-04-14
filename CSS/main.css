@@ -279,6 +279,7 @@
   grid-row: 1/2;
   margin-top: 5%;
   margin-bottom: 5%;
+  margin-right: auto;
 }
 .nav-bar .button-menu {
   all: unset;
