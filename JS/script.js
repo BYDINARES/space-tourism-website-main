@@ -1,67 +1,67 @@
-//================== General functions ==============================
+// ================== General functions ==============================
 
 const menu = document.querySelector(".nav-links");
 const hamburgerButton = document.querySelector(".button-menu");
 
-//The hamburger button center
-let timesClicked = 0;
-hamburgerButton.addEventListener("click", () => {
-  timesClicked++;
-  menu.classList.add("active");
-  hamburgerButton.classList.add("active");
+let isMenuOpen = false;
 
-  if (timesClicked >= 2) {
-    hamburgerButton.classList.remove("active");
-    timesClicked = 0;
-    removeNavbar();
+hamburgerButton.addEventListener("click", () => {
+  isMenuOpen = !isMenuOpen;
+
+  if (isMenuOpen) {
+    openMenu();
+  } else {
+    closeMenu();
   }
 
   isFixed(hamburgerButton);
 });
 
-// The one which makes the hamburger button become fixed
+// Fix the hamburger button when active
 function isFixed(button) {
   if (button.classList.contains("active")) {
-    const rect = button.getBoundingClientRect(); // get current position
-
     button.style.position = "fixed";
-    button.style.top = rect.top + "px";
-    button.style.left = rect.left + "px";
-    button.style.width = rect.width + "px";
-    button.style.height = rect.height + "px";
+    button.style.left = "85%";
+    button.style.marginLeft = "0%";
+    button.style.marginBottom = "0%";
   } else {
     button.style.position = "static";
     button.style.top = "";
     button.style.left = "";
     button.style.width = "";
     button.style.height = "";
+    button.style.marginLeft = "0%";
+    button.style.marginBottom = "0%";
   }
 }
 
-// The general function
-function toggleMenu() {
+function openMenu() {
   menu.classList.add("active");
-
-  // If menu is now active, add outside click listener
+  hamburgerButton.classList.add("active");
+  document.addEventListener("click", closeMenuOnClickOutside);
+  document.addEventListener("touchstart", closeMenuOnClickOutside);
 }
 
-//Adds the animation of the removal of the navbar
-function removeNavbar() {
+function closeMenu() {
+  hamburgerButton.classList.remove("active");
   menu.classList.remove("active");
   menu.classList.add("not-active");
+
+  // Remove fixed style
+  isFixed(hamburgerButton); // This will reset position
+  isMenuOpen = false;
+
   setTimeout(() => {
     menu.classList.remove("not-active");
   }, 200);
+
+  document.removeEventListener("click", closeMenuOnClickOutside);
+  document.removeEventListener("touchstart", closeMenuOnClickOutside);
 }
 
 // Function to close menu if clicked outside
 function closeMenuOnClickOutside(event) {
-  // Check if the click is NOT inside the menu or the hamburger button
-  if (!menu.contains(event.target)) {
-    removeNavbar();
-    document.removeEventListener("click", closeMenuOnClickOutside);
+  if (!menu.contains(event.target) && !hamburgerButton.contains(event.target)) {
+    closeMenu();
   }
 }
-
-// Optional: mobile touch support (in case of touch events)
-document.addEventListener("touchstart", closeMenuOnClickOutside);
