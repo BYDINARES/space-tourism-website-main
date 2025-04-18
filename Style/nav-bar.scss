@@ -78,3 +78,10 @@
     }
   }
 }
+
+@media screen and (min-width: 768px) {
+  .nav-bar {
+    grid-column: start / end;
+    grid-row: 1/2;
+  }
+}
