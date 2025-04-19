@@ -22,16 +22,12 @@ function isFixed(button) {
   if (button.classList.contains("active")) {
     button.style.position = "fixed";
     button.style.left = "85%";
-    button.style.marginLeft = "0%";
-    button.style.marginBottom = "0%";
   } else {
     button.style.position = "static";
     button.style.top = "";
     button.style.left = "";
     button.style.width = "";
-    button.style.height = "";
-    button.style.marginLeft = "0%";
-    button.style.marginBottom = "0%";
+    button.style.height = "40%";
   }
 }
 

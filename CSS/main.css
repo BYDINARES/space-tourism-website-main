@@ -269,7 +269,8 @@
   grid-row: 1/2;
   grid-column: 2/3;
   display: flex;
-  justify-content: center;
+  /* justify-content: space-between;
+  align-items: center; */
   z-index: 3;
   width: 100%;
   height: 100%;
@@ -286,7 +287,8 @@
   margin-left: auto;
   cursor: pointer;
   width: 10%;
-  height: fit-content;
+  height: 40%;
+  width: 8%;
   box-sizing: border-box;
   margin-top: 10.5%;
   margin-bottom: 10.5%;
@@ -337,8 +339,13 @@
 
 @media screen and (min-width: 768px) {
   .nav-bar {
-    grid-column: start/end;
-    grid-row: 1/2;
+    grid-area: nav;
+  }
+  .nav-bar .dimond {
+    margin: 0%;
+  }
+  .nav-bar .button-menu {
+    margin: 0%;
   }
 }
 /* Show menu when active */
@@ -497,20 +504,31 @@
 
 @media screen and (min-width: 768px) {
   .index-body {
-    height: 100vw;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 3% 1fr 1fr 3%;
+    grid-template-rows: 14% auto auto auto;
+    grid-template-areas: "empty-l nav nav empty-r" "empty-l sub-title empty empty-r" "empty-l title button empty-r" "empty-l text button empty-r";
   }
   .index-body .the-background {
-    height: 100vw;
-  }
-  .index-body *:not(.nav-bar) {
-    grid-row: 2;
+    height: 100%;
   }
   .index-body .sub-title {
-    grid-column: 1;
+    grid-area: sub-title;
   }
   .index-body .title {
-    grid-column: 1;
+    grid-area: title;
+  }
+  .index-body .plain-text {
+    grid-area: text;
+  }
+  .index-body .explore {
+    grid-area: button;
+  }
+  .index-body .empty-left {
+    grid-area: empty-l;
+  }
+  .index-body .empty-right {
+    grid-area: empty-r;
   }
 }/*# sourceMappingURL=main.css.map */
