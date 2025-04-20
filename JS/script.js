@@ -21,7 +21,10 @@ hamburgerButton.addEventListener("click", () => {
 function isFixed(button) {
   if (button.classList.contains("active")) {
     button.style.position = "fixed";
-    button.style.left = "85%";
+    button.style.left = "88%";
+    button.style.top = "3%";
+    button.style.width = "7%"; // set this explicitly
+    button.style.height = "3.4%";
   } else {
     button.style.position = "static";
     button.style.top = "";

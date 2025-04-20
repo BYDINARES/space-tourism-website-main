@@ -6,15 +6,15 @@
 
   &.active {
     span:nth-child(1) {
-      transform: rotateY(90deg);
+      transform: translate(1px, 7px) rotate(-40deg);
     }
 
     span:nth-child(2) {
-      transform: rotate(-40deg) rotateY(-1deg);
+      transform: translate(0px, 0px) rotateY(90deg);
     }
 
     span:nth-child(3) {
-      transform: rotate(40deg) translateY(-8px) translateX(-4px);
+      transform: translate(3.2px, -8px) rotate(40deg);
     }
   }
 }
