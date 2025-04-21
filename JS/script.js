@@ -64,3 +64,17 @@ function closeMenuOnClickOutside(event) {
     closeMenu();
   }
 }
+
+//_____________Responsive time__________________
+
+const homeBodyBackground = document.querySelector(
+  ".index-body .the-background"
+);
+
+if (window.innerWidth >= 768) {
+  bg.style.backgroundImage =
+    "url('starter-code/assets/home/background-home-tablet.jpg')";
+} else {
+  homeBodyBackground.src =
+    "starter-code/assets/home/background-home-mobile.jpg";
+}

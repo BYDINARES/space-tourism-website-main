@@ -90,7 +90,36 @@
       margin: 0%;
     }
     .button-menu {
+      visibility: hidden;
       margin: 0%;
+    }
+    .nav-links {
+      all: unset;
+      visibility: visible;
+      display: flex;
+      flex-direction: row;
+
+      width: 60%;
+
+      padding: 0%;
+      margin: 0%;
+      //style
+      list-style: none;
+      background-color: rgba(36, 35, 35, 0.529);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px); /* for Safari */
+      z-index: 2;
+
+      li {
+        padding: 5%;
+      }
+
+      li:nth-child(1) {
+        margin-top: 0%;
+      }
+      li:nth-child(4) {
+        padding-left: 10%;
+      }
     }
   }
 }
