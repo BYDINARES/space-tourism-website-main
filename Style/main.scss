@@ -23,6 +23,7 @@
   //The image in the background
   .the-background {
     position: absolute;
+    background-image: url("/starter-code/assets/home/background-home-mobile.jpg");
     background-size: cover;
     z-index: 0;
     height: 200vw;
@@ -76,7 +77,13 @@
       "empty-l text button empty-r";
 
     .the-background {
-      height: 100%;
+      height: 100vh;
+      width: 100vw;
+      background-image: url("/starter-code/assets/home/background-home-tablet.jpg");
+    }
+
+    .nav-bar {
+      grid-area: nav;
     }
 
     .sub-title {

@@ -14,6 +14,7 @@
 .destination-body .the-background {
   height: 208vw;
   width: 100%;
+  background-image: url("/starter-code/assets/destination/background-destination-mobile.jpg");
   position: absolute;
   z-index: 0;
 }
@@ -82,6 +83,52 @@
 }
 .destination-body .travel-mesuraments p {
   margin-bottom: 0%;
+}
+@media screen and (min-width: 768px) {
+  .destination-body {
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 3% 3fr 2fr 3%;
+    grid-template-rows: 14% auto auto auto auto auto;
+    grid-template-areas: "empty-l nav nav nav" "empty-l sub-title empty empty-r" "empty-l planet planetOp empty-r" "empty-l planet title empty-r" "empty-l planet text empty-r" "empty-l planet travelM empty-r";
+  }
+  .destination-body .the-background {
+    height: 100%;
+    background-image: url("/starter-code/assets/destination/background-destination-tablet.jpg");
+  }
+  .destination-body .nav-bar {
+    grid-area: nav;
+  }
+  .destination-body .sub-title {
+    grid-area: sub-title;
+    margin: 3%;
+  }
+  .destination-body .the-planet-options {
+    grid-area: planetOp;
+    height: fit-content;
+  }
+  .destination-body .planet {
+    grid-area: planet;
+    height: 70%;
+    width: 65%;
+  }
+  .destination-body h1 {
+    grid-area: title;
+    grid-column: 3/4;
+    grid-row: 4/5;
+  }
+  .destination-body .plain-text {
+    grid-area: text;
+  }
+  .destination-body .travel-mesuraments {
+    grid-area: travelM;
+  }
+  .destination-body .empty-left {
+    grid-area: empty-l;
+  }
+  .destination-body .empty-right {
+    grid-area: empty-r;
+  }
 }
 
 /* roboto-100 - latin */
@@ -339,9 +386,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  .nav-bar {
-    grid-area: nav;
-  }
   .nav-bar .dimond {
     margin: 0%;
   }
@@ -492,6 +536,7 @@
 }
 .index-body .the-background {
   position: absolute;
+  background-image: url("/starter-code/assets/home/background-home-mobile.jpg");
   background-size: cover;
   z-index: 0;
   height: 200vw;
@@ -536,7 +581,12 @@
     grid-template-areas: "empty-l nav nav empty-r" "empty-l sub-title empty empty-r" "empty-l title button empty-r" "empty-l text button empty-r";
   }
   .index-body .the-background {
-    height: 100%;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("/starter-code/assets/home/background-home-tablet.jpg");
+  }
+  .index-body .nav-bar {
+    grid-area: nav;
   }
   .index-body .sub-title {
     grid-area: sub-title;

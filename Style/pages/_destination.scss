@@ -14,6 +14,7 @@
   .the-background {
     height: 208vw;
     width: 100%;
+    background-image: url("/starter-code/assets/destination/background-destination-mobile.jpg");
     position: absolute;
     z-index: 0;
   }
@@ -98,6 +99,62 @@
     }
     p {
       margin-bottom: 0%;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 3% 3fr 2fr 3%;
+    grid-template-rows: 14% auto auto auto auto auto;
+    grid-template-areas:
+      "empty-l nav nav nav"
+      "empty-l sub-title empty empty-r"
+      "empty-l planet planetOp empty-r"
+      "empty-l planet title empty-r"
+      "empty-l planet text empty-r"
+      "empty-l planet travelM empty-r";
+
+    .the-background {
+      height: 100%;
+      background-image: url("/starter-code/assets/destination/background-destination-tablet.jpg");
+    } // ==== NEeds to be fixed.
+
+    .nav-bar {
+      grid-area: nav;
+    }
+
+    .sub-title {
+      grid-area: sub-title;
+      margin: 3%;
+    }
+    .the-planet-options {
+      grid-area: planetOp;
+      height: fit-content;
+    }
+    .planet {
+      grid-area: planet;
+      height: 70%;
+      width: 65%;
+    }
+    h1 {
+      grid-area: title;
+      grid-column: 3/4;
+      grid-row: 4/5;
+    }
+
+    .plain-text {
+      grid-area: text;
+    }
+    .travel-mesuraments {
+      grid-area: travelM;
+    }
+
+    .empty-left {
+      grid-area: empty-l;
+    }
+    .empty-right {
+      grid-area: empty-r;
     }
   }
 }
