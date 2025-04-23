@@ -93,8 +93,11 @@
     grid-template-areas: "empty-l nav nav nav" "empty-l sub-title empty empty-r" "empty-l planet planetOp empty-r" "empty-l planet title empty-r" "empty-l planet text empty-r" "empty-l planet travelM empty-r";
   }
   .destination-body .the-background {
-    height: 100%;
+    height: 100vh;
+    margin: 0%;
+    padding: 0%;
     background-image: url("/starter-code/assets/destination/background-destination-tablet.jpg");
+    background-size: cover;
   }
   .destination-body .nav-bar {
     grid-area: nav;
@@ -571,7 +574,20 @@
   color: rgba(0, 0, 0, 0.716);
   font-size: 2rem;
 }
-
+@media screen and (min-width: 576px) {
+  .index-body .the-background {
+    background-image: url("/starter-code/assets/home/background-home-tablet.jpg");
+  }
+  .index-body .sub-title {
+    font-size: 1.2rem;
+  }
+  .index-body .title {
+    font-size: 6rem;
+  }
+  .index-body .plain-text {
+    font-size: 1.5rem;
+  }
+}
 @media screen and (min-width: 768px) {
   .index-body {
     height: 100vh;
@@ -583,24 +599,33 @@
   .index-body .the-background {
     height: 100vh;
     width: 100vw;
-    background-image: url("/starter-code/assets/home/background-home-tablet.jpg");
+    background-image: url("/starter-code/assets/home/background-home-desktop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   .index-body .nav-bar {
     grid-area: nav;
   }
   .index-body .sub-title {
     grid-area: sub-title;
+    font-size: 1rem;
   }
   .index-body .title {
     grid-area: title;
+    font-size: 5rem;
   }
   .index-body .plain-text {
     grid-area: text;
+    box-sizing: border-box;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 1rem;
   }
   .index-body .explore {
     grid-area: button;
-    height: 60%;
-    width: 60%;
+    margin-top: 12%;
+    height: 50%;
+    width: 50%;
   }
   .index-body .empty-left {
     grid-area: empty-l;

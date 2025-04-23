@@ -62,10 +62,23 @@
     color: rgba(0, 0, 0, 0.716);
     font-size: 2rem;
   }
-}
 
-@media screen and (min-width: 768px) {
-  .index-body {
+  @media screen and (min-width: 576px) {
+    .the-background {
+      background-image: url("/starter-code/assets/home/background-home-tablet.jpg");
+    }
+    .sub-title {
+      font-size: 1.2rem;
+    }
+    .title {
+      font-size: 6rem;
+    }
+    .plain-text {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
     height: 100vh;
     width: 100vw;
     grid-template-columns: 3% 1fr 1fr 3%;
@@ -79,7 +92,9 @@
     .the-background {
       height: 100vh;
       width: 100vw;
-      background-image: url("/starter-code/assets/home/background-home-tablet.jpg");
+      background-image: url("/starter-code/assets/home/background-home-desktop.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
     }
 
     .nav-bar {
@@ -88,17 +103,24 @@
 
     .sub-title {
       grid-area: sub-title;
+      font-size: 1rem;
     }
     .title {
       grid-area: title;
+      font-size: 5rem;
     }
     .plain-text {
       grid-area: text;
+      box-sizing: border-box;
+      padding-left: 10%;
+      padding-right: 10%;
+      font-size: 1rem;
     }
     .explore {
       grid-area: button;
-      height: 60%;
-      width: 60%;
+      margin-top: 12%;
+      height: 50%;
+      width: 50%;
     }
 
     .empty-left {
