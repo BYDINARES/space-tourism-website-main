@@ -26,8 +26,6 @@
     height: 40%;
     width: 8%;
     box-sizing: border-box;
-    /* margin-top: 10.5%;
-    margin-bottom: 10.5%; //Fix this========*/
     z-index: 4;
 
     > div {
@@ -42,7 +40,6 @@
         height: 4px;
         background-color: #ffffff;
         border-radius: 2px;
-        /* margin-bottom: 10%; */
       }
     }
   }
@@ -80,10 +77,37 @@
       margin-top: 30%;
     }
   }
-}
+  @media (min-width: 400px) {
+    height: 100%;
 
-@media screen and (min-width: 768px) {
-  .nav-bar {
+    /* .button-menu {
+      all: unset;
+      margin-left: auto;
+      cursor: pointer;
+      width: 10%;
+      height: 40%;
+      width: 8%;
+      box-sizing: border-box;
+      z-index: 4;
+  
+      > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+        gap: 5px;
+  
+        span {
+          height: 4px;
+          background-color: #ffffff;
+          border-radius: 2px;
+        }
+      }
+    } */
+  }
+
+  @media screen and (min-width: 768px) {
     .dimond {
       margin: 0%;
     }
