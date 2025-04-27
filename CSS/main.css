@@ -43,7 +43,7 @@
   grid-row: 4/5;
   margin: 5%;
 }
-.destination-body h1 {
+.destination-body .title {
   grid-row: 5/6;
   width: fit-content;
   margin: 0%;
@@ -90,7 +90,7 @@
     width: 100vw;
     grid-template-columns: 3% 3fr 2fr 3%;
     grid-template-rows: 14% auto auto auto auto auto;
-    grid-template-areas: "empty-l nav nav nav" "empty-l sub-title empty empty-r" "empty-l planet planetOp empty-r" "empty-l planet title empty-r" "empty-l planet text empty-r" "empty-l planet travelM empty-r";
+    grid-template-areas: "empty-l nav nav nav" "empty-l sub-title planetOp empty-r" "empty-l planet title empty-r" "empty-l planet text empty-r" "empty-l planet travelM empty-r";
   }
   .destination-body .the-background {
     height: 100vh;
@@ -104,27 +104,40 @@
   }
   .destination-body .sub-title {
     grid-area: sub-title;
-    margin: 3%;
+    margin: 0%;
+    margin-top: 5%;
+    align-self: center;
+    justify-self: start;
   }
   .destination-body .the-planet-options {
     grid-area: planetOp;
     height: fit-content;
+    margin: 0%;
+    margin-top: 7%;
+    justify-self: start;
   }
   .destination-body .planet {
     grid-area: planet;
     height: 70%;
     width: 65%;
+    margin-bottom: 15%;
   }
-  .destination-body h1 {
+  .destination-body .title {
     grid-area: title;
-    grid-column: 3/4;
-    grid-row: 4/5;
+    /* grid-column: 3/4;
+    grid-row: 4/5; */
+    font-size: 6rem;
+    text-align: left;
+    justify-self: start;
   }
   .destination-body .plain-text {
     grid-area: text;
+    font-size: 1rem;
+    text-align: left;
   }
   .destination-body .travel-mesuraments {
     grid-area: travelM;
+    margin-bottom: 10%;
   }
   .destination-body .empty-left {
     grid-area: empty-l;
@@ -266,6 +279,9 @@
   margin-top: 0%;
 }
 @media (min-width: 400px) {
+  .crew-body {
+    grid-template-rows: 10% auto 3fr auto auto auto auto;
+  }
   .crew-body h3 {
     font-size: 2rem;
     margin: 0%;
@@ -277,14 +293,19 @@
     align-self: flex-end;
   }
   .crew-body h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .crew-body h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     align-content: center;
   }
   .crew-body .plain-text {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    margin: 0%;
+  }
+  .crew-body > ul {
+    margin-bottom: 10%;
+    margin-top: 5%;
   }
   .crew-body > ul li {
     font-size: 1.2rem;
@@ -296,8 +317,8 @@
   }
   .crew-body h3 {
     font-size: 2.5rem;
-    margin: 0%;
     margin-top: 8%;
+    margin-bottom: 5%;
   }
   .crew-body .crew-member {
     height: 100%;
@@ -383,9 +404,6 @@
 }
 .nav-bar .dimond {
   grid-row: 1/2;
-  /* margin-top: 7%;
-  margin-bottom: 7%;
-  margin-right: auto; Fix this========*/
 }
 .nav-bar .button-menu {
   all: unset;
@@ -395,8 +413,6 @@
   height: 40%;
   width: 8%;
   box-sizing: border-box;
-  /* margin-top: 10.5%;
-  margin-bottom: 10.5%; //Fix this========*/
   z-index: 4;
 }
 .nav-bar .button-menu > div {
@@ -411,7 +427,6 @@
   height: 4px;
   background-color: #ffffff;
   border-radius: 2px;
-  /* margin-bottom: 10%; */
 }
 .nav-bar .nav-links {
   list-style: none;
@@ -442,7 +457,17 @@
 .nav-bar .nav-links li:nth-child(1) {
   margin-top: 30%;
 }
-
+@media (min-width: 400px) {
+  .nav-bar {
+    height: 100%;
+  }
+  .nav-bar .dimond {
+    height: 60%;
+  }
+  .nav-bar .button-menu {
+    width: 10%;
+  }
+}
 @media screen and (min-width: 768px) {
   .nav-bar .dimond {
     margin: 0%;
@@ -475,6 +500,7 @@
     padding-left: 10%;
   }
 }
+
 /* Show menu when active */
 .button-menu span {
   transition: transform 0.5s ease;

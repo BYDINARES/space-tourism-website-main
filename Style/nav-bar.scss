@@ -12,9 +12,6 @@
 
   .dimond {
     grid-row: 1/2;
-    /* margin-top: 7%;
-    margin-bottom: 7%;
-    margin-right: auto; Fix this========*/
   }
 
   //The hamburger one
@@ -80,31 +77,12 @@
   @media (min-width: 400px) {
     height: 100%;
 
-    /* .button-menu {
-      all: unset;
-      margin-left: auto;
-      cursor: pointer;
+    .dimond {
+      height: 60%;
+    }
+    .button-menu {
       width: 10%;
-      height: 40%;
-      width: 8%;
-      box-sizing: border-box;
-      z-index: 4;
-  
-      > div {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
-        width: 100%;
-        gap: 5px;
-  
-        span {
-          height: 4px;
-          background-color: #ffffff;
-          border-radius: 2px;
-        }
-      }
-    } */
+    }
   }
 
   @media screen and (min-width: 768px) {

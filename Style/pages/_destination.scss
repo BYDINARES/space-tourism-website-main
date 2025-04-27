@@ -53,7 +53,7 @@
   }
 
   //5
-  h1 {
+  .title {
     grid-row: 5/6;
     width: fit-content;
     margin: 0%;
@@ -112,8 +112,7 @@
     grid-template-rows: 14% auto auto auto auto auto;
     grid-template-areas:
       "empty-l nav nav nav"
-      "empty-l sub-title empty empty-r"
-      "empty-l planet planetOp empty-r"
+      "empty-l sub-title planetOp empty-r"
       "empty-l planet title empty-r"
       "empty-l planet text empty-r"
       "empty-l planet travelM empty-r";
@@ -132,28 +131,41 @@
 
     .sub-title {
       grid-area: sub-title;
-      margin: 3%;
+      margin: 0%;
+      margin-top: 5%;
+      align-self: center;
+      justify-self: start;
     }
     .the-planet-options {
       grid-area: planetOp;
       height: fit-content;
+      margin: 0%;
+      margin-top: 7%;
+      justify-self: start;
     }
     .planet {
       grid-area: planet;
       height: 70%;
       width: 65%;
+      margin-bottom: 15%;
     }
-    h1 {
+    .title {
       grid-area: title;
-      grid-column: 3/4;
-      grid-row: 4/5;
+      /* grid-column: 3/4;
+      grid-row: 4/5; */
+      font-size: 6rem;
+      text-align: left;
+      justify-self: start;
     }
 
     .plain-text {
       grid-area: text;
+      font-size: 1rem;
+      text-align: left;
     }
     .travel-mesuraments {
       grid-area: travelM;
+      margin-bottom: 10%;
     }
 
     .empty-left {
