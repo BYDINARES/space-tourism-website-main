@@ -50,6 +50,20 @@
   .the-planet-options {
     grid-row: 4/5;
     margin: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+
+    a {
+      all: unset;
+      color: antiquewhite;
+      gap: 2rem;
+      height: fit-content;
+      margin: 0%;
+      margin-top: 7%;
+      justify-self: start;
+    }
   }
 
   //5
@@ -137,11 +151,15 @@
       justify-self: start;
     }
     .the-planet-options {
+      width: 100%;
       grid-area: planetOp;
-      height: fit-content;
+      cursor: pointer;
+      gap: 15%;
       margin: 0%;
-      margin-top: 7%;
-      justify-self: start;
+      margin-top: 10%;
+      a {
+        margin-top: 2%;
+      }
     }
     .planet {
       grid-area: planet;
@@ -166,6 +184,29 @@
     .travel-mesuraments {
       grid-area: travelM;
       margin-bottom: 10%;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+
+      div:nth-child(1) {
+        .distance {
+          margin-top: 0%;
+          margin: 0%;
+        }
+        p:nth-child(2) {
+          text-transform: uppercase;
+          font-size: 1.6rem;
+          margin-top: 0%;
+        }
+      }
+      div:nth-child(2) {
+        margin-left: auto;
+        p:nth-child(2) {
+          margin-top: 0%;
+          text-transform: uppercase;
+          font-size: 1.6rem;
+        }
+      }
     }
 
     .empty-left {

@@ -85,6 +85,11 @@
   .planet {
     animation: slideFromTheLeft 1s ease;
   }
+
+  @keyframes hoverPlanetOptions {
+    from {
+    }
+  }
 }
 
 .crew-body {

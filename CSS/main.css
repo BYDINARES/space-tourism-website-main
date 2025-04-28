@@ -42,6 +42,19 @@
 .destination-body .the-planet-options {
   grid-row: 4/5;
   margin: 5%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+}
+.destination-body .the-planet-options a {
+  all: unset;
+  color: antiquewhite;
+  gap: 2rem;
+  height: fit-content;
+  margin: 0%;
+  margin-top: 7%;
+  justify-self: start;
 }
 .destination-body .title {
   grid-row: 5/6;
@@ -110,11 +123,15 @@
     justify-self: start;
   }
   .destination-body .the-planet-options {
+    width: 100%;
     grid-area: planetOp;
-    height: fit-content;
+    cursor: pointer;
+    gap: 15%;
     margin: 0%;
-    margin-top: 7%;
-    justify-self: start;
+    margin-top: 10%;
+  }
+  .destination-body .the-planet-options a {
+    margin-top: 2%;
   }
   .destination-body .planet {
     grid-area: planet;
@@ -138,6 +155,26 @@
   .destination-body .travel-mesuraments {
     grid-area: travelM;
     margin-bottom: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .destination-body .travel-mesuraments div:nth-child(1) .distance {
+    margin-top: 0%;
+    margin: 0%;
+  }
+  .destination-body .travel-mesuraments div:nth-child(1) p:nth-child(2) {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    margin-top: 0%;
+  }
+  .destination-body .travel-mesuraments div:nth-child(2) {
+    margin-left: auto;
+  }
+  .destination-body .travel-mesuraments div:nth-child(2) p:nth-child(2) {
+    margin-top: 0%;
+    text-transform: uppercase;
+    font-size: 1.6rem;
   }
   .destination-body .empty-left {
     grid-area: empty-l;
@@ -575,6 +612,7 @@
 .destination-body .planet {
   animation: slideFromTheLeft 1s ease;
 }
+@keyframes hoverPlanetOptions {}
 
 @keyframes slideFromTheBottom {
   from {
