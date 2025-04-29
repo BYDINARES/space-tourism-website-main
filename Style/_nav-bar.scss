@@ -37,6 +37,7 @@
         height: 4px;
         background-color: #ffffff;
         border-radius: 2px;
+        width: 70%;
       }
     }
   }
@@ -89,9 +90,11 @@
     .dimond {
       margin: 0%;
     }
+
     .button-menu {
       visibility: hidden;
       margin: 0%;
+      z-index: 1;
     }
     .nav-links {
       all: unset;
