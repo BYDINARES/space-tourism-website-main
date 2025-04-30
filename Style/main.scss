@@ -99,6 +99,15 @@
 
     .nav-bar {
       grid-area: nav;
+      .nav-line {
+        display: block;
+        position: absolute;
+        right: 58%;
+        background-color: rgba(240, 248, 255, 0.223);
+        height: 2px;
+        width: 30%;
+        z-index: 3;
+      }
     }
 
     .sub-title {
