@@ -337,21 +337,33 @@
   text-align: center;
   color: rgba(240, 248, 255, 0.756);
 }
-.crew-body .dot-nav {
+.crew-body .crew-member-navigation {
+  width: 100%;
+}
+.crew-body .crew-member-navigation .dot-nav {
   grid-row: 7;
   display: flex;
   flex-direction: row;
+  width: 100%;
   gap: 5%;
   padding: 0%;
   margin-top: 0%;
+  list-style-type: none;
 }
-.crew-body .dot-nav li a {
+.crew-body .crew-member-navigation .dot-nav li {
+  display: flex;
+  justify-content: space-evenly;
+}
+.crew-body .crew-member-navigation .dot-nav li a {
   display: block;
   width: 15px;
   height: 15px;
   background-color: gray;
   border-radius: 50%;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.2s ease;
+}
+.crew-body .crew-member-navigation .dot-nav li a:hover {
+  background-color: rgb(197, 195, 195);
 }
 @media (min-width: 400px) {
   .crew-body {
@@ -416,7 +428,7 @@
   .crew-body {
     height: 100vh;
     grid-template-columns: 3% 1fr 1fr 3%;
-    grid-template-rows: auto auto auto 10% auto auto;
+    grid-template-rows: auto auto auto 12% auto 10%;
   }
   .crew-body *:not(.crew-member) {
     justify-self: start;
@@ -460,7 +472,7 @@
   .crew-body h1 {
     grid-column: 2/3;
     grid-row: 4/5;
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     align-self: start;
   }
   .crew-body .plain-text {
@@ -473,6 +485,22 @@
     grid-column: 2/3;
     grid-row: 6/7;
   }
+}
+
+.crew-commander .crew-member-navigation li:nth-child(1) a {
+  background-color: rgb(197, 195, 195);
+}
+
+.crew-engineer .crew-member-navigation li:nth-child(2) a {
+  background-color: rgb(197, 195, 195);
+}
+
+.crew-pilot .crew-member-navigation li:nth-child(3) a {
+  background-color: rgb(197, 195, 195);
+}
+
+.crew-specialist .crew-member-navigation li:nth-child(4) a {
+  background-color: rgb(197, 195, 195);
 }
 
 .technology-body {

@@ -1,3 +1,5 @@
+//_____________________ NAV-BAR ______________________
+
 /* Show menu when active */
 .button-menu {
   span {
@@ -52,6 +54,7 @@
     }
   }
 }
+//____________________ MAIN BODY _____________________
 
 .index-body {
   @keyframes palpitations {
@@ -70,6 +73,7 @@
     }
   }
 }
+//________________ DESTINATION BODY _________________
 
 .destination-body {
   @keyframes slideFromTheLeft {
@@ -92,7 +96,9 @@
   }
 }
 
+//___________________ CREW BODY ____________________
 .crew-body {
+  // The image apperance
   @keyframes slideFromTheBottom {
     from {
       transform: translateY(100%);
@@ -103,11 +109,15 @@
       opacity: 1;
     }
   }
-
   .crew-member {
     animation: slideFromTheBottom 1s ease;
   }
+
+  //The planet options nav
+  // PENDING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 }
+
+//_________________ TECHNOLOGY BODY __________________
 
 .technology-body {
   @keyframes slideFromTheRight {
