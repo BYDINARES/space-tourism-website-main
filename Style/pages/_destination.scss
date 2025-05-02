@@ -66,22 +66,22 @@
       margin: 0%;
       margin-top: 7%;
       justify-self: start;
+      font-size: 1.2rem;
     }
     span {
       display: block;
       width: 100%;
-      height: 2px;
+      height: 3px;
       background-color: aliceblue;
-    }
-    .nav-line {
-      /* display: block;
-      position: absolute;
-      right: 20%;
-      background-color: rgba(240, 248, 255, 0.223);
-      height: 2px;
-      width: 57%;
-      z-index: 3; */
       visibility: hidden;
+    }
+    .line1,
+    .line2,
+    .line3,
+    .line4 {
+      visibility: visible;
+      position: relative;
+      top: 15px;
     }
   }
 
@@ -246,3 +246,5 @@
     }
   }
 }
+
+//_____________ SPECIAL BODY STYLES ___________________

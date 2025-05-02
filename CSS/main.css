@@ -58,22 +58,22 @@
   margin: 0%;
   margin-top: 7%;
   justify-self: start;
+  font-size: 1.2rem;
 }
 .destination-body .the-planet-options span {
   display: block;
   width: 100%;
-  height: 2px;
+  height: 3px;
   background-color: aliceblue;
-}
-.destination-body .the-planet-options .nav-line {
-  /* display: block;
-  position: absolute;
-  right: 20%;
-  background-color: rgba(240, 248, 255, 0.223);
-  height: 2px;
-  width: 57%;
-  z-index: 3; */
   visibility: hidden;
+}
+.destination-body .the-planet-options .line1,
+.destination-body .the-planet-options .line2,
+.destination-body .the-planet-options .line3,
+.destination-body .the-planet-options .line4 {
+  visibility: visible;
+  position: relative;
+  top: 15px;
 }
 .destination-body .title {
   grid-row: 5/6;
@@ -741,7 +741,19 @@
 .destination-body .planet {
   animation: slideFromTheLeft 1s ease;
 }
-@keyframes hoverPlanetOptions {}
+@keyframes hoverPlanetOptions {
+  from {
+    transform: translate(0px, 0px);
+  }
+  to {
+    transform: translate(0px, 15px);
+    visibility: hidden;
+  }
+}
+.destination-body .the-planet-options a:hover + span:not(.line1, .line2, .line3, .line4) {
+  visibility: visible;
+  animation: hoverPlanetOptions 0.8s ease;
+}
 
 @keyframes slideFromTheBottom {
   from {
