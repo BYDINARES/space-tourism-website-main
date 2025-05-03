@@ -516,6 +516,7 @@
 }
 .technology-body .background-technology-mobile {
   position: absolute;
+  background-image: url("/starter-code/assets/technology/background-technology-mobile.jpg");
   height: 200vw;
   width: 100%;
   z-index: 0;
@@ -553,6 +554,60 @@
 .technology-body .plain-text {
   grid-row: 7;
   text-align: center;
+}
+@media (min-width: 768px) {
+  .technology-body {
+    height: 100vh;
+    grid-template-columns: 5% 10% 2fr 10% 1fr;
+    grid-template-rows: auto auto 10% auto;
+  }
+  .technology-body .background-technology-mobile {
+    height: 100vh;
+    background-image: url("/starter-code/assets/technology/background-technology-tablet.jpg");
+  }
+  .technology-body .nav-bar {
+    grid-column: 2/6;
+    grid-row: 1/2;
+  }
+  .technology-body .nav-bar .nav-line {
+    display: block;
+    position: absolute;
+    right: 55%;
+    background-color: rgba(240, 248, 255, 0.223);
+    height: 2px;
+    width: 32%;
+    z-index: 3;
+  }
+  .technology-body .name-of-the-page {
+    grid-column: 2/4;
+    grid-row: 2/3;
+    font-size: 1rem;
+    margin: 0%;
+  }
+  .technology-body .main-image {
+    grid-column: 5;
+    grid-row: 3/5;
+  }
+  .technology-body .pick-a-technology-buttons {
+    display: flex;
+    flex-direction: column;
+    grid-column: 2/3;
+    grid-row: 3/5;
+  }
+  .technology-body .what-it-is-about-text {
+    grid-column: 3/4;
+    grid-row: 3/4;
+    font-size: 1rem;
+  }
+  .technology-body .title {
+    grid-column: 3/4;
+    grid-row: 4/5;
+    font-size: 1rem;
+  }
+  .technology-body .plain-text {
+    grid-column: 3/4;
+    grid-row: 5;
+  }
 }
 
 .nav-bar {

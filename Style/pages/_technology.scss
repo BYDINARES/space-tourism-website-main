@@ -12,6 +12,7 @@
 
   .background-technology-mobile {
     position: absolute;
+    background-image: url("/starter-code/assets/technology/background-technology-mobile.jpg");
     height: 200vw;
     width: 100%;
     z-index: 0;
@@ -55,5 +56,75 @@
   .plain-text {
     grid-row: 7;
     text-align: center;
+  }
+
+  @media screen and (min-width: 576px) {
+  }
+
+  @media (min-width: 768px) {
+    height: 100vh;
+    grid-template-columns: 5% 10% 2fr 10% 1fr;
+    grid-template-rows: auto auto 10% auto;
+
+    .background-technology-mobile {
+      height: 100vh;
+      background-image: url("/starter-code/assets/technology/background-technology-tablet.jpg");
+    }
+
+    //________1
+    .nav-bar {
+      grid-column: 2/6;
+      grid-row: 1/2;
+      .nav-line {
+        display: block;
+        position: absolute;
+        right: 55%;
+        background-color: rgba(240, 248, 255, 0.223);
+        height: 2px;
+        width: 32%;
+        z-index: 3;
+      }
+    }
+    //______2
+    .name-of-the-page {
+      grid-column: 2/4;
+      grid-row: 2/3;
+      font-size: 1rem;
+      margin: 0%;
+    }
+
+    //_______3
+    .main-image {
+      grid-column: 5;
+      grid-row: 3/5;
+    }
+
+    //_______4
+    .pick-a-technology-buttons {
+      display: flex;
+      flex-direction: column;
+      grid-column: 2/3;
+      grid-row: 3/5;
+    }
+
+    //________5
+    .what-it-is-about-text {
+      grid-column: 3/4;
+      grid-row: 3/4;
+      font-size: 1rem;
+    }
+
+    //________6
+    .title {
+      grid-column: 3/4;
+      grid-row: 4/5;
+      font-size: 1rem;
+    }
+
+    //_________7
+    .plain-text {
+      grid-column: 3/4;
+      grid-row: 5;
+    }
   }
 }
