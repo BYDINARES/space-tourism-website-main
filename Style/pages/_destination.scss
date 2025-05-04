@@ -139,7 +139,7 @@
   }
 
   @media screen and (min-width: 768px) {
-    height: 100vh;
+    height: 62vw;
     width: 100vw;
     grid-template-columns: 3% 3fr 45% 3%;
     grid-template-rows: 14% auto auto auto auto auto;
@@ -151,7 +151,7 @@
       "empty-l planet travelM empty-r";
 
     .the-background {
-      height: 100vh;
+      height: 70vw;
       margin: 0%;
       padding: 0%;
       background-image: url("/starter-code/assets/destination/background-destination-tablet.jpg");
@@ -200,15 +200,18 @@
       grid-area: title;
       /* grid-column: 3/4;
       grid-row: 4/5; */
-      font-size: 6rem;
+      font-size: 5rem;
       text-align: left;
       justify-self: start;
+      text-transform: uppercase;
     }
 
     .plain-text {
       grid-area: text;
       font-size: 1rem;
       text-align: left;
+      margin-top: 0%;
+      padding-bottom: 10%;
     }
     .travel-mesuraments {
       grid-area: travelM;

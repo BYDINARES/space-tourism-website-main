@@ -118,14 +118,14 @@
 }
 @media screen and (min-width: 768px) {
   .destination-body {
-    height: 100vh;
+    height: 62vw;
     width: 100vw;
     grid-template-columns: 3% 3fr 45% 3%;
     grid-template-rows: 14% auto auto auto auto auto;
     grid-template-areas: "empty-l nav nav nav" "empty-l sub-title planetOp empty-r" "empty-l planet title empty-r" "empty-l planet text empty-r" "empty-l planet travelM empty-r";
   }
   .destination-body .the-background {
-    height: 100vh;
+    height: 70vw;
     margin: 0%;
     padding: 0%;
     background-image: url("/starter-code/assets/destination/background-destination-tablet.jpg");
@@ -172,14 +172,17 @@
     grid-area: title;
     /* grid-column: 3/4;
     grid-row: 4/5; */
-    font-size: 6rem;
+    font-size: 5rem;
     text-align: left;
     justify-self: start;
+    text-transform: uppercase;
   }
   .destination-body .plain-text {
     grid-area: text;
     font-size: 1rem;
     text-align: left;
+    margin-top: 0%;
+    padding-bottom: 10%;
   }
   .destination-body .travel-mesuraments {
     grid-area: travelM;
@@ -557,12 +560,13 @@
 }
 @media (min-width: 768px) {
   .technology-body {
-    height: 100vh;
-    grid-template-columns: 5% 10% 2fr 10% 1fr;
-    grid-template-rows: auto auto 10% auto;
+    height: 70vw;
+    width: 100vw;
+    grid-template-columns: 5% 10% 1.7fr 10% 1fr;
+    grid-template-rows: 13% 23% 5% 10% 40%;
   }
   .technology-body .background-technology-mobile {
-    height: 100vh;
+    height: 70vw;
     background-image: url("/starter-code/assets/technology/background-technology-tablet.jpg");
   }
   .technology-body .nav-bar {
@@ -581,32 +585,47 @@
   .technology-body .name-of-the-page {
     grid-column: 2/4;
     grid-row: 2/3;
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin: 0%;
+    justify-self: start;
+    align-self: center;
+    text-transform: uppercase;
   }
   .technology-body .main-image {
     grid-column: 5;
-    grid-row: 3/5;
+    grid-row: 3/6;
+    height: 70%;
+    margin-bottom: 30%;
   }
   .technology-body .pick-a-technology-buttons {
     display: flex;
     flex-direction: column;
     grid-column: 2/3;
-    grid-row: 3/5;
+    grid-row: 3/6;
+    gap: 18%;
   }
   .technology-body .what-it-is-about-text {
     grid-column: 3/4;
     grid-row: 3/4;
+    margin: 0%;
     font-size: 1rem;
+    justify-self: start;
+    align-self: end;
   }
   .technology-body .title {
     grid-column: 3/4;
     grid-row: 4/5;
-    font-size: 1rem;
+    font-size: 2.6rem;
+    justify-self: start;
+    text-transform: uppercase;
   }
   .technology-body .plain-text {
     grid-column: 3/4;
     grid-row: 5;
+    font-size: 1.1rem;
+    justify-self: start;
+    text-align: left;
+    margin: 0%;
   }
 }
 
@@ -905,14 +924,14 @@
 }
 @media screen and (min-width: 768px) {
   .index-body {
-    height: 100vh;
+    height: 60vw;
     width: 100vw;
     grid-template-columns: 3% 1fr 1fr 3%;
     grid-template-rows: 14% auto auto auto;
     grid-template-areas: "empty-l nav nav empty-r" "empty-l sub-title empty empty-r" "empty-l title button empty-r" "empty-l text button empty-r";
   }
   .index-body .the-background {
-    height: 100vh;
+    height: 70vw;
     width: 100vw;
     background-image: url("/starter-code/assets/home/background-home-desktop.jpg");
     background-size: cover;
