@@ -591,6 +591,16 @@
     align-self: center;
     text-transform: uppercase;
   }
+  .technology-body .image-wrapper {
+    grid-column: 5;
+    grid-row: 3/6;
+    width: 100%;
+    height: 100%;
+  }
+  .technology-body .image-wrapper .main-image {
+    height: 70%;
+    margin-bottom: 30%;
+  }
   .technology-body .main-image {
     grid-column: 5;
     grid-row: 3/6;
@@ -598,11 +608,32 @@
     margin-bottom: 30%;
   }
   .technology-body .pick-a-technology-buttons {
-    display: flex;
-    flex-direction: column;
     grid-column: 2/3;
     grid-row: 3/6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 18%;
+    width: 99%;
+    cursor: pointer;
+  }
+  .technology-body .pick-a-technology-buttons a {
+    all: unset;
+    text-decoration: none;
+    color: inherit;
+    height: 10%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid aliceblue;
+    border-radius: 50%;
+  }
+  .technology-body .pick-a-technology-buttons .tech1,
+  .technology-body .pick-a-technology-buttons .tech2,
+  .technology-body .pick-a-technology-buttons .tech3 {
+    background-color: aliceblue;
+    color: black;
   }
   .technology-body .what-it-is-about-text {
     grid-column: 3/4;
@@ -855,6 +886,26 @@
 }
 .technology-body .main-image {
   animation: slideFromTheRight 1s ease;
+}
+.technology-body .pick-a-technology-buttons a {
+  transition: all 0.5s ease;
+}
+.technology-body .pick-a-technology-buttons a:hover:not(.tech1, .tech2, .tech3) {
+  background-color: rgba(255, 255, 255, 0.356);
+}
+.technology-body .image-wrapper {
+  overflow: hidden; /* Hides the overflow when image grows */
+  border-radius: 10px; /* Optional rounded corners */
+  position: relative;
+}
+.technology-body .image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Keeps image nicely cropped */
+  transition: transform 0.3s ease;
+}
+.technology-body .image-wrapper img:hover {
+  transform: scale(1.1); /* Zoom only the image */
 }
 
 .index-body {
