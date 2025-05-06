@@ -5,7 +5,7 @@
   margin: 0%;
   display: grid;
   grid-template-columns: 5% 1fr 5%;
-  grid-template-rows: auto auto 30% auto auto auto;
+  grid-template-rows: 15% auto 30% auto auto auto;
   justify-items: center;
   align-items: center;
   position: relative;
@@ -431,7 +431,7 @@
   .crew-body {
     height: 100vh;
     grid-template-columns: 3% 1fr 1fr 3%;
-    grid-template-rows: auto auto auto 12% auto 10%;
+    grid-template-rows: 15% auto auto 12% auto 10%;
   }
   .crew-body *:not(.crew-member) {
     justify-self: start;
@@ -440,7 +440,7 @@
     height: 100vh;
   }
   .crew-body .nav-bar {
-    grid-column: 2/4;
+    grid-column: 2/5;
     grid-row: 1/2;
   }
   .crew-body .nav-bar .nav-line {
@@ -562,7 +562,7 @@
   .technology-body {
     height: 70vw;
     width: 100vw;
-    grid-template-columns: 5% 10% 1.7fr 10% 1fr;
+    grid-template-columns: 3% 10% 1.7fr 10% 1fr;
     grid-template-rows: 13% 23% 5% 10% 40%;
   }
   .technology-body .background-technology-mobile {
@@ -576,10 +576,10 @@
   .technology-body .nav-bar .nav-line {
     display: block;
     position: absolute;
-    right: 55%;
+    right: 58%;
     background-color: rgba(240, 248, 255, 0.223);
     height: 2px;
-    width: 32%;
+    width: 30%;
     z-index: 3;
   }
   .technology-body .name-of-the-page {
@@ -787,7 +787,32 @@
 }
 
 .nav-links {
+  display: flex;
+  align-content: center;
   /* Slide effect */
+}
+.nav-links li {
+  padding: 0%;
+}
+.nav-links a {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+}
+.nav-links span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: aliceblue;
+  visibility: hidden;
+}
+.nav-links .line1,
+.nav-links .line2,
+.nav-links .line3,
+.nav-links .line4 {
+  visibility: visible;
+  position: relative;
+  top: 15px;
 }
 .nav-links.active {
   visibility: visible;
@@ -832,6 +857,17 @@
 .index-body .explore:hover {
   transform: scale();
 }
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.index-body .sub-title,
+.index-body .title,
+.index-body .plain-text {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
 
 @keyframes slideFromTheLeft {
   from {
@@ -859,6 +895,18 @@
   visibility: visible;
   animation: hoverPlanetOptions 0.8s ease;
 }
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.destination-body .the-planet-options,
+.destination-body .title,
+.destination-body .plain-text,
+.destination-body .travel-mesuraments {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
 
 @keyframes slideFromTheBottom {
   from {
@@ -872,6 +920,18 @@
 }
 .crew-body .crew-member {
   animation: slideFromTheBottom 1s ease;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.crew-body h2,
+.crew-body h1,
+.crew-body .plain-text,
+.crew-body .crew-member-navigation {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
 }
 
 @keyframes slideFromTheRight {
@@ -907,6 +967,18 @@
 .technology-body .image-wrapper img:hover {
   transform: scale(1.1); /* Zoom only the image */
 }
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.technology-body .plain-text,
+.technology-body .title,
+.technology-body .what-it-is-about-text,
+.technology-body .pick-a-technology-buttons {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
 
 .index-body {
   font-family: "Roboto", sans-serif;
@@ -915,7 +987,7 @@
   margin: 0%;
   display: grid;
   grid-template-columns: 5% 1fr 5%;
-  grid-template-rows: 1fr 1fr 3fr 3fr 3.5fr;
+  grid-template-rows: 15% 1fr 3fr 3fr 3.5fr;
 }
 .index-body > *:not(.nav-bar) {
   z-index: 1;
@@ -978,8 +1050,8 @@
     height: 60vw;
     width: 100vw;
     grid-template-columns: 3% 1fr 1fr 3%;
-    grid-template-rows: 14% auto auto auto;
-    grid-template-areas: "empty-l nav nav empty-r" "empty-l sub-title empty empty-r" "empty-l title button empty-r" "empty-l text button empty-r";
+    grid-template-rows: 15% auto auto auto;
+    grid-template-areas: "empty-l nav nav nav" "empty-l sub-title empty empty-r" "empty-l title button empty-r" "empty-l text button empty-r";
   }
   .index-body .the-background {
     height: 70vw;

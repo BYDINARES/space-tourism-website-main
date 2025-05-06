@@ -5,7 +5,7 @@
   margin: 0%;
   display: grid;
   grid-template-columns: 5% 1fr 5%;
-  grid-template-rows: auto auto 30% auto auto auto;
+  grid-template-rows: 15% auto 30% auto auto auto;
   justify-items: center;
   align-items: center;
   position: relative; // Added this line
@@ -249,5 +249,3 @@
     }
   }
 }
-
-//_____________ SPECIAL BODY STYLES ___________________

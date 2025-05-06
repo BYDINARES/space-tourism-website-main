@@ -64,7 +64,7 @@
   @media (min-width: 768px) {
     height: 70vw;
     width: 100vw;
-    grid-template-columns: 5% 10% 1.7fr 10% 1fr;
+    grid-template-columns: 3% 10% 1.7fr 10% 1fr;
     grid-template-rows: 13% 23% 5% 10% 40%;
 
     .background-technology-mobile {
@@ -79,10 +79,10 @@
       .nav-line {
         display: block;
         position: absolute;
-        right: 55%;
+        right: 58%;
         background-color: rgba(240, 248, 255, 0.223);
         height: 2px;
-        width: 32%;
+        width: 30%;
         z-index: 3;
       }
     }
