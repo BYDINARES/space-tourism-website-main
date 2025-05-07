@@ -62,6 +62,7 @@
 }
 .destination-body .the-planet-options span {
   display: block;
+  position: relative;
   width: 100%;
   height: 3px;
   background-color: aliceblue;
@@ -431,7 +432,7 @@
   .crew-body {
     height: 100vh;
     grid-template-columns: 3% 1fr 1fr 3%;
-    grid-template-rows: 15% auto auto 12% auto 10%;
+    grid-template-rows: 14.5% auto auto 12% auto 10%;
   }
   .crew-body *:not(.crew-member) {
     justify-self: start;
@@ -563,7 +564,7 @@
     height: 70vw;
     width: 100vw;
     grid-template-columns: 3% 10% 1.7fr 10% 1fr;
-    grid-template-rows: 13% 23% 5% 10% 40%;
+    grid-template-rows: 12.5% 23% 5% 10% 40%;
   }
   .technology-body .background-technology-mobile {
     height: 70vw;
@@ -699,6 +700,8 @@
   width: 70%;
 }
 .nav-bar .nav-links {
+  display: flex;
+  align-content: center;
   list-style: none;
   visibility: hidden;
   align-self: start;
@@ -716,13 +719,31 @@
   z-index: 2;
 }
 .nav-bar .nav-links li {
-  padding: 15%;
+  padding: 0%;
   list-style: none;
 }
 .nav-bar .nav-links li a {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
   color: white;
   text-decoration: none;
   display: block;
+}
+.nav-bar .nav-links li span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: aliceblue;
+  visibility: hidden;
+}
+.nav-bar .nav-links li .line1,
+.nav-bar .nav-links li .line2,
+.nav-bar .nav-links li .line3,
+.nav-bar .nav-links li .line4 {
+  visibility: visible;
+  position: relative;
+  top: 15px;
 }
 .nav-bar .nav-links li:nth-child(1) {
   margin-top: 30%;
@@ -764,6 +785,9 @@
   .nav-bar .nav-links li {
     padding: 5%;
   }
+  .nav-bar .nav-links li span {
+    height: 3px;
+  }
   .nav-bar .nav-links li:nth-child(1) {
     margin-top: 0%;
   }
@@ -787,32 +811,7 @@
 }
 
 .nav-links {
-  display: flex;
-  align-content: center;
   /* Slide effect */
-}
-.nav-links li {
-  padding: 0%;
-}
-.nav-links a {
-  display: flex;
-  flex-direction: column;
-  height: fit-content;
-}
-.nav-links span {
-  display: block;
-  width: 100%;
-  height: 3px;
-  background-color: aliceblue;
-  visibility: hidden;
-}
-.nav-links .line1,
-.nav-links .line2,
-.nav-links .line3,
-.nav-links .line4 {
-  visibility: visible;
-  position: relative;
-  top: 15px;
 }
 .nav-links.active {
   visibility: visible;
@@ -840,6 +839,21 @@
   100% {
     transform: translateX(100%);
     opacity: 0;
+  }
+}
+.nav-links li:hover span:not(.line1, .line2, .line3, .line4) {
+  visibility: hidden;
+  animation: hoverNavOptions 0.8s ease forwards;
+}
+@keyframes hoverNavOptions {
+  from {
+    transform: translate(0px, 0px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0px, 15px);
+    visibility: visible;
+    opacity: 1;
   }
 }
 
@@ -1022,14 +1036,19 @@
   text-align: center;
   color: rgba(240, 248, 255, 0.761);
 }
-.index-body .explore {
+.index-body .button-wrapper {
   grid-row: 5;
   justify-self: center;
-  height: 90%;
+  height: 100%;
   width: 45%;
   border-radius: 50%;
+}
+.index-body .button-wrapper .explore {
   color: rgba(0, 0, 0, 0.716);
   font-size: 2rem;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
 }
 @media screen and (min-width: 576px) {
   .index-body .the-background {
@@ -1087,7 +1106,7 @@
     padding-right: 10%;
     font-size: 1rem;
   }
-  .index-body .explore {
+  .index-body .button-wrapper {
     grid-area: button;
     margin-top: 12%;
     height: 50%;

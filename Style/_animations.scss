@@ -22,37 +22,11 @@
 }
 
 .nav-links {
-  display: flex;
-  align-content: center;
-  li {
-    padding: 0%;
-  }
-  a {
-    display: flex;
-    flex-direction: column;
-    height: fit-content;
-  }
-  span {
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: aliceblue;
-    visibility: hidden;
-  }
-  .line1,
-  .line2,
-  .line3,
-  .line4 {
-    visibility: visible;
-    position: relative;
-    top: 15px;
-  }
-
+  //animation to slide the nav-bar on mobile devices
   &.active {
     visibility: visible;
     animation: slideIn 0.3s ease;
   }
-
   &.not-active {
     visibility: visible;
     animation: slideOut 1s ease;
@@ -81,6 +55,22 @@
   }
 
   //Span under the seclected page
+  li:hover span:not(.line1, .line2, .line3, .line4) {
+    visibility: hidden;
+    animation: hoverNavOptions 0.8s ease forwards;
+
+    @keyframes hoverNavOptions {
+      from {
+        transform: translate(0px, 0px);
+        opacity: 0;
+      }
+      to {
+        transform: translate(0px, 15px);
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
 }
 //____________________ MAIN BODY _____________________
 
