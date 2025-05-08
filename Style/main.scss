@@ -56,16 +56,20 @@
 
   .button-wrapper {
     grid-row: 5;
-    justify-self: center;
     height: 100%;
-    width: 45%;
+    width: 100%;
+    justify-self: center;
     border-radius: 50%; //Fix here
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     .explore {
       color: rgba(0, 0, 0, 0.716);
       font-size: 2rem;
       height: 100%;
-      width: 100%;
+      width: 50%;
       border-radius: 50%;
     }
   }
@@ -88,7 +92,7 @@
   @media screen and (min-width: 768px) {
     height: 60vw;
     width: 100vw;
-    grid-template-columns: 3% 1fr 1fr 3%;
+    grid-template-columns: 3% 1fr 1.5fr 3%;
     grid-template-rows: 15% auto auto auto;
     grid-template-areas:
       "empty-l nav nav nav"
@@ -135,9 +139,13 @@
 
     .button-wrapper {
       grid-area: button;
-      margin-top: 12%;
-      height: 50%;
+      height: 80%;
       width: 50%;
+
+      .explore {
+        height: 70%;
+        width: 70%;
+      }
     }
 
     .empty-left {

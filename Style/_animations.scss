@@ -7,8 +7,10 @@
   }
 
   &.active {
+    position: fixed;
+
     span:nth-child(1) {
-      transform: translate(1px, 7px) rotate(-40deg);
+      transform: translate(0px, 7px) rotate(-40deg);
     }
 
     span:nth-child(2) {

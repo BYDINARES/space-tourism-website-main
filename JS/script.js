@@ -6,6 +6,7 @@ const hamburgerButton = document.querySelector(".button-menu");
 let isMenuOpen = false;
 
 hamburgerButton.addEventListener("click", () => {
+  hamburgerButton.classList.add("hamburger-fixed"); //
   isMenuOpen = !isMenuOpen;
 
   if (isMenuOpen) {
@@ -14,10 +15,10 @@ hamburgerButton.addEventListener("click", () => {
     closeMenu();
   }
 
-  isFixed(hamburgerButton);
+  /* isFixed(hamburgerButton); */
 });
 
-// Fix the hamburger button when active
+/* // Fix the hamburger button when active
 function isFixed(button) {
   if (button.classList.contains("active")) {
     button.style.position = "fixed";
@@ -32,7 +33,7 @@ function isFixed(button) {
     button.style.width = "";
     button.style.height = "40%";
   }
-}
+} */
 
 function openMenu() {
   menu.classList.add("active");
@@ -46,9 +47,9 @@ function closeMenu() {
   menu.classList.remove("active");
   menu.classList.add("not-active");
 
-  // Remove fixed style
+  /*   // Remove fixed style
   isFixed(hamburgerButton); // This will reset position
-  isMenuOpen = false;
+  isMenuOpen = false; */
 
   setTimeout(() => {
     menu.classList.remove("not-active");

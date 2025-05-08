@@ -46,14 +46,18 @@
   .nav-links {
     display: flex;
     align-content: center;
+    flex-direction: column;
+    align-self: start;
+    gap: 10%;
 
     list-style: none;
     visibility: hidden;
-    align-self: start;
+
     position: fixed;
     height: 100vh;
-    right: 0;
     width: 50%;
+
+    right: 0;
     margin-top: 30%;
     padding: 0%;
     margin: 0%;
@@ -74,21 +78,6 @@
         color: white;
         text-decoration: none;
         display: block;
-      }
-      span {
-        display: block;
-        width: 100%;
-        height: 3px;
-        background-color: aliceblue;
-        visibility: hidden;
-      }
-      .line1,
-      .line2,
-      .line3,
-      .line4 {
-        visibility: visible;
-        position: relative;
-        top: 15px;
       }
     }
 
@@ -137,7 +126,19 @@
       li {
         padding: 5%;
         span {
+          display: block;
+          width: 100%;
           height: 3px;
+          background-color: aliceblue;
+          visibility: hidden;
+        }
+        .line1,
+        .line2,
+        .line3,
+        .line4 {
+          visibility: visible;
+          position: relative;
+          top: 15px;
         }
       }
 

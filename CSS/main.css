@@ -702,13 +702,15 @@
 .nav-bar .nav-links {
   display: flex;
   align-content: center;
+  flex-direction: column;
+  align-self: start;
+  gap: 10%;
   list-style: none;
   visibility: hidden;
-  align-self: start;
   position: fixed;
   height: 100vh;
-  right: 0;
   width: 50%;
+  right: 0;
   margin-top: 30%;
   padding: 0%;
   margin: 0%;
@@ -729,21 +731,6 @@
   color: white;
   text-decoration: none;
   display: block;
-}
-.nav-bar .nav-links li span {
-  display: block;
-  width: 100%;
-  height: 3px;
-  background-color: aliceblue;
-  visibility: hidden;
-}
-.nav-bar .nav-links li .line1,
-.nav-bar .nav-links li .line2,
-.nav-bar .nav-links li .line3,
-.nav-bar .nav-links li .line4 {
-  visibility: visible;
-  position: relative;
-  top: 15px;
 }
 .nav-bar .nav-links li:nth-child(1) {
   margin-top: 30%;
@@ -786,7 +773,19 @@
     padding: 5%;
   }
   .nav-bar .nav-links li span {
+    display: block;
+    width: 100%;
     height: 3px;
+    background-color: aliceblue;
+    visibility: hidden;
+  }
+  .nav-bar .nav-links li .line1,
+  .nav-bar .nav-links li .line2,
+  .nav-bar .nav-links li .line3,
+  .nav-bar .nav-links li .line4 {
+    visibility: visible;
+    position: relative;
+    top: 15px;
   }
   .nav-bar .nav-links li:nth-child(1) {
     margin-top: 0%;
@@ -800,8 +799,11 @@
 .button-menu span {
   transition: transform 0.5s ease;
 }
+.button-menu.active {
+  position: fixed;
+}
 .button-menu.active span:nth-child(1) {
-  transform: translate(1px, 7px) rotate(-40deg);
+  transform: translate(0px, 7px) rotate(-40deg);
 }
 .button-menu.active span:nth-child(2) {
   transform: translate(0px, 0px) rotateY(90deg);
@@ -1038,16 +1040,20 @@
 }
 .index-body .button-wrapper {
   grid-row: 5;
-  justify-self: center;
   height: 100%;
-  width: 45%;
+  width: 100%;
+  justify-self: center;
   border-radius: 50%;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .index-body .button-wrapper .explore {
   color: rgba(0, 0, 0, 0.716);
   font-size: 2rem;
   height: 100%;
-  width: 100%;
+  width: 50%;
   border-radius: 50%;
 }
 @media screen and (min-width: 576px) {
@@ -1068,7 +1074,7 @@
   .index-body {
     height: 60vw;
     width: 100vw;
-    grid-template-columns: 3% 1fr 1fr 3%;
+    grid-template-columns: 3% 1fr 1.5fr 3%;
     grid-template-rows: 15% auto auto auto;
     grid-template-areas: "empty-l nav nav nav" "empty-l sub-title empty empty-r" "empty-l title button empty-r" "empty-l text button empty-r";
   }
@@ -1108,9 +1114,12 @@
   }
   .index-body .button-wrapper {
     grid-area: button;
-    margin-top: 12%;
-    height: 50%;
+    height: 80%;
     width: 50%;
+  }
+  .index-body .button-wrapper .explore {
+    height: 70%;
+    width: 70%;
   }
   .index-body .empty-left {
     grid-area: empty-l;
