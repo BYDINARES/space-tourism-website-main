@@ -77,6 +77,7 @@
 //____________________ MAIN BODY _____________________
 
 .index-body {
+  //Palpitation of the EXPLORE button
   @keyframes palpitations {
     from {
       transform: scale(1);
@@ -85,12 +86,24 @@
       transform: scale(1.09);
     }
   }
+
+  @keyframes biggerPalpitations {
+    from {
+      transform: scale(1.9);
+    }
+    to {
+      transform: scale(2);
+    }
+  }
+
+  //The explore button
+  .button-wrapper:hover {
+    transform: scale(1.5);
+    background-color: rgba(247, 247, 247, 0.079);
+    animation: biggerPalpitations 1s ease-in-out infinite alternate;
+  }
   .explore {
     animation: palpitations 1s ease-in-out infinite alternate;
-
-    &:hover {
-      transform: scale(); //THis section is pending
-    }
   }
 
   //Make the text slightly appear from nothing
