@@ -87,23 +87,31 @@
     }
   }
 
-  @keyframes biggerPalpitations {
-    from {
-      transform: scale(1.9);
-    }
-    to {
-      transform: scale(2);
-    }
+  .explore /* The actual Explore button */ {
+    z-index: 1;
+    animation: palpitations 1s ease-in-out infinite alternate;
   }
 
-  //The explore button
-  .button-wrapper:hover {
-    transform: scale(1.5);
+  .explore::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 0%;
+    left: 0%;
+
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+
     background-color: rgba(247, 247, 247, 0.079);
-    animation: biggerPalpitations 1s ease-in-out infinite alternate;
+    transform: scale(1);
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
   }
-  .explore {
-    animation: palpitations 1s ease-in-out infinite alternate;
+
+  .explore:hover::before {
+    transform: scale(1.4);
+    opacity: 1;
   }
 
   //Make the text slightly appear from nothing

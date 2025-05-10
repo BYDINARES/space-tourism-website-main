@@ -867,21 +867,27 @@
     transform: scale(1.09);
   }
 }
-@keyframes biggerPalpitations {
-  from {
-    transform: scale(1.9);
-  }
-  to {
-    transform: scale(2);
-  }
-}
-.index-body .button-wrapper:hover {
-  transform: scale(1.5);
-  background-color: rgba(247, 247, 247, 0.079);
-  animation: biggerPalpitations 1s ease-in-out infinite alternate;
-}
 .index-body .explore {
+  z-index: 1;
   animation: palpitations 1s ease-in-out infinite alternate;
+}
+.index-body .explore::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background-color: rgba(247, 247, 247, 0.079);
+  transform: scale(1);
+  opacity: 0;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+.index-body .explore:hover::before {
+  transform: scale(1.4);
+  opacity: 1;
 }
 @keyframes fadeIn {
   to {
@@ -1048,23 +1054,15 @@
   text-align: center;
   color: rgba(240, 248, 255, 0.761);
 }
-.index-body .button-wrapper {
+.index-body .explore {
   grid-row: 5;
   height: 100%;
   width: 100%;
-  justify-self: center;
   border-radius: 50%;
+  justify-self: center;
   align-self: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.index-body .button-wrapper .explore {
   color: rgba(0, 0, 0, 0.716);
   font-size: 2rem;
-  height: 100%;
-  width: 50%;
-  border-radius: 50%;
 }
 @media screen and (min-width: 576px) {
   .index-body .the-background {
@@ -1122,14 +1120,10 @@
     padding-right: 10%;
     font-size: 1rem;
   }
-  .index-body .button-wrapper {
+  .index-body .explore {
     grid-area: button;
     height: 60%;
     width: 40%;
-  }
-  .index-body .button-wrapper .explore {
-    height: 100%;
-    width: 100%;
   }
   .index-body .empty-left {
     grid-area: empty-l;

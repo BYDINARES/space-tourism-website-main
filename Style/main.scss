@@ -54,24 +54,15 @@
     color: rgba(240, 248, 255, 0.761);
   }
 
-  .button-wrapper {
+  .explore {
     grid-row: 5;
     height: 100%;
     width: 100%;
+    border-radius: 50%;
     justify-self: center;
-    border-radius: 50%; //Fix here
     align-self: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    .explore {
-      color: rgba(0, 0, 0, 0.716);
-      font-size: 2rem;
-      height: 100%;
-      width: 50%;
-      border-radius: 50%;
-    }
+    color: rgba(0, 0, 0, 0.716);
+    font-size: 2rem;
   }
 
   @media screen and (min-width: 576px) {
@@ -137,15 +128,10 @@
       font-size: 1rem;
     }
 
-    .button-wrapper {
+    .explore /*Button*/ {
       grid-area: button;
       height: 60%;
       width: 40%;
-
-      .explore {
-        height: 100%;
-        width: 100%;
-      }
     }
 
     .empty-left {
