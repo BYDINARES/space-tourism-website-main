@@ -19,11 +19,18 @@
     all: unset;
     margin-left: auto;
     cursor: pointer;
-    width: 10%;
     height: 40%;
-    width: 8%;
+    width: 15%;
     box-sizing: border-box;
     z-index: 4;
+
+    &.active {
+      position: fixed;
+      left: 79%;
+      top: 8%;
+      width: 8%; // set this explicitly
+      height: 3.4%;
+    }
 
     > div {
       display: flex;
@@ -31,7 +38,6 @@
       justify-content: space-between;
       height: 100%;
       width: 100%;
-      gap: 5px;
 
       span {
         height: 4px;
@@ -58,14 +64,14 @@
     width: 50%;
 
     right: 0;
-    margin-top: 30%;
+    margin-top: 50%;
     padding: 0%;
     margin: 0%;
     //style
     text-align: center;
     background-color: rgba(0, 0, 0, 0.529);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* for Safari */
+    -webkit-backdrop-filter: blur(10px); /*for Safari */
     z-index: 2;
 
     li {
@@ -90,9 +96,6 @@
 
     .dimond {
       height: 60%;
-    }
-    .button-menu {
-      width: 10%;
     }
   }
 

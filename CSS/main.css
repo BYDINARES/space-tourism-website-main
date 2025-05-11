@@ -679,11 +679,17 @@
   all: unset;
   margin-left: auto;
   cursor: pointer;
-  width: 10%;
   height: 40%;
-  width: 8%;
+  width: 15%;
   box-sizing: border-box;
   z-index: 4;
+}
+.nav-bar .button-menu.active {
+  position: fixed;
+  left: 79%;
+  top: 8%;
+  width: 8%;
+  height: 3.4%;
 }
 .nav-bar .button-menu > div {
   display: flex;
@@ -691,7 +697,6 @@
   justify-content: space-between;
   height: 100%;
   width: 100%;
-  gap: 5px;
 }
 .nav-bar .button-menu > div span {
   height: 4px;
@@ -711,13 +716,13 @@
   height: 100vh;
   width: 50%;
   right: 0;
-  margin-top: 30%;
+  margin-top: 50%;
   padding: 0%;
   margin: 0%;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.529);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); /* for Safari */
+  -webkit-backdrop-filter: blur(10px); /*for Safari */
   z-index: 2;
 }
 .nav-bar .nav-links li {
@@ -741,9 +746,6 @@
   }
   .nav-bar .dimond {
     height: 60%;
-  }
-  .nav-bar .button-menu {
-    width: 10%;
   }
 }
 @media screen and (min-width: 768px) {
@@ -804,12 +806,14 @@
 }
 .button-menu.active span:nth-child(1) {
   transform: translate(0px, 7px) rotate(-40deg);
+  width: 150%;
 }
 .button-menu.active span:nth-child(2) {
-  transform: translate(0px, 0px) rotateY(90deg);
+  transform: translate(0px, -10px) rotateY(90deg);
 }
 .button-menu.active span:nth-child(3) {
-  transform: translate(3.2px, -8px) rotate(40deg);
+  transform: translate(2px, -7px) rotate(40deg);
+  width: 150%;
 }
 
 .nav-links {

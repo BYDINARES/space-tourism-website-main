@@ -15,25 +15,25 @@ hamburgerButton.addEventListener("click", () => {
     closeMenu();
   }
 
-  /* isFixed(hamburgerButton); */
+  isFixed(hamburgerButton);
 });
 
-/* // Fix the hamburger button when active
-function isFixed(button) {
+// Fix the hamburger button when active
+/* function isFixed(button) {
   if (button.classList.contains("active")) {
     button.style.position = "fixed";
-    button.style.left = "88%";
-    button.style.top = "3%";
-    button.style.width = "7%"; // set this explicitly
+    button.style.left = "79%";
+    button.style.top = "8%";
+    button.style.width = "8%"; // set this explicitly
     button.style.height = "3.4%";
   } else {
     button.style.position = "static";
     button.style.top = "";
     button.style.left = "";
-    button.style.width = "";
+    button.style.width = "15%";
     button.style.height = "40%";
   }
-} */
+} */ // see what to to here. Maybe you can pass all of this to SCSS &.active
 
 function openMenu() {
   menu.classList.add("active");
@@ -47,9 +47,9 @@ function closeMenu() {
   menu.classList.remove("active");
   menu.classList.add("not-active");
 
-  /*   // Remove fixed style
+  // Remove fixed style
   isFixed(hamburgerButton); // This will reset position
-  isMenuOpen = false; */
+  isMenuOpen = false;
 
   setTimeout(() => {
     menu.classList.remove("not-active");
