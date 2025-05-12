@@ -26,8 +26,8 @@
 
     &.active {
       position: fixed;
-      left: 79%;
-      top: 8%;
+      left: 80%;
+      top: 5%;
       width: 8%; // set this explicitly
       height: 3.4%;
     }
@@ -91,14 +91,41 @@
       margin-top: 30%;
     }
   }
+
+  //________________ MEDIA QUERIES ___________________
+
+  //media queries for the hamburguer button position
   @media (min-width: 400px) {
     height: 100%;
 
     .dimond {
       height: 60%;
     }
+
+    .button-menu.active {
+      top: 6%;
+    }
   }
 
+  @media (min-width: 500px) {
+    .button-menu.active {
+      top: 8%;
+    }
+  }
+
+  @media (min-width: 600px) {
+    .button-menu.active {
+      top: 10%;
+    }
+  }
+
+  @media (min-width: 700px) {
+    .button-menu.active {
+      top: 12%;
+    }
+  }
+
+  //An actual media query
   @media screen and (min-width: 768px) {
     .dimond {
       margin: 0%;

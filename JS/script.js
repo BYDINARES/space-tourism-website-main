@@ -15,7 +15,7 @@ hamburgerButton.addEventListener("click", () => {
     closeMenu();
   }
 
-  isFixed(hamburgerButton);
+  /* isFixed(hamburgerButton); */
 });
 
 // Fix the hamburger button when active
@@ -48,7 +48,7 @@ function closeMenu() {
   menu.classList.add("not-active");
 
   // Remove fixed style
-  isFixed(hamburgerButton); // This will reset position
+  /* isFixed(hamburgerButton); */
   isMenuOpen = false;
 
   setTimeout(() => {

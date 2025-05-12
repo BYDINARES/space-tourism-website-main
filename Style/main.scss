@@ -9,7 +9,7 @@
 .index-body {
   font-family: "Roboto", sans-serif;
   height: 160vw;
-  width: 100vw;
+  width: 100vw; /* maybe 300xp of width */
   margin: 0%;
   display: grid;
   grid-template-columns: 5% 1fr 5%;
@@ -56,8 +56,9 @@
 
   .explore {
     grid-row: 5;
-    height: 100%;
-    width: 100%;
+    margin-top: 10%;
+    height: 90%;
+    width: 50%;
     border-radius: 50%;
     justify-self: center;
     align-self: center;
@@ -65,21 +66,64 @@
     font-size: 2rem;
   }
 
+  //_________________  MEDIA QUERIES _________________
+  @media (min-width: 400px) {
+    .sub-title {
+      font-size: 1.2rem;
+    }
+    .title {
+      font-size: 5.2rem;
+    }
+    .plain-text {
+      font-size: 1.1rem;
+    }
+    /*     .explore {
+    } */
+  }
+
+  @media (min-width: 500px) {
+    .sub-title {
+      font-size: 1.5rem;
+    }
+    .title {
+      font-size: 6.2rem;
+    }
+    .plain-text {
+      font-size: 1.3rem;
+    }
+    .explore {
+    }
+  }
+
+  //REAL MEDIA QUERY
   @media screen and (min-width: 576px) {
     .the-background {
       background-image: url("/starter-code/assets/home/background-home-tablet.jpg");
     }
     .sub-title {
-      font-size: 1.2rem;
+      font-size: 1.7rem;
     }
     .title {
-      font-size: 6rem;
+      font-size: 6.7rem;
     }
     .plain-text {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
     }
   }
 
+  @media (min-width: 650px) {
+    .sub-title {
+      font-size: 2rem;
+    }
+    .title {
+      font-size: 7rem;
+    }
+    .plain-text {
+      font-size: 1.8rem;
+    }
+  }
+
+  //REAL MEDIA QUERY
   @media screen and (min-width: 768px) {
     height: 60vw;
     width: 100vw;

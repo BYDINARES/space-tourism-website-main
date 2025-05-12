@@ -686,8 +686,8 @@
 }
 .nav-bar .button-menu.active {
   position: fixed;
-  left: 79%;
-  top: 8%;
+  left: 80%;
+  top: 5%;
   width: 8%;
   height: 3.4%;
 }
@@ -746,6 +746,24 @@
   }
   .nav-bar .dimond {
     height: 60%;
+  }
+  .nav-bar .button-menu.active {
+    top: 6%;
+  }
+}
+@media (min-width: 500px) {
+  .nav-bar .button-menu.active {
+    top: 8%;
+  }
+}
+@media (min-width: 600px) {
+  .nav-bar .button-menu.active {
+    top: 10%;
+  }
+}
+@media (min-width: 700px) {
+  .nav-bar .button-menu.active {
+    top: 12%;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1019,7 +1037,7 @@
 .index-body {
   font-family: "Roboto", sans-serif;
   height: 160vw;
-  width: 100vw;
+  width: 100vw; /* maybe 300xp of width */
   margin: 0%;
   display: grid;
   grid-template-columns: 5% 1fr 5%;
@@ -1060,26 +1078,64 @@
 }
 .index-body .explore {
   grid-row: 5;
-  height: 100%;
-  width: 100%;
+  margin-top: 10%;
+  height: 90%;
+  width: 50%;
   border-radius: 50%;
   justify-self: center;
   align-self: center;
   color: rgba(0, 0, 0, 0.716);
   font-size: 2rem;
 }
-@media screen and (min-width: 576px) {
-  .index-body .the-background {
-    background-image: url("/starter-code/assets/home/background-home-tablet.jpg");
+@media (min-width: 400px) {
+  .index-body {
+    /*     .explore {
+    } */
   }
   .index-body .sub-title {
     font-size: 1.2rem;
   }
   .index-body .title {
-    font-size: 6rem;
+    font-size: 5.2rem;
   }
   .index-body .plain-text {
+    font-size: 1.1rem;
+  }
+}
+@media (min-width: 500px) {
+  .index-body .sub-title {
     font-size: 1.5rem;
+  }
+  .index-body .title {
+    font-size: 6.2rem;
+  }
+  .index-body .plain-text {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 576px) {
+  .index-body .the-background {
+    background-image: url("/starter-code/assets/home/background-home-tablet.jpg");
+  }
+  .index-body .sub-title {
+    font-size: 1.7rem;
+  }
+  .index-body .title {
+    font-size: 6.7rem;
+  }
+  .index-body .plain-text {
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 650px) {
+  .index-body .sub-title {
+    font-size: 2rem;
+  }
+  .index-body .title {
+    font-size: 7rem;
+  }
+  .index-body .plain-text {
+    font-size: 1.8rem;
   }
 }
 @media screen and (min-width: 768px) {
