@@ -10,7 +10,7 @@
     position: fixed;
 
     span:nth-child(1) {
-      transform: translate(0px, 7px) rotate(-40deg);
+      transform: /* translate(0px, -10px) */ rotate(-45deg);
       width: 150%;
     }
 
@@ -19,7 +19,7 @@
     }
 
     span:nth-child(3) {
-      transform: translate(2px, -7px) rotate(40deg);
+      transform: /* translate(0px, -10px) */ rotate(45deg);
       width: 150%;
     }
   }
