@@ -140,7 +140,7 @@
   }
 
   @media screen and (min-width: 768px) {
-    height: 62vw;
+    height: 65vw;
     width: 100vw;
     grid-template-columns: 3% 3fr 45% 3%;
     grid-template-rows: 14% auto auto auto auto auto;
@@ -152,7 +152,7 @@
       "empty-l planet travelM empty-r";
 
     .the-background {
-      height: 70vw;
+      height: 75vw;
       margin: 0%;
       padding: 0%;
       background-image: url("/starter-code/assets/destination/background-destination-tablet.jpg");

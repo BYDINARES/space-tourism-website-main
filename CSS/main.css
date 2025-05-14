@@ -119,14 +119,14 @@
 }
 @media screen and (min-width: 768px) {
   .destination-body {
-    height: 62vw;
+    height: 65vw;
     width: 100vw;
     grid-template-columns: 3% 3fr 45% 3%;
     grid-template-rows: 14% auto auto auto auto auto;
     grid-template-areas: "empty-l nav nav nav" "empty-l sub-title planetOp empty-r" "empty-l planet title empty-r" "empty-l planet text empty-r" "empty-l planet travelM empty-r";
   }
   .destination-body .the-background {
-    height: 70vw;
+    height: 75vw;
     margin: 0%;
     padding: 0%;
     background-image: url("/starter-code/assets/destination/background-destination-tablet.jpg");
@@ -538,9 +538,13 @@
   z-index: 1;
   grid-column: 2/3;
 }
+.technology-body .dimond {
+  height: 80%;
+}
 .technology-body h2 {
   grid-row: 2/3;
   margin: 10%;
+  font-size: 1.3rem;
 }
 .technology-body h2 a {
   color: rgba(240, 248, 255, 0.504);
@@ -554,6 +558,31 @@
 .technology-body .pick-a-technology-buttons {
   grid-row: 4/5;
   margin: 2%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+  width: 99%;
+  cursor: pointer;
+}
+.technology-body .pick-a-technology-buttons a {
+  all: unset;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid aliceblue;
+  border-radius: 50%;
+}
+.technology-body .pick-a-technology-buttons .tech1,
+.technology-body .pick-a-technology-buttons .tech2,
+.technology-body .pick-a-technology-buttons .tech3 {
+  background-color: aliceblue;
+  color: black;
 }
 .technology-body h3 {
   grid-row: 5/6;
@@ -567,6 +596,73 @@
 .technology-body .plain-text {
   grid-row: 7;
   text-align: center;
+  font-size: 0.8rem;
+}
+@media (min-width: 400px) {
+  .technology-body {
+    grid-template-rows: auto auto 37% auto auto auto auto;
+    /* grid-template-columns: 5% 1fr 5%; */
+  }
+  .technology-body h2 {
+    font-size: 1.8rem;
+  }
+  .technology-body .pick-a-technology-buttons a {
+    width: 13%;
+    font-size: 1.2rem;
+  }
+  .technology-body h3 {
+    font-size: 1.3rem;
+    font-weight: 200;
+    opacity: 0.5;
+  }
+  .technology-body h1 {
+    font-size: 2.3rem;
+  }
+  .technology-body .plain-text {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 500px) {
+  .technology-body {
+    grid-template-rows: auto auto 35% auto auto auto auto;
+  }
+  .technology-body .dimond {
+    height: 100%;
+  }
+  .technology-body h2 {
+    font-size: 2rem;
+  }
+  .technology-body h3 {
+    font-size: 1.5rem;
+  }
+  .technology-body h1 {
+    font-size: 3rem;
+  }
+  .technology-body .plain-text {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (min-width: 576px) {
+  .technology-body {
+    /* grid-template-columns: 3% 10% 1.7fr 10% 1fr;
+    grid-template-rows: 12.5% 23% 5% 10% 40%; */
+    grid-template-columns: 3% 10% 1.7fr 10% 1fr;
+    grid-template-rows: 12.5% 23% 5% 10% 40%;
+  }
+  .technology-body h2 {
+    grid-column: 2/4;
+    grid-row: 2/3;
+  }
+}
+@media screen and (min-width: 600px) {
+  .technology-body {
+    /* h2 {
+    }
+    .pick-a-technology-buttons a{}
+    h3{}
+    h1{}
+    .plain-text{} */
+  }
 }
 @media (min-width: 768px) {
   .technology-body {
@@ -626,24 +722,6 @@
     gap: 18%;
     width: 99%;
     cursor: pointer;
-  }
-  .technology-body .pick-a-technology-buttons a {
-    all: unset;
-    text-decoration: none;
-    color: inherit;
-    height: 10%;
-    width: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid aliceblue;
-    border-radius: 50%;
-  }
-  .technology-body .pick-a-technology-buttons .tech1,
-  .technology-body .pick-a-technology-buttons .tech2,
-  .technology-body .pick-a-technology-buttons .tech3 {
-    background-color: aliceblue;
-    color: black;
   }
   .technology-body .what-it-is-about-text {
     grid-column: 3/4;
@@ -773,7 +851,7 @@
     top: 10%;
   }
   .nav-bar .nav-links li a {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 }
 @media (min-width: 700px) {
