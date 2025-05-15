@@ -133,36 +133,64 @@
 
   //---- MEDIA QUERIES (landscape mode)
   @media screen and (min-width: 576px) {
-    /* grid-template-columns: 3% 10% 1.7fr 10% 1fr;
-    grid-template-rows: 12.5% 23% 5% 10% 40%; */
-    grid-template-columns: 3% 10% 1.7fr 10% 1fr;
-    grid-template-rows: 12.5% 23% 5% 10% 40%;
+    height: 70vw;
+    grid-template-columns: 3% 10% 1.7fr 10% 40% 3%;
+    grid-template-rows: 14% auto auto 10% auto 50%;
 
-    h2 {
+    .background-technology-mobile {
+      height: 70vw;
+    }
+
+    .nav-bar {
+      grid-column: 2/6;
+      grid-row: 1/2;
+    }
+
+    .name-of-the-page {
       grid-column: 2/4;
       grid-row: 2/3;
+      font-size: 1.2rem;
+      margin-left: 0%;
+      padding: 0%;
     }
     .image-wrapper {
+      grid-column: 5/6;
+      grid-row: 2/6;
     }
-    .pick-a-technology-buttons a {
+    .pick-a-technology-buttons {
+      grid-column: 2/3;
+      grid-row: 3/6;
+      display: flex;
+      flex-direction: column;
+
+      box-sizing: border-box;
+      height: 100%;
+      width: 100%;
+      gap: 18%;
+      margin-bottom: 30%;
+      a {
+        width: 50%;
+        height: 15%;
+      }
     }
-    h3 {
+    .what-it-is-about-text {
+      grid-column: 3/4;
+      grid-row: 3/4;
+      font-size: 1.2rem;
     }
-    h1 {
+    .title {
+      grid-column: 3/4;
+      grid-row: 4/5;
+      font-size: 1.7rem;
     }
     .plain-text {
+      grid-column: 3/4;
+      grid-row: 5/6;
+      font-size: 0.87rem;
     }
   }
 
-  @media screen and (min-width: 600px) {
-    /* h2 {
-    }
-    .pick-a-technology-buttons a{}
-    h3{}
-    h1{}
-    .plain-text{} */
-  }
-
+  //The computer and laptops screen size
   @media (min-width: 768px) {
     height: 70vw;
     width: 100vw;
