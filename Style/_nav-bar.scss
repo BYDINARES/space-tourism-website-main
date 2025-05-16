@@ -118,6 +118,20 @@
     }
   }
 
+  @media (min-width: 576px) {
+    .nav-links {
+      width: 35vw;
+      li {
+        &:nth-child(1) {
+          margin-top: 40%;
+        }
+        a {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+
   @media (min-width: 600px) {
     .button-menu.active {
       top: 10%;
