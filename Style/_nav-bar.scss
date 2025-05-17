@@ -108,7 +108,7 @@
     }
 
     .nav-links li a {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
     }
   }
 
@@ -116,11 +116,14 @@
     .button-menu.active {
       top: 8%;
     }
+
+    .nav-links li a {
+      font-size: 1.5rem;
+    }
   }
 
   @media (min-width: 576px) {
     .nav-links {
-      width: 35vw;
       li {
         &:nth-child(1) {
           margin-top: 40%;
