@@ -97,7 +97,35 @@
 
   //REAL MEDIA QUERY
   @media screen and (min-width: 576px) {
+    grid-template-columns: 3% 6% 42.5% 42.5% 6%;
+    grid-template-rows: 15% 40% 10% 12% auto;
+    height: 60vw;
     .the-background {
+      height: 60vw;
+      background-image: url("/starter-code/assets/home/background-home-tablet.jpg");
+    }
+
+    .sub-title {
+      grid-column: 3/4;
+      grid-row: 2/3;
+      font-size: 1rem;
+    }
+    .title {
+      grid-column: 3/4;
+      grid-row: 3/4;
+      font-size: 1rem;
+    }
+    .plain-text {
+      grid-column: 3/4;
+      grid-row: 4/5;
+      font-size: 1rem;
+    }
+    .explore {
+      grid-column: 4/5;
+      grid-row: 3/5;
+    }
+
+    /* .the-background {
       background-image: url("/starter-code/assets/home/background-home-tablet.jpg");
     }
     .sub-title {
@@ -120,7 +148,7 @@
     }
     .plain-text {
       font-size: 1.8rem;
-    }
+    }*/
   }
 
   //REAL MEDIA QUERY

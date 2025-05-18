@@ -124,12 +124,13 @@
 
   @media (min-width: 576px) {
     .nav-links {
+      width: 40%;
       li {
         &:nth-child(1) {
           margin-top: 40%;
         }
         a {
-          font-size: 1.1rem;
+          font-size: 0.9rem;
         }
       }
     }
