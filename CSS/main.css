@@ -117,6 +117,86 @@
 .destination-body .travel-mesuraments p {
   margin-bottom: 0%;
 }
+@media screen and (min-width: 576px) {
+  .destination-body {
+    grid-template-columns: 3% 6% 42.5% 42.5% 6%;
+    grid-template-rows: 15% 10% 15% 20% 20% 20% 20%;
+    height: 60vw;
+  }
+  .destination-body .the-background {
+    height: 60vw;
+  }
+  .destination-body .nav-bar {
+    grid-column: 2/6;
+    grid-row: 1/2;
+  }
+  .destination-body .sub-title {
+    grid-column: 2/4;
+    grid-row: 2/3;
+    font-size: 1rem;
+    margin: 0%;
+  }
+  .destination-body .planet {
+    grid-column: 3/4;
+    grid-row: 3/7;
+    height: 70%;
+  }
+  .destination-body .the-planet-options {
+    grid-column: 4/5;
+    grid-row: 3/4;
+    margin: 0%;
+    margin-bottom: 10%;
+    justify-self: left;
+    width: auto;
+    /* div:nth-child(4) {
+      margin-right: ;
+    } */
+  }
+  .destination-body .the-planet-options div {
+    align-self: baseline;
+  }
+  .destination-body .the-planet-options div a {
+    font-size: 1rem;
+  }
+  .destination-body .title {
+    grid-column: 4/5;
+    grid-row: 4/5;
+    font-size: 3rem;
+    justify-self: left;
+  }
+  .destination-body .plain-text {
+    grid-column: 4/5;
+    grid-row: 5/6;
+    font-size: 0.7rem;
+    text-align: left;
+    margin: 0%;
+    padding-bottom: 2%;
+  }
+  .destination-body .travel-mesuraments {
+    grid-column: 4/5;
+    grid-row: 6/7;
+    display: flex;
+    flex-direction: row;
+    font-size: 0.8rem;
+  }
+  .destination-body .travel-mesuraments div:nth-child(1) .distance {
+    margin-top: 0%;
+    margin: 0%;
+  }
+  .destination-body .travel-mesuraments div:nth-child(1) p:nth-child(2) {
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-top: 0%;
+  }
+  .destination-body .travel-mesuraments div:nth-child(2) {
+    margin-left: auto;
+  }
+  .destination-body .travel-mesuraments div:nth-child(2) p:nth-child(2) {
+    margin-top: 0%;
+    text-transform: uppercase;
+    font-size: 1rem;
+  }
+}
 @media screen and (min-width: 768px) {
   .destination-body {
     height: 65vw;
@@ -189,24 +269,11 @@
     grid-area: travelM;
     margin-bottom: 10%;
     width: 100%;
-    display: flex;
-    flex-direction: row;
-  }
-  .destination-body .travel-mesuraments div:nth-child(1) .distance {
-    margin-top: 0%;
-    margin: 0%;
   }
   .destination-body .travel-mesuraments div:nth-child(1) p:nth-child(2) {
-    text-transform: uppercase;
     font-size: 1.6rem;
-    margin-top: 0%;
-  }
-  .destination-body .travel-mesuraments div:nth-child(2) {
-    margin-left: auto;
   }
   .destination-body .travel-mesuraments div:nth-child(2) p:nth-child(2) {
-    margin-top: 0%;
-    text-transform: uppercase;
     font-size: 1.6rem;
   }
   .destination-body .empty-left {
@@ -1351,55 +1418,41 @@
 @media screen and (min-width: 576px) {
   .index-body {
     grid-template-columns: 3% 6% 42.5% 42.5% 6%;
-    grid-template-rows: 15% 40% 10% 12% auto;
+    grid-template-rows: 15% 20% 15% 12% auto 10%;
     height: 60vw;
-    /* .the-background {
-        background-image: url("/starter-code/assets/home/background-home-tablet.jpg");
-      }
-      .sub-title {
-        font-size: 1.7rem;
-      }
-      .title {
-        font-size: 6.7rem;
-      }
-      .plain-text {
-        font-size: 1.6rem;
-      }
-    }
-
-    @media (min-width: 650px) {
-      .sub-title {
-        font-size: 2rem;
-      }
-      .title {
-        font-size: 7rem;
-      }
-      .plain-text {
-        font-size: 1.8rem;
-      }*/
   }
   .index-body .the-background {
     height: 60vw;
-    background-image: url("/starter-code/assets/home/background-home-tablet.jpg");
+    background-image: url("/starter-code/assets/home/background-home-desktop.jpg");
+  }
+  .index-body .nav-bar {
+    grid-column: 2/6;
+    grid-row: 1/2;
   }
   .index-body .sub-title {
     grid-column: 3/4;
     grid-row: 2/3;
-    font-size: 1rem;
+    font-size: 0.9rem;
+    justify-self: left;
+    margin-bottom: 5%;
   }
   .index-body .title {
     grid-column: 3/4;
     grid-row: 3/4;
-    font-size: 1rem;
+    justify-self: left;
+    font-size: 4rem;
   }
   .index-body .plain-text {
     grid-column: 3/4;
     grid-row: 4/5;
-    font-size: 1rem;
+    font-size: 0.9rem;
+    text-align: left;
   }
   .index-body .explore {
     grid-column: 4/5;
-    grid-row: 3/5;
+    grid-row: 3/6;
+    margin-top: 0%;
+    height: 70%;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1432,10 +1485,14 @@
   .index-body .sub-title {
     grid-area: sub-title;
     font-size: 1rem;
+    padding-left: 8%;
+    margin: 0%;
+    margin-top: 10%;
   }
   .index-body .title {
     grid-area: title;
     font-size: 5rem;
+    padding-left: 8%;
   }
   .index-body .plain-text {
     grid-area: text;

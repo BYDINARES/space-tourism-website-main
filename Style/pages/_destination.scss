@@ -137,6 +137,86 @@
   }
 
   @media screen and (min-width: 576px) {
+    grid-template-columns: 3% 6% 42.5% 42.5% 6%;
+    grid-template-rows: 15% 10% 15% 20% 20% 20% 20%;
+    height: 60vw;
+
+    .the-background {
+      height: 60vw;
+    }
+
+    .nav-bar {
+      grid-column: 2/6;
+      grid-row: 1/2;
+    }
+    .sub-title {
+      grid-column: 2/4;
+      grid-row: 2/3;
+      font-size: 1rem;
+      margin: 0%;
+    }
+    .planet {
+      grid-column: 3/4;
+      grid-row: 3/7;
+      height: 70%;
+    }
+    .the-planet-options {
+      grid-column: 4/5;
+      grid-row: 3/4;
+      margin: 0%;
+      margin-bottom: 10%;
+      justify-self: left;
+      width: auto;
+      div {
+        align-self: baseline;
+        a {
+          font-size: 1rem;
+        }
+      }
+      /* div:nth-child(4) {
+        margin-right: ;
+      } */
+    }
+    .title {
+      grid-column: 4/5;
+      grid-row: 4/5;
+      font-size: 3rem;
+      justify-self: left;
+    }
+    .plain-text {
+      grid-column: 4/5;
+      grid-row: 5/6;
+      font-size: 0.7rem;
+      text-align: left;
+      margin: 0%;
+      padding-bottom: 2%;
+    }
+    .travel-mesuraments {
+      grid-column: 4/5;
+      grid-row: 6/7;
+      display: flex;
+      flex-direction: row;
+      font-size: 0.8rem;
+      div:nth-child(1) {
+        .distance {
+          margin-top: 0%;
+          margin: 0%;
+        }
+        p:nth-child(2) {
+          text-transform: uppercase;
+          font-size: 1rem;
+          margin-top: 0%;
+        }
+      }
+      div:nth-child(2) {
+        margin-left: auto;
+        p:nth-child(2) {
+          margin-top: 0%;
+          text-transform: uppercase;
+          font-size: 1rem;
+        }
+      }
+    }
   }
 
   @media screen and (min-width: 768px) {
@@ -218,25 +298,13 @@
       grid-area: travelM;
       margin-bottom: 10%;
       width: 100%;
-      display: flex;
-      flex-direction: row;
-
       div:nth-child(1) {
-        .distance {
-          margin-top: 0%;
-          margin: 0%;
-        }
         p:nth-child(2) {
-          text-transform: uppercase;
           font-size: 1.6rem;
-          margin-top: 0%;
         }
       }
       div:nth-child(2) {
-        margin-left: auto;
         p:nth-child(2) {
-          margin-top: 0%;
-          text-transform: uppercase;
           font-size: 1.6rem;
         }
       }
