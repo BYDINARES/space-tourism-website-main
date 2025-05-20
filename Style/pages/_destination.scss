@@ -165,17 +165,15 @@
       grid-row: 3/4;
       margin: 0%;
       margin-bottom: 10%;
-      justify-self: left;
-      width: auto;
+      width: 100%;
+      justify-content: space-between;
+      box-sizing: border-box;
       div {
-        align-self: baseline;
+        align-self: left;
         a {
           font-size: 1rem;
         }
       }
-      /* div:nth-child(4) {
-        margin-right: ;
-      } */
     }
     .title {
       grid-column: 4/5;
@@ -196,6 +194,7 @@
       grid-row: 6/7;
       display: flex;
       flex-direction: row;
+      width: 100%;
       font-size: 0.8rem;
       div:nth-child(1) {
         .distance {

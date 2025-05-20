@@ -17,12 +17,16 @@
   //The hamburger one
   .button-menu {
     all: unset;
-    margin-left: auto;
-    cursor: pointer;
-    height: 40%;
+    height: 9%;
     width: 15%;
+    margin-left: auto;
     box-sizing: border-box;
     z-index: 4;
+    cursor: pointer;
+
+    position: absolute;
+    left: 85%;
+    top: 4%;
 
     &.active {
       position: fixed;
@@ -123,6 +127,9 @@
   }
 
   @media (min-width: 576px) {
+    .button-menu {
+      width: 12%;
+    }
     .nav-links {
       width: 40%;
       li {

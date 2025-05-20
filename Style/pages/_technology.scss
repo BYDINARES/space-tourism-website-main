@@ -136,7 +136,7 @@
   @media screen and (min-width: 576px) {
     height: 60vw;
     grid-template-columns: 3% 10% 1.7fr 10% 40% 3%;
-    grid-template-rows: 20% auto auto 10% auto 50%;
+    grid-template-rows: 15% auto auto 10% auto 50%;
 
     .background-technology-mobile {
       height: 60vw;
@@ -183,7 +183,7 @@
     .title {
       grid-column: 3/4;
       grid-row: 4/5;
-      font-size: 1.7rem;
+      font-size: 1.6rem;
     }
     .plain-text {
       grid-column: 3/4;
