@@ -2,25 +2,41 @@
 
 /* Show menu when active */
 .button-menu {
-  span {
+  div span {
+    position: absolute;
     transition: transform 0.5s ease;
   }
+  /* + div > span {
+    all: unset;
+    position: absolute;
+    height: 4px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    width: 70%;
+    transition: transform 0.5s ease;
+  } */
 
   &.active {
     position: fixed;
 
+    > div {
+      position: relative;
+    }
     span:nth-child(1) {
-      transform: translate(-50%, 20%) rotate(50deg);
+      transform: translate(-60%, 132%) rotate(45deg);
       width: 100%;
+      top: 0%;
     }
 
     span:nth-child(2) {
       opacity: 0;
+      top: 0%;
     }
 
     span:nth-child(3) {
-      transform: translate(-30%, 10%) rotate(-50deg);
+      transform: translate(-30%, 10%) rotate(-45deg);
       width: 100%;
+      top: 0%;
     }
   }
 }

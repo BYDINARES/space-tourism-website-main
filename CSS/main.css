@@ -965,21 +965,21 @@
   z-index: 4;
   cursor: pointer;
   position: absolute;
-  left: 85%;
-  top: 4%;
+  left: 80%;
+  top: 5%;
 }
 .nav-bar .button-menu.active {
   position: fixed;
-  left: 80%;
+  left: 75%;
   top: 5%;
+  height: 8%;
   width: 8%;
-  height: 3.4%;
 }
 .nav-bar .button-menu > div {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
+  height: 80%;
   width: 100%;
 }
 .nav-bar .button-menu > div span {
@@ -987,6 +987,12 @@
   background-color: #ffffff;
   border-radius: 2px;
   width: 70%;
+  /* &:nth-child(2) {
+    top: 30%;
+  }
+  &:nth-child(3) {
+    top: 50%;
+  } */
 }
 .nav-bar .nav-links {
   display: flex;
@@ -1032,7 +1038,7 @@
     height: 60%;
   }
   .nav-bar .button-menu.active {
-    top: 6%;
+    top: 10%;
   }
   .nav-bar .nav-links li a {
     font-size: 1.3rem;
@@ -1123,22 +1129,40 @@
 }
 
 /* Show menu when active */
-.button-menu span {
+.button-menu {
+  /* + div > span {
+    all: unset;
+    position: absolute;
+    height: 4px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    width: 70%;
+    transition: transform 0.5s ease;
+  } */
+}
+.button-menu div span {
+  position: absolute;
   transition: transform 0.5s ease;
 }
 .button-menu.active {
   position: fixed;
 }
+.button-menu.active > div {
+  position: relative;
+}
 .button-menu.active span:nth-child(1) {
-  transform: translate(-50%, 20%) rotate(50deg);
+  transform: translate(-60%, 132%) rotate(45deg);
   width: 100%;
+  top: 0%;
 }
 .button-menu.active span:nth-child(2) {
   opacity: 0;
+  top: 0%;
 }
 .button-menu.active span:nth-child(3) {
-  transform: translate(-30%, 10%) rotate(-50deg);
+  transform: translate(-30%, 10%) rotate(-45deg);
   width: 100%;
+  top: 0%;
 }
 
 .nav-links {
