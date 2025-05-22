@@ -12,7 +12,7 @@
   color: aliceblue;
 }
 .destination-body .the-background {
-  height: 208vw;
+  height: 230vw;
   width: 100%;
   background-image: url("/starter-code/assets/destination/background-destination-mobile.jpg");
   position: absolute;
@@ -987,12 +987,12 @@
   background-color: #ffffff;
   border-radius: 2px;
   width: 70%;
-  /* &:nth-child(2) {
-    top: 30%;
-  }
-  &:nth-child(3) {
-    top: 50%;
-  } */
+}
+.nav-bar .button-menu > div span:nth-child(2) {
+  top: 30%;
+}
+.nav-bar .button-menu > div span:nth-child(3) {
+  top: 50%;
 }
 .nav-bar .nav-links {
   display: flex;
@@ -1129,18 +1129,12 @@
 }
 
 /* Show menu when active */
-.button-menu {
-  /* + div > span {
-    all: unset;
-    position: absolute;
-    height: 4px;
-    background-color: #ffffff;
-    border-radius: 2px;
-    width: 70%;
-    transition: transform 0.5s ease;
-  } */
+.button-menu div {
+  position: relative;
+  top: 20px;
 }
 .button-menu div span {
+  display: block;
   position: absolute;
   transition: transform 0.5s ease;
 }
@@ -1148,20 +1142,21 @@
   position: fixed;
 }
 .button-menu.active > div {
-  position: relative;
+  position: absolute;
+  margin-top: 40%;
 }
-.button-menu.active span:nth-child(1) {
-  transform: translate(-60%, 132%) rotate(45deg);
-  width: 100%;
+.button-menu.active > div span:nth-child(1) {
+  transform: rotate(45deg);
+  width: 150%;
   top: 0%;
 }
-.button-menu.active span:nth-child(2) {
+.button-menu.active > div span:nth-child(2) {
   opacity: 0;
   top: 0%;
 }
-.button-menu.active span:nth-child(3) {
-  transform: translate(-30%, 10%) rotate(-45deg);
-  width: 100%;
+.button-menu.active > div span:nth-child(3) {
+  transform: rotate(-45deg);
+  width: 150%;
   top: 0%;
 }
 

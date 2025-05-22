@@ -2,41 +2,39 @@
 
 /* Show menu when active */
 .button-menu {
-  div span {
-    position: absolute;
-    transition: transform 0.5s ease;
+  div {
+    position: relative;
+    top: 20px;
+    span {
+      display: block;
+      position: absolute;
+      transition: transform 0.5s ease;
+    }
   }
-  /* + div > span {
-    all: unset;
-    position: absolute;
-    height: 4px;
-    background-color: #ffffff;
-    border-radius: 2px;
-    width: 70%;
-    transition: transform 0.5s ease;
-  } */
 
   &.active {
     position: fixed;
 
     > div {
-      position: relative;
-    }
-    span:nth-child(1) {
-      transform: translate(-60%, 132%) rotate(45deg);
-      width: 100%;
-      top: 0%;
-    }
+      position: absolute;
+      margin-top: 40%;
+      span:nth-child(1) {
+        transform: rotate(45deg);
 
-    span:nth-child(2) {
-      opacity: 0;
-      top: 0%;
-    }
+        width: 150%;
+        top: 0%;
+      }
 
-    span:nth-child(3) {
-      transform: translate(-30%, 10%) rotate(-45deg);
-      width: 100%;
-      top: 0%;
+      span:nth-child(2) {
+        opacity: 0;
+        top: 0%;
+      }
+
+      span:nth-child(3) {
+        transform: rotate(-45deg);
+        width: 150%;
+        top: 0%;
+      }
     }
   }
 }
