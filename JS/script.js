@@ -1,39 +1,23 @@
 // ================== General functions ==============================
 
 const menu = document.querySelector(".nav-links");
+const navBar = document.querySelector(".nav-bar");
 const hamburgerButton = document.querySelector(".button-menu");
+const navLinks = document.querySelector(".nav-links");
 
 let isMenuOpen = false;
 
 hamburgerButton.addEventListener("click", () => {
-  hamburgerButton.classList.add("hamburger-fixed"); //
+  isMenuOpen ? closeMenu() : openMenu();
   isMenuOpen = !isMenuOpen;
 
-  if (isMenuOpen) {
-    openMenu();
+  if (!isMenuOpen) {
+    navBar.append(hamburgerButton);
+    hamburgerButton.classList.remove("hamburger-fixed");
   } else {
-    closeMenu();
+    hamburgerButton.classList.add("hamburger-fixed");
   }
-
-  /* isFixed(hamburgerButton); */
 });
-
-// Fix the hamburger button when active
-/* function isFixed(button) {
-  if (button.classList.contains("active")) {
-    button.style.position = "fixed";
-    button.style.left = "79%";
-    button.style.top = "8%";
-    button.style.width = "8%"; // set this explicitly
-    button.style.height = "3.4%";
-  } else {
-    button.style.position = "static";
-    button.style.top = "";
-    button.style.left = "";
-    button.style.width = "15%";
-    button.style.height = "40%";
-  }
-} */ // see what to to here. Maybe you can pass all of this to SCSS &.active
 
 function openMenu() {
   menu.classList.add("active");
@@ -44,6 +28,7 @@ function openMenu() {
 
 function closeMenu() {
   hamburgerButton.classList.remove("active");
+  hamburgerButton.classList.remove("hamburger-fixed");
   menu.classList.remove("active");
   menu.classList.add("not-active");
 
@@ -65,5 +50,3 @@ function closeMenuOnClickOutside(event) {
     closeMenu();
   }
 }
-
-//_____________Responsive time__________________

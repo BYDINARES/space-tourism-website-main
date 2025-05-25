@@ -28,13 +28,13 @@
     left: 80%;
     top: 5%;
 
-    &.active {
+    /* &.active {
       position: fixed;
       left: 75%;
       top: 5%;
       height: 8%;
       width: 8%;
-    }
+    } */
 
     > div {
       display: flex;
@@ -84,6 +84,10 @@
     -webkit-backdrop-filter: blur(10px); /*for Safari */
     z-index: 2;
 
+    &:nth-child(1) {
+      margin-top: 50%;
+    }
+
     li {
       padding: 0%;
       list-style: none;
@@ -96,10 +100,6 @@
         text-decoration: none;
         display: block;
       }
-    }
-
-    li:nth-child(1) {
-      margin-top: 50%;
     }
   }
 

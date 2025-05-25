@@ -967,13 +967,13 @@
   position: absolute;
   left: 80%;
   top: 5%;
-}
-.nav-bar .button-menu.active {
-  position: fixed;
-  left: 75%;
-  top: 5%;
-  height: 8%;
-  width: 8%;
+  /* &.active {
+    position: fixed;
+    left: 75%;
+    top: 5%;
+    height: 8%;
+    width: 8%;
+  } */
 }
 .nav-bar .button-menu > div {
   display: flex;
@@ -1015,6 +1015,9 @@
   -webkit-backdrop-filter: blur(10px); /*for Safari */
   z-index: 2;
 }
+.nav-bar .nav-links:nth-child(1) {
+  margin-top: 50%;
+}
 .nav-bar .nav-links li {
   padding: 0%;
   list-style: none;
@@ -1026,9 +1029,6 @@
   color: white;
   text-decoration: none;
   display: block;
-}
-.nav-bar .nav-links li:nth-child(1) {
-  margin-top: 50%;
 }
 @media (min-width: 400px) {
   .nav-bar {
