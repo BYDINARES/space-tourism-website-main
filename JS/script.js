@@ -1,5 +1,3 @@
-// ================== General functions ==============================
-
 const menu = document.querySelector(".nav-links");
 const navBar = document.querySelector(".nav-bar");
 const hamburgerButton = document.querySelector(".button-menu");
@@ -8,15 +6,17 @@ const navLinks = document.querySelector(".nav-links");
 let isMenuOpen = false;
 
 hamburgerButton.addEventListener("click", () => {
-  isMenuOpen ? closeMenu() : openMenu();
-  isMenuOpen = !isMenuOpen;
-
   if (!isMenuOpen) {
+    openMenu();
+    navLinks.prepend(hamburgerButton);
+    hamburgerButton.classList.add("hamburger-fixed");
+  } else {
+    closeMenu();
     navBar.append(hamburgerButton);
     hamburgerButton.classList.remove("hamburger-fixed");
-  } else {
-    hamburgerButton.classList.add("hamburger-fixed");
   }
+
+  isMenuOpen = !isMenuOpen;
 });
 
 function openMenu() {
@@ -28,13 +28,8 @@ function openMenu() {
 
 function closeMenu() {
   hamburgerButton.classList.remove("active");
-  hamburgerButton.classList.remove("hamburger-fixed");
   menu.classList.remove("active");
   menu.classList.add("not-active");
-
-  // Remove fixed style
-  /* isFixed(hamburgerButton); */
-  isMenuOpen = false;
 
   setTimeout(() => {
     menu.classList.remove("not-active");
@@ -44,9 +39,12 @@ function closeMenu() {
   document.removeEventListener("touchstart", closeMenuOnClickOutside);
 }
 
-// Function to close menu if clicked outside
 function closeMenuOnClickOutside(event) {
   if (!menu.contains(event.target) && !hamburgerButton.contains(event.target)) {
     closeMenu();
+    navBar.append(hamburgerButton);
+    hamburgerButton.classList.remove("hamburger-fixed");
+    hamburgerButton.classList.remove("active");
+    isMenuOpen = false;
   }
 }
