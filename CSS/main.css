@@ -1484,7 +1484,7 @@
     height: 60vw;
     width: 100vw;
     grid-template-columns: 3% 1fr 1.3fr 3%;
-    grid-template-rows: 15% auto auto auto;
+    grid-template-rows: 15% 25% 20% 20%;
     grid-template-areas: "empty-l nav nav nav" "empty-l sub-title empty empty-r" "empty-l title button empty-r" "empty-l text button empty-r";
   }
   .index-body .the-background {
@@ -1508,7 +1508,7 @@
   }
   .index-body .sub-title {
     grid-area: sub-title;
-    font-size: 1rem;
+    font-size: 1.2rem;
     padding-left: 8%;
     margin: 0%;
     margin-top: 10%;
@@ -1523,17 +1523,49 @@
     box-sizing: border-box;
     padding-left: 10%;
     padding-right: 10%;
+    margin-top: 0%;
     font-size: 1rem;
   }
   .index-body .explore {
     grid-area: button;
     height: 60%;
-    width: 40%;
+    width: 30%;
+    margin-left: 20%;
   }
   .index-body .empty-left {
     grid-area: empty-l;
   }
   .index-body .empty-right {
     grid-area: empty-r;
+  }
+}
+@media screen and (min-width: 992px) {
+  .index-body {
+    height: 45vw;
+    grid-template-columns: 3% 1fr 1.3fr 3%;
+    grid-template-rows: 25% 25% 20% 20%;
+  }
+  .index-body .nav-bar {
+    height: 80%;
+    align-self: flex-end;
+  }
+  .index-body .nav-bar .nav-links li a {
+    font-size: 1.2rem;
+  }
+  .index-body .the-background {
+    height: 60vw;
+  }
+  .index-body .sub-title {
+    font-size: 1.95rem;
+  }
+  .index-body .title {
+    font-size: 7rem;
+  }
+  .index-body .plain-text {
+    font-size: 1.4rem;
+  }
+  .index-body .explore {
+    height: 80%;
+    width: 30%;
   }
 }/*# sourceMappingURL=main.css.map */

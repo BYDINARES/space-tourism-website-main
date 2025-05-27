@@ -10,10 +10,12 @@ hamburgerButton.addEventListener("click", () => {
     openMenu();
     navLinks.prepend(hamburgerButton);
     hamburgerButton.classList.add("hamburger-fixed");
+    hamburgerButton.classList.add("active");
   } else {
     closeMenu();
     navBar.append(hamburgerButton);
     hamburgerButton.classList.remove("hamburger-fixed");
+    hamburgerButton.classList.remove("active");
   }
 
   isMenuOpen = !isMenuOpen;
