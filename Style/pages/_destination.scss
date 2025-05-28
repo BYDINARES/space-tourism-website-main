@@ -110,24 +110,26 @@
   .travel-mesuraments {
     grid-row: 7;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 2%;
+    margin-top: 5%;
+    align-items: center;
+
     //genrenal adjustments
     > p {
       text-transform: uppercase;
       margin: 0%;
-      margin-bottom: 10%;
       text-align: center;
-    }
-    //all the p elements except .distance and .travel-time
-    > p:not(.distance, .travel-time) {
-      font-size: 2rem;
+
+      //all the p elements except .distance and .travel-time
+      &:not(.distance, .travel-time) {
+        font-size: 2rem;
+      }
+      &.distance {
+        margin: 0%;
+      }
     }
 
-    .distance {
-      margin: 0%;
-      margin-top: 15%;
-    }
     .travel-time {
       margin: 0%;
     }
@@ -136,6 +138,44 @@
     }
   }
 
+  @media (min-width: 400px) {
+    height: 220vw;
+
+    .the-background {
+      height: 240vw;
+    }
+
+    .sub-title {
+      font-size: 1.4rem;
+    }
+    .planet {
+      width: 70%;
+    }
+    .the-planet-options a {
+      font-size: 1.4rem;
+    }
+    .title {
+      font-size: 5rem;
+    }
+    .plain-text {
+      font-size: 1.2rem;
+    }
+    .travel-mesuraments {
+      flex-direction: row;
+      justify-content: flex-start;
+
+      p {
+        font-size: 1.3rem;
+        text-align: center;
+
+        &.distance {
+          margin: 0%;
+        }
+      }
+    }
+  }
+
+  //----------- Change of position completly --------------
   @media screen and (min-width: 576px) {
     grid-template-columns: 3% 6% 42.5% 42.5% 6%;
     grid-template-rows: 15% 10% 15% 20% 20% 20% 20%;
@@ -195,7 +235,9 @@
       display: flex;
       flex-direction: row;
       width: 100%;
-      font-size: 0.8rem;
+      p {
+        font-size: 0.8rem;
+      }
       div:nth-child(1) {
         .distance {
           margin-top: 0%;
@@ -222,7 +264,7 @@
     height: 65vw;
     width: 100vw;
     grid-template-columns: 3% 3fr 45% 3%;
-    grid-template-rows: 14% auto auto auto auto auto;
+    grid-template-rows: 14% auto auto 20% 20% auto;
     grid-template-areas:
       "empty-l nav nav nav"
       "empty-l sub-title planetOp empty-r"
@@ -258,6 +300,7 @@
       margin-top: 5%;
       align-self: center;
       justify-self: start;
+      font-size: 1.2rem;
     }
     .the-planet-options {
       width: 100%;
@@ -266,8 +309,9 @@
       gap: 15%;
       margin: 0%;
       margin-top: 10%;
-      a {
+      div a {
         margin-top: 2%;
+        font-size: 1.2 rem;
       }
     }
     .planet {
@@ -278,9 +322,7 @@
     }
     .title {
       grid-area: title;
-      /* grid-column: 3/4;
-      grid-row: 4/5; */
-      font-size: 5rem;
+      font-size: 4rem;
       text-align: left;
       justify-self: start;
       text-transform: uppercase;
@@ -297,6 +339,7 @@
       grid-area: travelM;
       margin-bottom: 10%;
       width: 100%;
+      margin-top: 0%;
       div:nth-child(1) {
         p:nth-child(2) {
           font-size: 1.6rem;
@@ -315,5 +358,9 @@
     .empty-right {
       grid-area: empty-r;
     }
+  }
+
+  //Desktops
+  @media (min-width: 991px) {
   }
 }

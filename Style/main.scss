@@ -91,8 +91,6 @@
     .plain-text {
       font-size: 1.3rem;
     }
-    .explore {
-    }
   }
 
   //REAL MEDIA QUERY
@@ -188,7 +186,7 @@
       padding-left: 10%;
       padding-right: 10%;
       margin-top: 0%;
-      font-size: 1rem;
+      font-size: 0.9rem;
     }
 
     .explore /*Button*/ {
@@ -209,8 +207,8 @@
   //Desktops
   @media screen and (min-width: 992px) {
     height: 45vw;
-    grid-template-columns: 3% 1fr 1.3fr 3%;
-    grid-template-rows: 25% 25% 20% 20%;
+    grid-template-columns: 3% 40% 1.3fr 3%;
+    grid-template-rows: 25% 25% 20% 28%;
 
     .nav-bar {
       height: 80%;
@@ -225,13 +223,13 @@
     }
 
     .sub-title {
-      font-size: 1.95rem;
+      font-size: 1.4rem;
     }
     .title {
-      font-size: 7rem;
+      font-size: 6rem;
     }
     .plain-text {
-      font-size: 1.4rem;
+      font-size: 1.1rem;
     }
 
     .explore {
@@ -241,5 +239,31 @@
   }
 
   @media (min-width: 1400px) {
+    .nav-bar {
+      height: 80%;
+      align-self: flex-end;
+      .nav-links li a {
+        font-size: 1.2rem;
+      }
+    }
+
+    .the-background {
+      height: 60vw;
+    }
+
+    .sub-title {
+      font-size: 1.9rem;
+    }
+    .title {
+      font-size: 8.5rem;
+    }
+    .plain-text {
+      font-size: 1.3rem;
+    }
+
+    .explore {
+      height: 80%;
+      width: 30%;
+    }
   }
 }
