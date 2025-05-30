@@ -178,7 +178,7 @@
   //----------- Change of position completly --------------
   @media screen and (min-width: 576px) {
     grid-template-columns: 3% 6% 42.5% 42.5% 6%;
-    grid-template-rows: 15% 10% 15% 20% 20% 20% 20%;
+    grid-template-rows: 15% 8% 11% 18% 20% 20% 20%;
     height: 60vw;
 
     .the-background {
@@ -192,7 +192,7 @@
     .sub-title {
       grid-column: 2/4;
       grid-row: 2/3;
-      font-size: 1rem;
+      font-size: 0.9rem;
       margin: 0%;
     }
     .planet {
@@ -218,13 +218,13 @@
     .title {
       grid-column: 4/5;
       grid-row: 4/5;
-      font-size: 3rem;
+      font-size: 2.9rem;
       justify-self: left;
     }
     .plain-text {
       grid-column: 4/5;
       grid-row: 5/6;
-      font-size: 0.7rem;
+      font-size: 0.65rem;
       text-align: left;
       margin: 0%;
       padding-bottom: 2%;
@@ -232,6 +232,8 @@
     .travel-mesuraments {
       grid-column: 4/5;
       grid-row: 6/7;
+      align-self: flex-start;
+      margin-top: 2%;
       display: flex;
       flex-direction: row;
       width: 100%;
@@ -261,10 +263,10 @@
   }
 
   @media screen and (min-width: 768px) {
-    height: 65vw;
+    height: 60vw;
     width: 100vw;
     grid-template-columns: 3% 3fr 45% 3%;
-    grid-template-rows: 14% auto auto 20% 20% auto;
+    grid-template-rows: 14% 15% 15% 20% 20% auto;
     grid-template-areas:
       "empty-l nav nav nav"
       "empty-l sub-title planetOp empty-r"
@@ -273,7 +275,7 @@
       "empty-l planet travelM empty-r";
 
     .the-background {
-      height: 75vw;
+      height: 65vw;
       margin: 0%;
       padding: 0%;
       background-image: url("/starter-code/assets/destination/background-destination-tablet.jpg");
@@ -302,6 +304,7 @@
       justify-self: start;
       font-size: 1.2rem;
     }
+
     .the-planet-options {
       width: 100%;
       grid-area: planetOp;
@@ -309,6 +312,9 @@
       gap: 15%;
       margin: 0%;
       margin-top: 10%;
+      justify-self: center;
+      margin: 0%;
+
       div a {
         margin-top: 2%;
         font-size: 1.2 rem;
@@ -316,9 +322,9 @@
     }
     .planet {
       grid-area: planet;
-      height: 70%;
+      height: 85%;
       width: 65%;
-      margin-bottom: 15%;
+      margin-bottom: 10%;
     }
     .title {
       grid-area: title;
@@ -330,16 +336,17 @@
 
     .plain-text {
       grid-area: text;
-      font-size: 1rem;
+      font-size: 0.9rem;
       text-align: left;
       margin-top: 0%;
-      padding-bottom: 10%;
+      padding-bottom: 5%;
     }
     .travel-mesuraments {
       grid-area: travelM;
       margin-bottom: 10%;
       width: 100%;
       margin-top: 0%;
+
       div:nth-child(1) {
         p:nth-child(2) {
           font-size: 1.6rem;
@@ -362,5 +369,81 @@
 
   //Desktops
   @media (min-width: 991px) {
+    grid-template-columns: 3% 3fr 45% 3%;
+    grid-template-rows: 14% 10% 15% 18% 20% auto;
+
+    .sub-title {
+      font-size: 1.5rem;
+    }
+    .the-planet-options {
+      div a {
+        font-size: 1.5rem;
+      }
+    }
+
+    .planet {
+      height: 80%;
+      width: 60%;
+      margin-bottom: 10%;
+    }
+
+    .title {
+      font-size: 5rem;
+    }
+    .plain-text {
+      font-size: 1.1rem;
+      padding-bottom: 5%;
+    }
+    .travel-mesuraments {
+      div {
+        p:nth-child(1) {
+          font-size: 1.4rem;
+        }
+        p:nth-child(2) {
+          font-size: 1.7rem;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: 3% 3fr 45% 3%;
+    grid-template-rows: 14% 10% 15% 18% 20% auto;
+
+    .the-background {
+      height: 65vw;
+    }
+
+    .sub-title {
+    }
+    .the-planet-options {
+      align-self: center;
+      justify-self: center;
+      margin: 0%;
+      div a {
+      }
+    }
+
+    .planet {
+    }
+
+    .title {
+      font-size: 5.5rem;
+    }
+    .plain-text {
+    }
+    .plain-text {
+      padding-bottom: 5%;
+    }
+    .travel-mesuraments {
+      div {
+        p:nth-child(1) {
+          /*    font-size: 1.4rem; */
+        }
+        p:nth-child(2) {
+          /* font-size: 1.7rem; */
+        }
+      }
+    }
   }
 }

@@ -131,8 +131,14 @@
   }
 
   @media (min-width: 576px) {
+    .dimond {
+      height: 80%;
+    }
+
     .button-menu {
       width: 12%;
+      display: flex;
+      top: 0%;
     }
     .nav-links {
       width: 40%;
