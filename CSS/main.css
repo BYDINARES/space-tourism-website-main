@@ -326,9 +326,11 @@
 @media (min-width: 991px) {
   .destination-body {
     grid-template-columns: 3% 3fr 45% 3%;
-    grid-template-rows: 14% 10% 15% 18% 20% auto;
+    grid-template-rows: 19% 10% 15% 18% 20% auto;
   }
   .destination-body .sub-title {
+    align-self: center;
+    margin: 0%;
     font-size: 1.5rem;
   }
   .destination-body .the-planet-options div a {
@@ -356,7 +358,7 @@
 @media (min-width: 1200px) {
   .destination-body {
     grid-template-columns: 3% 3fr 45% 3%;
-    grid-template-rows: 14% 10% 15% 18% 20% auto;
+    grid-template-rows: 19% 10% 15% 18% 20% auto;
   }
   .destination-body .the-background {
     height: 65vw;
@@ -364,7 +366,7 @@
   .destination-body .the-planet-options {
     align-self: center;
     justify-self: center;
-    margin: 0%;
+    margin-top: 2%;
   }
   .destination-body .title {
     font-size: 5.5rem;
@@ -377,6 +379,20 @@
   }
   .destination-body .travel-mesuraments div p:nth-child(2) {
     /* font-size: 1.7rem; */
+  }
+}
+@media (min-width: 1400px) {
+  .destination-body .sub-title {
+    font-size: 2rem;
+  }
+  .destination-body .the-planet-options div a {
+    font-size: 2rem;
+  }
+  .destination-body .title {
+    font-size: 6rem;
+  }
+  .destination-body .plain-text {
+    font-size: 1.5rem;
   }
 }
 
@@ -706,7 +722,7 @@
     width: 75%;
     align-self: center;
   }
-  .crew-body h2 {
+  .crew-body .role {
     grid-column: 2/3;
     grid-row: 3/4;
     font-size: 2.2rem;
@@ -714,7 +730,7 @@
     align-self: end;
     margin: 0%;
   }
-  .crew-body h1 {
+  .crew-body .name-of-the-crew-member {
     grid-column: 2/3;
     grid-row: 4/5;
     font-size: 2.5rem;
@@ -726,7 +742,7 @@
     font-size: 1.1rem;
     text-align: start;
   }
-  .crew-body > ul {
+  .crew-body > .dot-nav {
     grid-column: 2/3;
     grid-row: 6/7;
   }
@@ -1182,6 +1198,16 @@
   .nav-bar .dimond {
     margin: 0%;
   }
+  .nav-bar .nav-line {
+    display: block;
+    position: absolute;
+    visibility: visible;
+    right: 58%;
+    background-color: rgba(240, 248, 255, 0.223);
+    height: 2.7px;
+    width: 30%;
+    z-index: 3;
+  }
   .nav-bar .button-menu {
     visibility: hidden;
     margin: 0%;
@@ -1202,7 +1228,7 @@
     z-index: 2;
   }
   .nav-bar .nav-links li {
-    padding: 5%;
+    padding: 4%;
   }
   .nav-bar .nav-links li span {
     display: block;
@@ -1210,6 +1236,9 @@
     height: 3px;
     background-color: aliceblue;
     visibility: hidden;
+  }
+  .nav-bar .nav-links li a {
+    font-size: 1rem;
   }
   .nav-bar .nav-links li .line1,
   .nav-bar .nav-links li .line2,
@@ -1224,6 +1253,26 @@
   }
   .nav-bar .nav-links li:nth-child(4) {
     padding-left: 10%;
+  }
+}
+@media (min-width: 991px) {
+  .nav-bar {
+    height: 80%;
+    align-self: flex-end;
+  }
+  .nav-bar .nav-links li {
+    padding: 4.5%;
+  }
+  .nav-bar .nav-links li a {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .nav-bar .nav-links li {
+    padding: 3.5%;
+  }
+  .nav-bar .nav-links li a {
+    font-size: 1.5rem;
   }
 }
 
@@ -1583,7 +1632,7 @@
     height: 60vw;
     width: 100vw;
     grid-template-columns: 3% 1fr 1.3fr 3%;
-    grid-template-rows: 15% 25% 20% 20%;
+    grid-template-rows: 15% 20% 20% 20%;
     grid-template-areas: "empty-l nav nav nav" "empty-l sub-title empty empty-r" "empty-l title button empty-r" "empty-l text button empty-r";
   }
   .index-body .the-background {
@@ -1592,18 +1641,6 @@
     background-image: url("/starter-code/assets/home/background-home-desktop.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-  }
-  .index-body .nav-bar {
-    grid-area: nav;
-  }
-  .index-body .nav-bar .nav-line {
-    display: block;
-    position: absolute;
-    right: 58%;
-    background-color: rgba(240, 248, 255, 0.223);
-    height: 2px;
-    width: 30%;
-    z-index: 3;
   }
   .index-body .sub-title {
     grid-area: sub-title;
@@ -1642,14 +1679,7 @@
   .index-body {
     height: 45vw;
     grid-template-columns: 3% 40% 1.3fr 3%;
-    grid-template-rows: 25% 25% 20% 28%;
-  }
-  .index-body .nav-bar {
-    height: 80%;
-    align-self: flex-end;
-  }
-  .index-body .nav-bar .nav-links li a {
-    font-size: 1.2rem;
+    grid-template-rows: 25% 20% 20% 28%;
   }
   .index-body .the-background {
     height: 60vw;
@@ -1668,13 +1698,25 @@
     width: 30%;
   }
 }
-@media (min-width: 1400px) {
-  .index-body .nav-bar {
-    height: 80%;
-    align-self: flex-end;
+@media (min-width: 1200px) {
+  .index-body {
+    grid-template-columns: 3% 40% 1.3fr 3%;
+    grid-template-rows: 25% 20% 20% 28%;
   }
-  .index-body .nav-bar .nav-links li a {
-    font-size: 1.2rem;
+  .index-body .sub-title {
+    font-size: 1.8rem;
+  }
+  .index-body .title {
+    font-size: 8rem;
+  }
+  .index-body .plain-text {
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 1400px) {
+  .index-body {
+    grid-template-columns: 3% 40% 1.3fr 3%;
+    grid-template-rows: 19% 20% 20% 28%;
   }
   .index-body .the-background {
     height: 60vw;

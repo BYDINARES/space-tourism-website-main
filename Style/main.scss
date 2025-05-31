@@ -140,7 +140,7 @@
     height: 60vw;
     width: 100vw;
     grid-template-columns: 3% 1fr 1.3fr 3%;
-    grid-template-rows: 15% 25% 20% 20%;
+    grid-template-rows: 15% 20% 20% 20%;
     grid-template-areas:
       "empty-l nav nav nav"
       "empty-l sub-title empty empty-r"
@@ -153,19 +153,6 @@
       background-image: url("/starter-code/assets/home/background-home-desktop.jpg");
       background-size: cover;
       background-repeat: no-repeat;
-    }
-
-    .nav-bar {
-      grid-area: nav;
-      .nav-line {
-        display: block;
-        position: absolute;
-        right: 58%;
-        background-color: rgba(240, 248, 255, 0.223);
-        height: 2px;
-        width: 30%;
-        z-index: 3;
-      }
     }
 
     .sub-title {
@@ -208,15 +195,7 @@
   @media screen and (min-width: 992px) {
     height: 45vw;
     grid-template-columns: 3% 40% 1.3fr 3%;
-    grid-template-rows: 25% 25% 20% 28%;
-
-    .nav-bar {
-      height: 80%;
-      align-self: flex-end;
-      .nav-links li a {
-        font-size: 1.2rem;
-      }
-    }
+    grid-template-rows: 25% 20% 20% 28%;
 
     .the-background {
       height: 60vw;
@@ -238,14 +217,25 @@
     }
   }
 
-  @media (min-width: 1400px) {
-    .nav-bar {
-      height: 80%;
-      align-self: flex-end;
-      .nav-links li a {
-        font-size: 1.2rem;
-      }
+  @media (min-width: 1200px) {
+    grid-template-columns: 3% 40% 1.3fr 3%;
+    grid-template-rows: 25% 20% 20% 28%;
+
+    .sub-title {
+      font-size: 1.8rem;
     }
+    .title {
+      font-size: 8rem;
+    }
+
+    .plain-text {
+      font-size: 1.3rem;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    grid-template-columns: 3% 40% 1.3fr 3%;
+    grid-template-rows: 19% 20% 20% 28%;
 
     .the-background {
       height: 60vw;

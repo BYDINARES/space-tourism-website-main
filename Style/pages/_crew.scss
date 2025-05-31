@@ -292,7 +292,7 @@
     }
 
     //4
-    h2 {
+    .role {
       grid-column: 2/3;
       grid-row: 3/4;
       font-size: 2.2rem;
@@ -302,7 +302,7 @@
     }
 
     //5
-    h1 {
+    .name-of-the-crew-member {
       grid-column: 2/3;
       grid-row: 4/5;
       font-size: 2.5rem;
@@ -318,7 +318,7 @@
     }
 
     //7
-    > ul {
+    > .dot-nav {
       grid-column: 2/3;
       grid-row: 6/7;
     }

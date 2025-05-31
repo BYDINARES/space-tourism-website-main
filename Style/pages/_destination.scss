@@ -370,9 +370,11 @@
   //Desktops
   @media (min-width: 991px) {
     grid-template-columns: 3% 3fr 45% 3%;
-    grid-template-rows: 14% 10% 15% 18% 20% auto;
+    grid-template-rows: 19% 10% 15% 18% 20% auto;
 
     .sub-title {
+      align-self: center;
+      margin: 0%;
       font-size: 1.5rem;
     }
     .the-planet-options {
@@ -408,7 +410,7 @@
 
   @media (min-width: 1200px) {
     grid-template-columns: 3% 3fr 45% 3%;
-    grid-template-rows: 14% 10% 15% 18% 20% auto;
+    grid-template-rows: 19% 10% 15% 18% 20% auto;
 
     .the-background {
       height: 65vw;
@@ -419,7 +421,7 @@
     .the-planet-options {
       align-self: center;
       justify-self: center;
-      margin: 0%;
+      margin-top: 2%;
       div a {
       }
     }
@@ -444,6 +446,21 @@
           /* font-size: 1.7rem; */
         }
       }
+    }
+  }
+  @media (min-width: 1400px) {
+    .sub-title {
+      font-size: 2rem;
+    }
+    .the-planet-options div a {
+      font-size: 2rem;
+    }
+
+    .title {
+      font-size: 6rem;
+    }
+    .plain-text {
+      font-size: 1.5rem;
     }
   }
 }
