@@ -628,7 +628,7 @@
 @media (min-width: 576px) {
   .crew-body {
     grid-template-columns: 3% 6% 42.5% 42.5% 6%;
-    grid-template-rows: 15% 10% auto 12% 30% 17%;
+    grid-template-rows: 15% 10% 10% 12% 15% 17%;
     height: 60vw;
   }
   .crew-body .background-destination-mobile {
@@ -664,7 +664,7 @@
   .crew-body .name-of-the-crew-member {
     grid-column: 3/4;
     grid-row: 4/5;
-    font-size: 1.8rem;
+    font-size: 2.3rem;
     margin-right: auto;
   }
   .crew-body .name-of-the-crew-member.specialist {
@@ -673,7 +673,7 @@
   .crew-body .plain-text {
     grid-column: 3/4;
     grid-row: 5/6;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     margin-right: auto;
     text-align: left;
   }
@@ -681,21 +681,28 @@
     grid-column: 3/4;
     grid-row: 6/7;
   }
-  .crew-body .crew-member-navigation > ul li {
+  .crew-body .crew-member-navigation > .dot-nav {
+    gap: 10%;
+  }
+  .crew-body .crew-member-navigation > .dot-nav li {
     font-size: 1.5rem;
+  }
+  .crew-body .crew-member-navigation > .dot-nav li a {
+    height: 20px;
+    width: 20px;
   }
 }
 @media (min-width: 768px) {
   .crew-body {
-    height: 100vh;
+    height: 45vw;
     grid-template-columns: 3% 1fr 1fr 3%;
-    grid-template-rows: 15% auto auto 12% auto 10%;
+    grid-template-rows: 19% 12% 15% 18% auto 15%;
   }
   .crew-body *:not(.crew-member) {
     justify-self: start;
   }
   .crew-body .background-destination-mobile {
-    height: 100vh;
+    height: 100vw;
   }
   .crew-body .nav-bar {
     grid-column: 2/5;
@@ -717,9 +724,10 @@
   }
   .crew-body .crew-member {
     grid-column: 3/4;
-    grid-row: 2/7;
-    height: 80%;
+    grid-row: 2/8;
+    height: 90%;
     width: 75%;
+    margin-top: 10%;
     align-self: center;
   }
   .crew-body .role {
@@ -733,18 +741,74 @@
   .crew-body .name-of-the-crew-member {
     grid-column: 2/3;
     grid-row: 4/5;
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     align-self: start;
   }
   .crew-body .plain-text {
     grid-column: 2/3;
     grid-row: 5/6;
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-align: start;
   }
-  .crew-body > .dot-nav {
+  .crew-body > .crew-member-navigation {
     grid-column: 2/3;
     grid-row: 6/7;
+    margin: 0%;
+    align-self: center;
+  }
+  .crew-body > .crew-member-navigation .dot-nav {
+    margin: 0%;
+    gap: 10%;
+  }
+  .crew-body > .crew-member-navigation .dot-nav li a {
+    height: 25px;
+    width: 25px;
+  }
+}
+@media (min-width: 991px) {
+  .crew-body {
+    grid-template-columns: 3% 50% 1fr 3%;
+    grid-template-rows: 25% 12% 12% 13% 25% 15%;
+  }
+  .crew-body .nav-bar {
+    height: 80%;
+  }
+  .crew-body .title-of-the-page {
+    margin: 0%;
+    font-size: 1.2rem;
+  }
+  .crew-body .crew-member {
+    width: 60%;
+  }
+  .crew-body .name-of-the-crew-member {
+    font-size: 3rem;
+  }
+  .crew-body .plain-text {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .crew-body .title-of-the-page {
+    font-size: 1.5rem;
+  }
+  .crew-body .role {
+    font-size: 3rem;
+  }
+  .crew-body .name-of-the-crew-member {
+    font-size: 3.6rem;
+  }
+  .crew-body .plain-text {
+    font-size: 1.5rem;
+  }
+  .crew-body .crew-member-navigation .dot-nav li a {
+    height: 35px;
+    width: 35px;
+  }
+}
+@media (min-width: 1400px) {
+  .crew-body {
+    grid-template-columns: 3% 50% 1fr 3%;
+    grid-template-rows: 25% 12% 12% 13% 25% 15%;
   }
 }
 
