@@ -2,7 +2,7 @@
   height: 200vw;
   width: 100vw;
   display: grid;
-  grid-template-rows: auto auto 1fr auto auto auto auto;
+  grid-template-rows: 12% auto 35% auto auto auto auto;
   grid-template-columns: 5% 1fr 5%;
   justify-items: center;
   margin: 0%;
@@ -23,14 +23,14 @@
     grid-column: 2/3;
   }
   .dimond {
-    height: 80%;
   }
 
   h2 {
     grid-row: 2/3;
     margin: 10%;
     font-size: 1.3rem;
-    justify-self: start;
+    justify-self: center;
+
     a {
       color: rgba(240, 248, 255, 0.504);
     }
@@ -114,28 +114,31 @@
   }
 
   @media (min-width: 500px) {
-    grid-template-rows: auto auto 35% auto auto auto auto;
+    grid-template-rows: auto 8% 35% 7% 7% 8% auto;
     .dimond {
-      height: 100%;
+      height: 50%;
     }
     h2 {
+      align-self: center;
       font-size: 2rem;
     }
+
     h3 {
-      font-size: 1.5rem;
+      font-size: 2rem;
     }
     h1 {
-      font-size: 3rem;
+      font-size: 4rem;
     }
     .plain-text {
       font-size: 1.25rem;
+      margin-top: 0%;
     }
   }
 
   //---- MEDIA QUERIES (landscape mode)
   @media screen and (min-width: 576px) {
     height: 60vw;
-    grid-template-columns: 3% 10% 1.7fr 10% 40% 3%;
+    grid-template-columns: 3% 10% 37% 7% 40% 3%;
     grid-template-rows: 15% auto auto 10% auto 50%;
 
     .background-technology-mobile {
@@ -179,16 +182,19 @@
       grid-column: 3/4;
       grid-row: 3/4;
       font-size: 1.2rem;
+      justify-self: start;
     }
     .title {
       grid-column: 3/4;
       grid-row: 4/5;
-      font-size: 1.6rem;
+      font-size: 1.8rem;
+      justify-self: start;
     }
     .plain-text {
       grid-column: 3/4;
       grid-row: 5/6;
-      font-size: 0.7rem;
+      font-size: 0.6rem;
+      text-align: left;
     }
   }
   @media (min-width: 650px) {
@@ -207,22 +213,22 @@
       font-size: 1.5rem;
     }
     .title {
-      font-size: 1.9rem;
+      font-size: 2rem;
     }
     .plain-text {
-      font-size: 0.85rem;
+      font-size: 0.73rem;
     }
   }
 
   //---- MEDIA QUERIES (laptops and other similar devices)
   @media (min-width: 768px) {
-    height: 60vw;
+    height: 55vw;
     width: 100vw;
     grid-template-columns: 3% 10% 40% 10% 1fr;
-    grid-template-rows: 15% 10% 5% 15% 40%;
+    grid-template-rows: 15% 10% 8% 12% 30%;
 
     .background-technology-mobile {
-      height: 60vw;
+      height: 55vw;
       background-image: url("/starter-code/assets/technology/background-technology-tablet.jpg");
     }
 
@@ -258,15 +264,8 @@
       width: 100%;
       height: 100%;
       .main-image {
-        height: 75%;
-        margin-bottom: 30%;
+        height: 90%;
       }
-    }
-    .main-image {
-      grid-column: 5;
-      grid-row: 3/6;
-      height: 70%;
-      margin-bottom: 30%;
     }
 
     //_______4
@@ -276,7 +275,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 18%;
+      gap: 15%;
       width: 99%;
       cursor: pointer;
     }
@@ -286,7 +285,7 @@
       grid-column: 3/4;
       grid-row: 3/4;
       margin: 0%;
-      font-size: 1rem;
+      font-size: 1.2rem;
       justify-self: start;
       align-self: end;
     }
@@ -295,8 +294,9 @@
     .title {
       grid-column: 3/4;
       grid-row: 4/5;
-      font-size: 2.2rem;
+      font-size: 2rem;
       justify-self: start;
+      align-self: start;
       text-transform: uppercase;
     }
 
@@ -304,10 +304,16 @@
     .plain-text {
       grid-column: 3/4;
       grid-row: 5;
-      font-size: 1.1rem;
+      font-size: 0.9rem;
       justify-self: start;
       text-align: left;
       margin: 0%;
+    }
+  }
+
+  @media (min-width: 991px) {
+    .title {
+      font-size: 5rem;
     }
   }
 }

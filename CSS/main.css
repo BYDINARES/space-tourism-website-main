@@ -5,7 +5,7 @@
   margin: 0%;
   display: grid;
   grid-template-columns: 5% 1fr 5%;
-  grid-template-rows: 15% auto 30% auto auto auto;
+  grid-template-rows: 11% auto 30% auto auto auto;
   justify-items: center;
   align-items: center;
   position: relative;
@@ -475,7 +475,7 @@
   margin: 0%;
   color: aliceblue;
   grid-template-columns: 5% 90% 5%;
-  grid-template-rows: auto auto 40% auto auto auto auto;
+  grid-template-rows: 8.9% auto 40% auto auto auto auto;
   justify-items: center;
   align-items: center;
   font-family: "Roboto", sans-serif;
@@ -808,7 +808,10 @@
 @media (min-width: 1400px) {
   .crew-body {
     grid-template-columns: 3% 50% 1fr 3%;
-    grid-template-rows: 25% 12% 12% 13% 25% 15%;
+    grid-template-rows: 25% 12% 12% 13% 19% 15%;
+  }
+  .crew-body .crew-member {
+    height: 80%;
   }
 }
 
@@ -832,7 +835,7 @@
   height: 200vw;
   width: 100vw;
   display: grid;
-  grid-template-rows: auto auto 1fr auto auto auto auto;
+  grid-template-rows: 12% auto 35% auto auto auto auto;
   grid-template-columns: 5% 1fr 5%;
   justify-items: center;
   margin: 0%;
@@ -850,14 +853,11 @@
   z-index: 1;
   grid-column: 2/3;
 }
-.technology-body .dimond {
-  height: 80%;
-}
 .technology-body h2 {
   grid-row: 2/3;
   margin: 10%;
   font-size: 1.3rem;
-  justify-self: start;
+  justify-self: center;
 }
 .technology-body h2 a {
   color: rgba(240, 248, 255, 0.504);
@@ -937,28 +937,30 @@
 }
 @media (min-width: 500px) {
   .technology-body {
-    grid-template-rows: auto auto 35% auto auto auto auto;
+    grid-template-rows: auto 8% 35% 7% 7% 8% auto;
   }
   .technology-body .dimond {
-    height: 100%;
+    height: 50%;
   }
   .technology-body h2 {
+    align-self: center;
     font-size: 2rem;
   }
   .technology-body h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   .technology-body h1 {
-    font-size: 3rem;
+    font-size: 4rem;
   }
   .technology-body .plain-text {
     font-size: 1.25rem;
+    margin-top: 0%;
   }
 }
 @media screen and (min-width: 576px) {
   .technology-body {
     height: 60vw;
-    grid-template-columns: 3% 10% 1.7fr 10% 40% 3%;
+    grid-template-columns: 3% 10% 37% 7% 40% 3%;
     grid-template-rows: 15% auto auto 10% auto 50%;
   }
   .technology-body .background-technology-mobile {
@@ -999,16 +1001,19 @@
     grid-column: 3/4;
     grid-row: 3/4;
     font-size: 1.2rem;
+    justify-self: start;
   }
   .technology-body .title {
     grid-column: 3/4;
     grid-row: 4/5;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+    justify-self: start;
   }
   .technology-body .plain-text {
     grid-column: 3/4;
     grid-row: 5/6;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
+    text-align: left;
   }
 }
 @media (min-width: 650px) {
@@ -1029,21 +1034,21 @@
     font-size: 1.5rem;
   }
   .technology-body .title {
-    font-size: 1.9rem;
+    font-size: 2rem;
   }
   .technology-body .plain-text {
-    font-size: 0.85rem;
+    font-size: 0.73rem;
   }
 }
 @media (min-width: 768px) {
   .technology-body {
-    height: 60vw;
+    height: 55vw;
     width: 100vw;
     grid-template-columns: 3% 10% 40% 10% 1fr;
-    grid-template-rows: 15% 10% 5% 15% 40%;
+    grid-template-rows: 15% 10% 8% 12% 30%;
   }
   .technology-body .background-technology-mobile {
-    height: 60vw;
+    height: 55vw;
     background-image: url("/starter-code/assets/technology/background-technology-tablet.jpg");
   }
   .technology-body .nav-bar {
@@ -1075,14 +1080,7 @@
     height: 100%;
   }
   .technology-body .image-wrapper .main-image {
-    height: 75%;
-    margin-bottom: 30%;
-  }
-  .technology-body .main-image {
-    grid-column: 5;
-    grid-row: 3/6;
-    height: 70%;
-    margin-bottom: 30%;
+    height: 90%;
   }
   .technology-body .pick-a-technology-buttons {
     grid-column: 2/3;
@@ -1090,7 +1088,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 18%;
+    gap: 15%;
     width: 99%;
     cursor: pointer;
   }
@@ -1098,24 +1096,30 @@
     grid-column: 3/4;
     grid-row: 3/4;
     margin: 0%;
-    font-size: 1rem;
+    font-size: 1.2rem;
     justify-self: start;
     align-self: end;
   }
   .technology-body .title {
     grid-column: 3/4;
     grid-row: 4/5;
-    font-size: 2.2rem;
+    font-size: 2rem;
     justify-self: start;
+    align-self: start;
     text-transform: uppercase;
   }
   .technology-body .plain-text {
     grid-column: 3/4;
     grid-row: 5;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     justify-self: start;
     text-align: left;
     margin: 0%;
+  }
+}
+@media (min-width: 991px) {
+  .technology-body .title {
+    font-size: 5rem;
   }
 }
 
