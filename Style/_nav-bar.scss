@@ -23,10 +23,11 @@
     box-sizing: border-box;
     z-index: 4;
     cursor: pointer;
+    align-self: center;
 
     position: absolute;
-    left: 80%;
-    top: 3%;
+    right: 6%;
+    top: 0%;
 
     /* &.active {
       position: fixed;
@@ -42,6 +43,7 @@
       justify-content: space-between;
       height: 80%;
       width: 100%;
+      align-self: center;
 
       span {
         height: 4px;
@@ -52,7 +54,7 @@
           top: 30%;
         }
         &:nth-child(3) {
-          top: 50%;
+          top: 60%;
         }
       }
     }
@@ -84,7 +86,7 @@
     -webkit-backdrop-filter: blur(10px); /*for Safari */
     z-index: 2;
 
-    &:nth-child(1) {
+    li:nth-child(1) {
       margin-top: 50%;
     }
 
@@ -109,11 +111,11 @@
   @media (min-width: 400px) {
     height: 100%;
 
-    .button-menu {
+    /* .button-menu {
       &.active {
         top: 10%;
       }
-    }
+    } */
 
     .nav-links li a {
       font-size: 1.3rem;
@@ -121,9 +123,9 @@
   }
 
   @media (min-width: 500px) {
-    .button-menu.active {
+    /*  .button-menu.active {
       top: 8%;
-    }
+    } */
 
     .nav-links li a {
       font-size: 1.5rem;
@@ -131,6 +133,10 @@
   }
 
   @media (min-width: 576px) {
+    .button-menu.active {
+      right: 13%;
+    }
+
     .dimond {
       height: 80%;
     }
@@ -154,20 +160,20 @@
   }
 
   @media (min-width: 600px) {
-    .button-menu.active {
+    /* .button-menu.active {
       top: 10%;
-    }
+    } */
 
     .nav-links li a {
       font-size: 1rem;
     }
   }
 
-  @media (min-width: 700px) {
+  /* @media (min-width: 700px) {
     .button-menu.active {
       top: 12%;
     }
-  }
+  } */
 
   //An actual media query
   @media screen and (min-width: 768px) {

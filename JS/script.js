@@ -1,20 +1,15 @@
 const menu = document.querySelector(".nav-links");
 const navBar = document.querySelector(".nav-bar");
 const hamburgerButton = document.querySelector(".button-menu");
-const navLinks = document.querySelector(".nav-links");
 
 let isMenuOpen = false;
 
 hamburgerButton.addEventListener("click", () => {
   if (!isMenuOpen) {
     openMenu();
-    navLinks.prepend(hamburgerButton);
-    hamburgerButton.classList.add("hamburger-fixed");
     hamburgerButton.classList.add("active");
   } else {
     closeMenu();
-    navBar.append(hamburgerButton);
-    hamburgerButton.classList.remove("hamburger-fixed");
     hamburgerButton.classList.remove("active");
   }
 

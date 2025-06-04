@@ -1171,6 +1171,11 @@
   width: 100%;
   height: 100%;
   box-sizing: border-box;
+  /* @media (min-width: 700px) {
+    .button-menu.active {
+      top: 12%;
+    }
+  } */
 }
 .nav-bar .dimond {
   grid-row: 1/2;
@@ -1183,9 +1188,10 @@
   box-sizing: border-box;
   z-index: 4;
   cursor: pointer;
+  align-self: center;
   position: absolute;
-  left: 80%;
-  top: 3%;
+  right: 6%;
+  top: 0%;
   /* &.active {
     position: fixed;
     left: 75%;
@@ -1200,6 +1206,7 @@
   justify-content: space-between;
   height: 80%;
   width: 100%;
+  align-self: center;
 }
 .nav-bar .button-menu > div span {
   height: 4px;
@@ -1211,7 +1218,7 @@
   top: 30%;
 }
 .nav-bar .button-menu > div span:nth-child(3) {
-  top: 50%;
+  top: 60%;
 }
 .nav-bar .nav-links {
   display: flex;
@@ -1234,7 +1241,7 @@
   -webkit-backdrop-filter: blur(10px); /*for Safari */
   z-index: 2;
 }
-.nav-bar .nav-links:nth-child(1) {
+.nav-bar .nav-links li:nth-child(1) {
   margin-top: 50%;
 }
 .nav-bar .nav-links li {
@@ -1252,23 +1259,30 @@
 @media (min-width: 400px) {
   .nav-bar {
     height: 100%;
-  }
-  .nav-bar .button-menu.active {
-    top: 10%;
+    /* .button-menu {
+      &.active {
+        top: 10%;
+      }
+    } */
   }
   .nav-bar .nav-links li a {
     font-size: 1.3rem;
   }
 }
 @media (min-width: 500px) {
-  .nav-bar .button-menu.active {
-    top: 8%;
+  .nav-bar {
+    /*  .button-menu.active {
+      top: 8%;
+    } */
   }
   .nav-bar .nav-links li a {
     font-size: 1.5rem;
   }
 }
 @media (min-width: 576px) {
+  .nav-bar .button-menu.active {
+    right: 13%;
+  }
   .nav-bar .dimond {
     height: 80%;
   }
@@ -1288,16 +1302,13 @@
   }
 }
 @media (min-width: 600px) {
-  .nav-bar .button-menu.active {
-    top: 10%;
+  .nav-bar {
+    /* .button-menu.active {
+      top: 10%;
+    } */
   }
   .nav-bar .nav-links li a {
     font-size: 1rem;
-  }
-}
-@media (min-width: 700px) {
-  .nav-bar .button-menu.active {
-    top: 12%;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1394,6 +1405,7 @@
 }
 .button-menu.active {
   position: fixed;
+  right: 15%;
 }
 .button-menu.active > div {
   position: absolute;
@@ -1401,7 +1413,7 @@
 }
 .button-menu.active > div span:nth-child(1) {
   transform: rotate(45deg);
-  width: 150%;
+  width: 100%;
   top: 0%;
 }
 .button-menu.active > div span:nth-child(2) {
@@ -1410,7 +1422,7 @@
 }
 .button-menu.active > div span:nth-child(3) {
   transform: rotate(-45deg);
-  width: 150%;
+  width: 100%;
   top: 0%;
 }
 
