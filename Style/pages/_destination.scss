@@ -91,7 +91,7 @@
     grid-row: 5/6;
     width: fit-content;
     margin: 0%;
-    font-size: 4rem;
+    font-size: 3.9rem;
   }
 
   //6
@@ -117,20 +117,22 @@
     align-items: center;
 
     //genrenal adjustments
-    > p {
+    > div p {
       text-transform: uppercase;
       margin: 0%;
       text-align: center;
 
       //all the p elements except .distance and .travel-time
       &:not(.distance, .travel-time) {
-        font-size: 2rem;
+        font-size: 1rem;
+        margin-top: 2%;
+        font-weight: 200;
       }
       &.distance {
-        margin: 0%;
+        margin-top: 0%;
       }
       &.travel-time {
-        margin: 0%;
+        margin-top: 0%;
       }
     }
 
@@ -267,7 +269,7 @@
     height: 60vw;
     width: 100vw;
     grid-template-columns: 3% 3fr 45% 3%;
-    grid-template-rows: 14% 15% 15% 20% 20% auto;
+    grid-template-rows: 15% 15% 15% 20% 20% auto;
     grid-template-areas:
       "empty-l nav nav nav"
       "empty-l sub-title planetOp empty-r"
@@ -292,7 +294,7 @@
         right: 20%;
         background-color: rgba(240, 248, 255, 0.223);
         height: 2px;
-        width: 57%;
+        width: 62%;
         z-index: 3;
       }
     }

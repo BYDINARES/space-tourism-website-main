@@ -257,7 +257,7 @@
   @media (min-width: 768px) {
     height: 45vw;
     grid-template-columns: 3% 1fr 1fr 3%;
-    grid-template-rows: 19% 12% 15% 18% auto 15%;
+    grid-template-rows: 20% 12% 15% 18% auto 15%;
 
     *:not(.crew-member) {
       justify-self: start;

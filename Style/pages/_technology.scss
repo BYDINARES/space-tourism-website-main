@@ -88,14 +88,14 @@
   }
 
   @media (min-width: 400px) {
-    grid-template-rows: auto auto 37% auto auto auto auto;
+    grid-template-rows: 12% auto 37% auto auto auto auto;
     /* grid-template-columns: 5% 1fr 5%; */
 
     h2 {
       font-size: 1.8rem;
     }
     .pick-a-technology-buttons a {
-      width: 13%;
+      width: 10%;
       font-size: 1.2rem;
     }
     h3 {
@@ -113,9 +113,7 @@
 
   @media (min-width: 500px) {
     grid-template-rows: auto 8% 35% 7% 7% 8% auto;
-    .dimond {
-      height: 50%;
-    }
+
     h2 {
       align-self: center;
       font-size: 2rem;
@@ -223,7 +221,7 @@
     height: 55vw;
     width: 100vw;
     grid-template-columns: 3% 10% 40% 10% 1fr;
-    grid-template-rows: 15% 10% 8% 12% 30%;
+    grid-template-rows: 16.6% 10% 8% 12% 30%;
 
     .background-technology-mobile {
       height: 55vw;
@@ -239,6 +237,7 @@
         position: absolute;
         right: 58%;
         background-color: rgba(240, 248, 255, 0.223);
+        height: 2px;
         height: 2px;
         width: 30%;
         z-index: 3;

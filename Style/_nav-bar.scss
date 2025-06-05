@@ -51,10 +51,10 @@
         border-radius: 2px;
         width: 70%;
         &:nth-child(2) {
-          top: 30%;
+          top: 15px;
         }
         &:nth-child(3) {
-          top: 60%;
+          top: 30px;
         }
       }
     }
@@ -111,11 +111,9 @@
   @media (min-width: 400px) {
     height: 100%;
 
-    /* .button-menu {
-      &.active {
-        top: 10%;
-      }
-    } */
+    .button-menu {
+      top: 8px;
+    }
 
     .nav-links li a {
       font-size: 1.3rem;
@@ -132,6 +130,12 @@
     }
   }
 
+  @media (min-width: 490px) {
+    .button-menu {
+      top: 15px;
+    }
+  }
+
   @media (min-width: 576px) {
     .button-menu.active {
       right: 13%;
@@ -144,7 +148,7 @@
     .button-menu {
       width: 12%;
       display: flex;
-      top: 0%;
+      top: -10px;
     }
     .nav-links {
       width: 40%;
@@ -186,7 +190,7 @@
       visibility: visible;
       right: 58%;
       background-color: rgba(240, 248, 255, 0.223);
-      height: 3px;
+      height: 2px;
       width: 30%;
       z-index: 3;
     }

@@ -39,8 +39,6 @@ function closeMenu() {
 function closeMenuOnClickOutside(event) {
   if (!menu.contains(event.target) && !hamburgerButton.contains(event.target)) {
     closeMenu();
-    navBar.append(hamburgerButton);
-    hamburgerButton.classList.remove("hamburger-fixed");
     hamburgerButton.classList.remove("active");
     isMenuOpen = false;
   }

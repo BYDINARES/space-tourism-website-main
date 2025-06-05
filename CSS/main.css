@@ -80,7 +80,7 @@
   grid-row: 5/6;
   width: fit-content;
   margin: 0%;
-  font-size: 4rem;
+  font-size: 3.9rem;
 }
 .destination-body .plain-text {
   grid-row: 6/7;
@@ -101,19 +101,21 @@
   margin-top: 5%;
   align-items: center;
 }
-.destination-body .travel-mesuraments > p {
+.destination-body .travel-mesuraments > div p {
   text-transform: uppercase;
   margin: 0%;
   text-align: center;
 }
-.destination-body .travel-mesuraments > p:not(.distance, .travel-time) {
-  font-size: 2rem;
+.destination-body .travel-mesuraments > div p:not(.distance, .travel-time) {
+  font-size: 1rem;
+  margin-top: 2%;
+  font-weight: 200;
 }
-.destination-body .travel-mesuraments > p.distance {
-  margin: 0%;
+.destination-body .travel-mesuraments > div p.distance {
+  margin-top: 0%;
 }
-.destination-body .travel-mesuraments > p.travel-time {
-  margin: 0%;
+.destination-body .travel-mesuraments > div p.travel-time {
+  margin-top: 0%;
 }
 .destination-body .travel-mesuraments p {
   margin-bottom: 0%;
@@ -240,7 +242,7 @@
     height: 60vw;
     width: 100vw;
     grid-template-columns: 3% 3fr 45% 3%;
-    grid-template-rows: 14% 15% 15% 20% 20% auto;
+    grid-template-rows: 15% 15% 15% 20% 20% auto;
     grid-template-areas: "empty-l nav nav nav" "empty-l sub-title planetOp empty-r" "empty-l planet title empty-r" "empty-l planet text empty-r" "empty-l planet travelM empty-r";
   }
   .destination-body .the-background {
@@ -260,7 +262,7 @@
     right: 20%;
     background-color: rgba(240, 248, 255, 0.223);
     height: 2px;
-    width: 57%;
+    width: 62%;
     z-index: 3;
   }
   .destination-body .sub-title {
@@ -697,7 +699,7 @@
   .crew-body {
     height: 45vw;
     grid-template-columns: 3% 1fr 1fr 3%;
-    grid-template-rows: 19% 12% 15% 18% auto 15%;
+    grid-template-rows: 20% 12% 15% 18% auto 15%;
   }
   .crew-body *:not(.crew-member) {
     justify-self: start;
@@ -914,14 +916,14 @@
 }
 @media (min-width: 400px) {
   .technology-body {
-    grid-template-rows: auto auto 37% auto auto auto auto;
+    grid-template-rows: 12% auto 37% auto auto auto auto;
     /* grid-template-columns: 5% 1fr 5%; */
   }
   .technology-body h2 {
     font-size: 1.8rem;
   }
   .technology-body .pick-a-technology-buttons a {
-    width: 13%;
+    width: 10%;
     font-size: 1.2rem;
   }
   .technology-body h3 {
@@ -939,9 +941,6 @@
 @media (min-width: 500px) {
   .technology-body {
     grid-template-rows: auto 8% 35% 7% 7% 8% auto;
-  }
-  .technology-body .dimond {
-    height: 50%;
   }
   .technology-body h2 {
     align-self: center;
@@ -1046,7 +1045,7 @@
     height: 55vw;
     width: 100vw;
     grid-template-columns: 3% 10% 40% 10% 1fr;
-    grid-template-rows: 15% 10% 8% 12% 30%;
+    grid-template-rows: 16.6% 10% 8% 12% 30%;
   }
   .technology-body .background-technology-mobile {
     height: 55vw;
@@ -1061,6 +1060,7 @@
     position: absolute;
     right: 58%;
     background-color: rgba(240, 248, 255, 0.223);
+    height: 2px;
     height: 2px;
     width: 30%;
     z-index: 3;
@@ -1215,10 +1215,10 @@
   width: 70%;
 }
 .nav-bar .button-menu > div span:nth-child(2) {
-  top: 30%;
+  top: 15px;
 }
 .nav-bar .button-menu > div span:nth-child(3) {
-  top: 60%;
+  top: 30px;
 }
 .nav-bar .nav-links {
   display: flex;
@@ -1259,11 +1259,9 @@
 @media (min-width: 400px) {
   .nav-bar {
     height: 100%;
-    /* .button-menu {
-      &.active {
-        top: 10%;
-      }
-    } */
+  }
+  .nav-bar .button-menu {
+    top: 8px;
   }
   .nav-bar .nav-links li a {
     font-size: 1.3rem;
@@ -1279,6 +1277,11 @@
     font-size: 1.5rem;
   }
 }
+@media (min-width: 490px) {
+  .nav-bar .button-menu {
+    top: 15px;
+  }
+}
 @media (min-width: 576px) {
   .nav-bar .button-menu.active {
     right: 13%;
@@ -1289,7 +1292,7 @@
   .nav-bar .button-menu {
     width: 12%;
     display: flex;
-    top: 0%;
+    top: -10px;
   }
   .nav-bar .nav-links {
     width: 40%;
@@ -1321,7 +1324,7 @@
     visibility: visible;
     right: 58%;
     background-color: rgba(240, 248, 255, 0.223);
-    height: 3px;
+    height: 2px;
     width: 30%;
     z-index: 3;
   }
@@ -1742,7 +1745,9 @@
     grid-column: 4/5;
     grid-row: 3/6;
     margin-top: 0%;
-    height: 70%;
+    height: 60%;
+    width: 50%;
+    margin-bottom: 15%;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1778,7 +1783,7 @@
     padding-left: 10%;
     padding-right: 10%;
     margin-top: 0%;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
   .index-body .explore {
     grid-area: button;
@@ -1793,7 +1798,7 @@
     grid-area: empty-r;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 991px) {
   .index-body {
     height: 45vw;
     grid-template-columns: 3% 40% 1.3fr 3%;
