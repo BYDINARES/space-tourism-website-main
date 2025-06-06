@@ -137,6 +137,26 @@
     }
   }
 
+  @media (min-width: 650px) {
+    grid-template-columns: 3% 6% 38% 47% 6%;
+    grid-template-rows: 15% 20% 15% 12% auto 10%;
+    .sub-title {
+      font-size: 1.1rem;
+    }
+    .title {
+      font-size: 5rem;
+    }
+
+    .plain-text {
+      font-size: 0.8rem;
+    }
+
+    .explore {
+      margin-bottom: 15%;
+      width: 45%;
+    }
+  }
+
   //REAL MEDIA QUERY
   @media screen and (min-width: 768px) {
     height: 60vw;
@@ -238,7 +258,7 @@
 
   @media (min-width: 1400px) {
     grid-template-columns: 3% 40% 1.3fr 3%;
-    grid-template-rows: 19% 20% 20% 28%;
+    grid-template-rows: 25% 20% 20% 28%;
 
     .the-background {
       height: 60vw;

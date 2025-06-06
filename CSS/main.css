@@ -237,6 +237,23 @@
     font-size: 1rem;
   }
 }
+@media (min-width: 650px) {
+  .destination-body {
+    grid-template-columns: 3% 6% 42.5% 42.5% 6%;
+    grid-template-rows: 15% 8% 11% 16% 20% 20% 20%;
+  }
+  .destination-body .the-planet-options {
+    margin: 0%;
+  }
+  .destination-body .title {
+    font-size: 4rem;
+  }
+  .destination-body .planet {
+    align-self: start;
+    margin-top: 5%;
+    height: 75%;
+  }
+}
 @media screen and (min-width: 768px) {
   .destination-body {
     height: 60vw;
@@ -329,7 +346,10 @@
 @media (min-width: 991px) {
   .destination-body {
     grid-template-columns: 3% 3fr 45% 3%;
-    grid-template-rows: 19% 10% 15% 18% 20% auto;
+    grid-template-rows: 19% 15% 15% 18% 20% auto;
+  }
+  .destination-body .the-background {
+    height: 60vw;
   }
   .destination-body .sub-title {
     align-self: center;
@@ -345,10 +365,10 @@
     margin-bottom: 10%;
   }
   .destination-body .title {
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
   .destination-body .plain-text {
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding-bottom: 5%;
   }
   .destination-body .travel-mesuraments div p:nth-child(1) {
@@ -360,7 +380,7 @@
 }
 @media (min-width: 1200px) {
   .destination-body {
-    grid-template-columns: 3% 3fr 45% 3%;
+    grid-template-columns: 3% 3fr 37% 3%;
     grid-template-rows: 19% 10% 15% 18% 20% auto;
   }
   .destination-body .the-background {
@@ -371,8 +391,15 @@
     justify-self: center;
     margin-top: 2%;
   }
+  .destination-body .planet {
+    width: 35%;
+    height: 70%;
+  }
   .destination-body .title {
-    font-size: 5.5rem;
+    font-size: 6rem;
+  }
+  .destination-body .plain-text {
+    font-size: 1.1rem;
   }
   .destination-body .plain-text {
     padding-bottom: 5%;
@@ -385,17 +412,25 @@
   }
 }
 @media (min-width: 1400px) {
+  .destination-body {
+    grid-template-columns: 3% 3fr 40% 3%;
+    grid-template-rows: 19% 10% 15% 18% 20% auto;
+  }
   .destination-body .sub-title {
     font-size: 2rem;
   }
   .destination-body .the-planet-options div a {
     font-size: 2rem;
   }
+  .destination-body .planet {
+    height: 80%;
+    width: 40%;
+  }
   .destination-body .title {
-    font-size: 6rem;
+    font-size: 8rem;
   }
   .destination-body .plain-text {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -631,7 +666,7 @@
 @media (min-width: 576px) {
   .crew-body {
     grid-template-columns: 3% 6% 42.5% 42.5% 6%;
-    grid-template-rows: 15% 10% 10% 12% 15% 17%;
+    grid-template-rows: 15% 15% 10% 12% 15% 17%;
     height: 60vw;
   }
   .crew-body .background-destination-mobile {
@@ -667,7 +702,7 @@
   .crew-body .name-of-the-crew-member {
     grid-column: 3/4;
     grid-row: 4/5;
-    font-size: 2.3rem;
+    font-size: 2rem;
     margin-right: auto;
   }
   .crew-body .name-of-the-crew-member.specialist {
@@ -676,7 +711,7 @@
   .crew-body .plain-text {
     grid-column: 3/4;
     grid-row: 5/6;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     margin-right: auto;
     text-align: left;
   }
@@ -1750,6 +1785,25 @@
     margin-bottom: 15%;
   }
 }
+@media (min-width: 650px) {
+  .index-body {
+    grid-template-columns: 3% 6% 38% 47% 6%;
+    grid-template-rows: 15% 20% 15% 12% auto 10%;
+  }
+  .index-body .sub-title {
+    font-size: 1.1rem;
+  }
+  .index-body .title {
+    font-size: 5rem;
+  }
+  .index-body .plain-text {
+    font-size: 0.8rem;
+  }
+  .index-body .explore {
+    margin-bottom: 15%;
+    width: 45%;
+  }
+}
 @media screen and (min-width: 768px) {
   .index-body {
     height: 60vw;
@@ -1839,7 +1893,7 @@
 @media (min-width: 1400px) {
   .index-body {
     grid-template-columns: 3% 40% 1.3fr 3%;
-    grid-template-rows: 19% 20% 20% 28%;
+    grid-template-rows: 25% 20% 20% 28%;
   }
   .index-body .the-background {
     height: 60vw;

@@ -265,6 +265,25 @@
     }
   }
 
+  @media (min-width: 650px) {
+    grid-template-columns: 3% 6% 42.5% 42.5% 6%;
+    grid-template-rows: 15% 8% 11% 16% 20% 20% 20%;
+
+    .the-planet-options {
+      margin: 0%;
+    }
+
+    .title {
+      font-size: 4rem;
+    }
+
+    .planet {
+      align-self: start;
+      margin-top: 5%;
+      height: 75%;
+    }
+  }
+
   @media screen and (min-width: 768px) {
     height: 60vw;
     width: 100vw;
@@ -373,7 +392,11 @@
   //Desktops
   @media (min-width: 991px) {
     grid-template-columns: 3% 3fr 45% 3%;
-    grid-template-rows: 19% 10% 15% 18% 20% auto;
+    grid-template-rows: 19% 15% 15% 18% 20% auto;
+
+    .the-background {
+      height: 60vw;
+    }
 
     .sub-title {
       align-self: center;
@@ -393,10 +416,10 @@
     }
 
     .title {
-      font-size: 5rem;
+      font-size: 4.5rem;
     }
     .plain-text {
-      font-size: 1.1rem;
+      font-size: 1rem;
       padding-bottom: 5%;
     }
     .travel-mesuraments {
@@ -412,7 +435,7 @@
   }
 
   @media (min-width: 1200px) {
-    grid-template-columns: 3% 3fr 45% 3%;
+    grid-template-columns: 3% 3fr 37% 3%;
     grid-template-rows: 19% 10% 15% 18% 20% auto;
 
     .the-background {
@@ -430,12 +453,15 @@
     }
 
     .planet {
+      width: 35%;
+      height: 70%;
     }
 
     .title {
-      font-size: 5.5rem;
+      font-size: 6rem;
     }
     .plain-text {
+      font-size: 1.1rem;
     }
     .plain-text {
       padding-bottom: 5%;
@@ -452,6 +478,9 @@
     }
   }
   @media (min-width: 1400px) {
+    grid-template-columns: 3% 3fr 40% 3%;
+    grid-template-rows: 19% 10% 15% 18% 20% auto;
+
     .sub-title {
       font-size: 2rem;
     }
@@ -459,11 +488,16 @@
       font-size: 2rem;
     }
 
+    .planet {
+      height: 80%;
+      width: 40%;
+    }
+
     .title {
-      font-size: 6rem;
+      font-size: 8rem;
     }
     .plain-text {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
     }
   }
 }
