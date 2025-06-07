@@ -18,9 +18,10 @@
   <body class="index-body">
     <div class="the-background"></div>
     <nav class="nav-bar">
+      <!-- Fixed backslash to forward slash in src path -->
       <img
         class="dimond"
-        src="../starter-code\assets\shared\logo.svg"
+        src="../starter-code/assets/shared/logo.svg"
         alt="A dimond"
       />
 
@@ -36,22 +37,30 @@
 
       <ul class="nav-links">
         <li>
-          <a class="pages-links" href="index.html">00 Home</a>
+          <!-- No change needed for Home link if index.html is one level up -->
+          <a class="pages-links" href="../index.html">00 Home</a>
           <span class="line1"></span>
         </li>
 
         <li>
-          <a class="pages-links" href="destination-moon.html">01 Destination</a>
+          <!-- Changed absolute path to relative path for Destination -->
+          <a class="pages-links" href="../starter-code/destination-moon.html"
+            >01 Destination</a
+          >
           <span></span>
         </li>
 
         <li>
-          <a class="pages-links" href="crew-commander.html">02 Crew</a>
+          <!-- Changed absolute path to relative path for Crew -->
+          <a class="pages-links" href="../starter-code/crew-commander.html"
+            >02 Crew</a
+          >
           <span></span>
         </li>
 
         <li>
-          <a class="pages-links" href="technology-vehicle.html"
+          <!-- Changed absolute path to relative path for Technology -->
+          <a class="pages-links" href="../starter-code/technology-vehicle.html"
             >03 Technology</a
           >
           <span></span>
