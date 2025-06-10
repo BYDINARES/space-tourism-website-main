@@ -242,6 +242,14 @@
     grid-template-columns: 3% 6% 42.5% 42.5% 6%;
     grid-template-rows: 15% 8% 11% 16% 20% 20% 20%;
   }
+  .destination-body .the-background {
+    height: 65vw;
+    margin: 0%;
+    padding: 0%;
+    background-image: url("/starter-code/assets/destination/background-destination-tablet.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
   .destination-body .the-planet-options {
     margin: 0%;
   }
@@ -266,7 +274,6 @@
     height: 65vw;
     margin: 0%;
     padding: 0%;
-    background-image: url("/starter-code/assets/destination/background-destination-tablet.jpg");
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -347,6 +354,9 @@
   .destination-body {
     grid-template-columns: 3% 3fr 45% 3%;
     grid-template-rows: 19% 15% 15% 18% 20% auto;
+  }
+  .destination-body .the-background {
+    background-image: url("/starter-code/assets/destination/background-destination-desktop.jpg");
   }
   .destination-body .the-background {
     height: 60vw;
@@ -1680,7 +1690,7 @@
 }
 .index-body .the-background {
   position: absolute;
-  background-image: url("/starter-code/assets/home/background-home-mobile.jpg");
+  background-image: url("../starter-code/assets/home/background-home-mobile.jpg");
   background-size: cover;
   z-index: 0;
   height: 200vw;
@@ -1751,7 +1761,7 @@
   }
   .index-body .the-background {
     height: 60vw;
-    background-image: url("/starter-code/assets/home/background-home-desktop.jpg");
+    background-image: url("/starter-code/assets/home/background-home-tablet.jpg");
   }
   .index-body .nav-bar {
     grid-column: 2/6;

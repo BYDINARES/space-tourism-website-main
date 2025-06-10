@@ -23,7 +23,7 @@
   //The image in the background
   .the-background {
     position: absolute;
-    background-image: url("/starter-code/assets/home/background-home-mobile.jpg");
+    background-image: url("../starter-code/assets/home/background-home-mobile.jpg");
     background-size: cover;
     z-index: 0;
     height: 200vw;
@@ -100,7 +100,7 @@
     height: 60vw;
     .the-background {
       height: 60vw;
-      background-image: url("/starter-code/assets/home/background-home-desktop.jpg");
+      background-image: url("/starter-code/assets/home/background-home-tablet.jpg");
     }
     .nav-bar {
       grid-column: 2/6;

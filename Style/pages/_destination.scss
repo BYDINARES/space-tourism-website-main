@@ -269,6 +269,15 @@
     grid-template-columns: 3% 6% 42.5% 42.5% 6%;
     grid-template-rows: 15% 8% 11% 16% 20% 20% 20%;
 
+    .the-background {
+      height: 65vw;
+      margin: 0%;
+      padding: 0%;
+      background-image: url("/starter-code/assets/destination/background-destination-tablet.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
     .the-planet-options {
       margin: 0%;
     }
@@ -300,7 +309,6 @@
       height: 65vw;
       margin: 0%;
       padding: 0%;
-      background-image: url("/starter-code/assets/destination/background-destination-tablet.jpg");
       background-size: cover;
       background-repeat: no-repeat;
     }
@@ -393,6 +401,10 @@
   @media (min-width: 991px) {
     grid-template-columns: 3% 3fr 45% 3%;
     grid-template-rows: 19% 15% 15% 18% 20% auto;
+
+    .the-background {
+      background-image: url("/starter-code/assets/destination/background-destination-desktop.jpg");
+    }
 
     .the-background {
       height: 60vw;
